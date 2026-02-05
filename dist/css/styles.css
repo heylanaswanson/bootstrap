@@ -10848,9 +10848,11 @@ h2.statement, .statement.h2 {
   padding: 50px 0;
   text-align: center;
 }
-h2.statement.inline, .statement.inline.h2 {
-  padding: 20px 0;
+h2.statement.standalone, .statement.standalone.h2 {
+  padding: 75px 120px;
   text-align: center;
+  line-height: 1.45;
+  letter-spacing: 0.5;
 }
 
 h3, .h3 {

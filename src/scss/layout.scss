@@ -26,9 +26,12 @@ h2 {
         padding: 50px 0;
         text-align: center;
 
-        &.inline {
-            padding: 20px 0;
+        &.standalone {
+            padding: 75px 120px;
             text-align: center;
+            line-height: 1.45;
+            letter-spacing: .5;
+
         }
     }
 }
