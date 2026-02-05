@@ -10921,6 +10921,9 @@ h3, .h3 {
 .hero-image.home {
   background-image: url("../assets/images/home-image.png");
 }
+.hero-image.sand {
+  background-image: url("../assets/images/banners/home.png");
+}
 .hero-image .hero-text {
   color: #ffffff;
   font-size: 48px;
@@ -10947,8 +10950,8 @@ h3, .h3 {
   padding: 50px;
   background-color: #f3eee6;
   border-radius: 15px;
-  margin: 0px 10px;
-  border: 1px solid #e7e1d8;
+  margin: 0px;
+  border: 10px solid #ffffff;
 }
 
 .card h1, .card .h1 {
