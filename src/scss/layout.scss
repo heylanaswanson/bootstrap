@@ -12,7 +12,7 @@ h1 {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-size: 36px;
+    font-size: 40px;
 }
 
 h2 {
@@ -20,15 +20,11 @@ h2 {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;
+    font-size: 28px;
 
     &.statement {
-        padding: 50px 0 0;
+        padding: 50px 0;
         text-align: center;
-
-        &.homepage {
-            padding: 400px 0 30px;
-        }
     }
 }
 
@@ -37,7 +33,7 @@ h3 {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .logo {
@@ -92,15 +88,12 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    position: absolute;
-    top: 120px;
     width: 100%;
     z-index: 1;
 
     .container {
         padding: 0 50px;
-        text-align: left;
+        text-align: center;
         color: #3b2f2a;
     }
 
@@ -128,6 +121,11 @@ h3 {
         border-radius: 5px;
         font-size: 18px;
         border: none;
+        background-color: white;
+
+        &:hover {
+            background-color: #d48c7a;
+        }
     }
 }
 
@@ -136,16 +134,31 @@ h3 {
     background-color: #f3eee6;
     border-radius: 15px;
     margin: 0px 10px;
+    border: 1px solid #e7e1d8;
 }
 
-.card h2 {
-    margin: 30px 0 40px;
+.card h1 {
+    margin: 30px 0 60px;
 }
 
-p.step {
-    color: #9a9a96;
-    letter-spacing: 3px;
+p {
+
+    letter-spacing: 1px;
+    line-height: 1.75;
+    font-size: 18px;
+
+    &.step-label {
+        letter-spacing: 0.12em;
+        color: #c2bbb1;
+
+    }
+
+    &.step-body {
+        color: #807a72;
+    }
 }
+
+
 
 .image-container {
     margin-top: 50px;
