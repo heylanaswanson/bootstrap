@@ -10848,6 +10848,10 @@ h2.statement, .statement.h2 {
   padding: 50px 0;
   text-align: center;
 }
+h2.statement.inline, .statement.inline.h2 {
+  padding: 20px 0;
+  text-align: center;
+}
 
 h3, .h3 {
   font-family: "Playfair Display", serif;
@@ -10913,7 +10917,7 @@ h3, .h3 {
   color: #3b2f2a;
 }
 .hero-image.home {
-  background-image: url("../assets/images/banners/home.png");
+  background-image: url("../assets/images/home-image.png");
 }
 .hero-image .hero-text {
   color: #ffffff;
