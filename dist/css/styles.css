@@ -10833,7 +10833,7 @@ h2.statement, .statement.h2 {
 }
 @media (max-width: 767.98px) {
   h2.statement, .statement.h2 {
-    padding: 30px 40px;
+    padding: 30px 40px 10px;
   }
 }
 h2.statement.standalone, .statement.standalone.h2 {
@@ -10990,7 +10990,9 @@ h3, .h3 {
 }
 @media (max-width: 767.98px) {
   .card {
-    padding: 50px;
+    padding: 30px;
+    border: 20px solid #ffffff;
+    border-bottom: none;
   }
 }
 .card h1, .card .h1 {

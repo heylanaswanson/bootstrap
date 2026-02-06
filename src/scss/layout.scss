@@ -36,7 +36,7 @@ h2 {
         text-align: center;
 
         @include media-breakpoint-down(md) {
-            padding: 30px 40px;
+            padding: 30px 40px 10px;
         }
 
         &.standalone {
@@ -218,7 +218,9 @@ h3 {
     border-bottom: none;
 
     @include media-breakpoint-down(md) {
-        padding: 50px;
+        padding: 30px;
+        border: 20px solid #ffffff;
+        border-bottom: none;
     }
 
     h1 {
