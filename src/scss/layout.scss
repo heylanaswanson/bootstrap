@@ -27,10 +27,14 @@ h2 {
         text-align: center;
 
         &.standalone {
-            padding: 75px 120px;
+            padding: 50px 40px;
             text-align: center;
             line-height: 1.45;
             letter-spacing: .5;
+
+            @include media-breakpoint-up(sm) {
+                padding: 75px 120px;
+            }
 
         }
     }
@@ -98,22 +102,54 @@ h3 {
     justify-content: center;
     width: 100%;
     z-index: 1;
+    position: relative;
 
     .container {
         padding: 0 50px;
         text-align: center;
         color: #3b2f2a;
+        position: absolute;
+        background-image: url('../assets/images/transparent-bg.png');
+        background-repeat: repeat;
+        min-height: 600px;
+
+
+        @include media-breakpoint-up(sm) {
+            min-height: auto;
+            top: 0;
+        }
+
+        @include media-breakpoint-up(md) {
+            top: 15%;
+        }
     }
 
     &.home {
-        background-image: url('../assets/images/home-image.png');
+        background-image: url('../assets/images/banners/home.png');
+
+    }
+
+    &.buyers {
+        background-image: url('../assets/images/banners/buyers.png');
 
     }
 
     &.sand {
-        background-image: url('../assets/images/banners/home.png');
+        background-image: url('../assets/images/banners/sand.png');
+
+        .container {
+            min-height: auto;
+            background-image: none;
+
+            h2 {
+                padding-top: 130px;
+            }
+        }
 
     }
+
+
+
 
 
     .hero-text {
@@ -128,8 +164,6 @@ h3 {
         margin-top: 80px;
     }
 
-    .hero-image h2 {}
-
     button {
         padding: 10px 30px;
         margin: 40px 0;
@@ -140,6 +174,7 @@ h3 {
 
         &:hover {
             background-color: #d48c7a;
+            color: #fff;
         }
     }
 }
@@ -177,4 +212,15 @@ p {
 
 .image-container {
     margin-top: 50px;
+}
+
+footer {
+    padding: 50px;
+
+    a {
+        display: block;
+        line-height: 3;
+        text-decoration: none;
+        color: #000;
+    }
 }

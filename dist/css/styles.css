@@ -10849,10 +10849,15 @@ h2.statement, .statement.h2 {
   text-align: center;
 }
 h2.statement.standalone, .statement.standalone.h2 {
-  padding: 75px 120px;
+  padding: 50px 40px;
   text-align: center;
   line-height: 1.45;
   letter-spacing: 0.5;
+}
+@media (min-width: 576px) {
+  h2.statement.standalone, .statement.standalone.h2 {
+    padding: 75px 120px;
+  }
 }
 
 h3, .h3 {
@@ -10912,17 +10917,43 @@ h3, .h3 {
   justify-content: center;
   width: 100%;
   z-index: 1;
+  position: relative;
 }
 .hero-image .container {
   padding: 0 50px;
   text-align: center;
   color: #3b2f2a;
+  position: absolute;
+  background-image: url("../assets/images/transparent-bg.png");
+  background-repeat: repeat;
+  min-height: 600px;
+}
+@media (min-width: 576px) {
+  .hero-image .container {
+    min-height: auto;
+    top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .hero-image .container {
+    top: 15%;
+  }
 }
 .hero-image.home {
-  background-image: url("../assets/images/home-image.png");
+  background-image: url("../assets/images/banners/home.png");
+}
+.hero-image.buyers {
+  background-image: url("../assets/images/banners/buyers.png");
 }
 .hero-image.sand {
-  background-image: url("../assets/images/banners/home.png");
+  background-image: url("../assets/images/banners/sand.png");
+}
+.hero-image.sand .container {
+  min-height: auto;
+  background-image: none;
+}
+.hero-image.sand .container h2, .hero-image.sand .container .h2 {
+  padding-top: 130px;
 }
 .hero-image .hero-text {
   color: #ffffff;
@@ -10944,6 +10975,7 @@ h3, .h3 {
 }
 .hero-image button:hover {
   background-color: #d48c7a;
+  color: #fff;
 }
 
 .card {
@@ -10973,4 +11005,14 @@ p.step-body {
 
 .image-container {
   margin-top: 50px;
+}
+
+footer {
+  padding: 50px;
+}
+footer a {
+  display: block;
+  line-height: 3;
+  text-decoration: none;
+  color: #000;
 }
