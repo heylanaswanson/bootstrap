@@ -10942,6 +10942,20 @@ h3, .h3 {
     top: 15%;
   }
 }
+.hero-image .container.buyers {
+  position: absolute;
+  left: 0;
+  text-align: left;
+}
+.hero-image .container.buyers h1, .hero-image .container.buyers .h1 {
+  padding: 50px 50px 0px;
+}
+.hero-image .container.buyers h2, .hero-image .container.buyers .h2 {
+  padding: 0 50px;
+}
+.hero-image .container.buyers button {
+  margin-left: 50px;
+}
 .hero-image.home {
   background-image: url("../assets/images/banners/home.png");
 }
@@ -10956,7 +10970,7 @@ h3, .h3 {
   padding-top: 130px;
 }
 .hero-image.buyers {
-  background-image: url("../assets/images/banners/bedroom.png");
+  background-image: url("../assets/images/banners/sellers.png");
 }
 .hero-image .hero-text {
   color: #ffffff;
