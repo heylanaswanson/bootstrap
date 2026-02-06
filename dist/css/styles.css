@@ -10945,7 +10945,7 @@ h3, .h3 {
   }
 }
 .hero-image .container h1, .hero-image .container .h1 {
-  padding: 50px 0 20px;
+  padding: 50px 10px 20px;
   width: 80%;
   margin: 0 auto;
 }
@@ -10970,6 +10970,9 @@ h3, .h3 {
 }
 .hero-image.buyers {
   background-image: url("../assets/images/banners/buyers.png");
+}
+.hero-image.buyers .container h1, .hero-image.buyers .container .h1 {
+  padding: 50px 50px 20px;
 }
 
 button {
