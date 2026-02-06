@@ -9,6 +9,7 @@
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
+        "watch-sass": "onchange './src/scss/**/*.scss' -- npm run build:scss",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
@@ -43,6 +44,7 @@
         "browser-sync": "2.29.1",
         "chokidar": "3.5.3",
         "concurrently": "6.3.0",
+        "onchange": "^7.1.0",
         "postcss": "^8.4.21",
         "prettier": "2.8.6",
         "pug": "3.0.2",

@@ -209,9 +209,10 @@ h3 {
     border-radius: 15px;
     margin: 0px;
     border: 10px solid #ffffff;
+    border-top: none;
+    border-bottom: none;
 
     @include media-breakpoint-down(md) {
-        top: 11%;
         padding: 50px;
 
         h1 {
