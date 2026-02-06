@@ -36,7 +36,7 @@ h2 {
         text-align: center;
 
         @include media-breakpoint-down(md) {
-            padding: 30px 40px;
+            padding: 30px 40px 10px;
         }
 
         &.standalone {
@@ -149,6 +149,24 @@ h3 {
         @include media-breakpoint-up(lg) {
             top: 15%;
         }
+
+        &.buyers {
+            position: absolute;
+            left: 0;
+            text-align: left;
+
+            h1 {
+                padding: 50px 50px 0px;
+            }
+
+            h2 {
+                padding: 0 50px;
+            }
+
+            button {
+                margin-left: 50px
+            }
+        }
     }
 
     &.home {
@@ -171,8 +189,13 @@ h3 {
 
     }
 
+    &.sellers {
+        background-image: url('../assets/images/banners/sellers.png');
+
+    }
+
     &.buyers {
-        background-image: url('../assets/images/banners/bedroom.png');
+        background-image: url('../assets/images/banners/buyers.png');
 
     }
 
@@ -218,7 +241,9 @@ h3 {
     border-bottom: none;
 
     @include media-breakpoint-down(md) {
-        padding: 50px;
+        padding: 30px;
+        border: 20px solid #ffffff;
+        border-bottom: none;
     }
 
     h1 {
@@ -242,13 +267,23 @@ h3 {
         }
     }
 
-
+    &.card-image {
+        padding: 0;
+        border-width: 10px;
+    }
 
     .image-container {
         margin-top: 50px;
     }
 }
 
+// Buyers 
+section.my-role {
+    background-color: #ecf3f9;
+    padding: 50px;
+}
+
+//Footer
 footer {
     padding: 50px;
 
