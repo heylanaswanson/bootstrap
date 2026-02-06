@@ -189,8 +189,13 @@ h3 {
 
     }
 
-    &.buyers {
+    &.sellers {
         background-image: url('../assets/images/banners/sellers.png');
+
+    }
+
+    &.buyers {
+        background-image: url('../assets/images/banners/buyers.png');
 
     }
 
@@ -262,13 +267,23 @@ h3 {
         }
     }
 
-
+    &.card-image {
+        padding: 0;
+        border-width: 10px;
+    }
 
     .image-container {
         margin-top: 50px;
     }
 }
 
+// Buyers 
+section.my-role {
+    background-color: #ecf3f9;
+    padding: 50px;
+}
+
+//Footer
 footer {
     padding: 50px;
 

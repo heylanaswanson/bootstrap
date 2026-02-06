@@ -10969,8 +10969,11 @@ h3, .h3 {
 .hero-image.sand .container h2, .hero-image.sand .container .h2 {
   padding-top: 130px;
 }
-.hero-image.buyers {
+.hero-image.sellers {
   background-image: url("../assets/images/banners/sellers.png");
+}
+.hero-image.buyers {
+  background-image: url("../assets/images/banners/buyers.png");
 }
 .hero-image .hero-text {
   color: #ffffff;
@@ -11024,8 +11027,17 @@ h3, .h3 {
 .card p.step-body {
   color: #807a72;
 }
+.card.card-image {
+  padding: 0;
+  border-width: 10px;
+}
 .card .image-container {
   margin-top: 50px;
+}
+
+section.my-role {
+  background-color: #ecf3f9;
+  padding: 50px;
 }
 
 footer {
