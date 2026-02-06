@@ -106,17 +106,17 @@ h3 {
 
     .container {
         padding: 0 50px;
+        width: 350px;
         text-align: center;
         color: #3b2f2a;
         position: absolute;
         background-image: url('../assets/images/transparent-bg.png');
         background-repeat: repeat;
-        min-height: 600px;
 
 
         @include media-breakpoint-up(sm) {
-            min-height: auto;
             top: 0;
+            width: auto;
         }
 
         @include media-breakpoint-up(md) {
@@ -129,10 +129,6 @@ h3 {
 
     }
 
-    &.buyers {
-        background-image: url('../assets/images/banners/buyers.png');
-
-    }
 
     &.sand {
         background-image: url('../assets/images/banners/sand.png');
@@ -145,6 +141,11 @@ h3 {
                 padding-top: 130px;
             }
         }
+
+    }
+
+    &.buyers {
+        background-image: url('../assets/images/banners/bedroom.png');
 
     }
 

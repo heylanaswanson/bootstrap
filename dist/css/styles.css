@@ -10921,17 +10921,17 @@ h3, .h3 {
 }
 .hero-image .container {
   padding: 0 50px;
+  width: 350px;
   text-align: center;
   color: #3b2f2a;
   position: absolute;
   background-image: url("../assets/images/transparent-bg.png");
   background-repeat: repeat;
-  min-height: 600px;
 }
 @media (min-width: 576px) {
   .hero-image .container {
-    min-height: auto;
     top: 0;
+    width: auto;
   }
 }
 @media (min-width: 768px) {
@@ -10942,9 +10942,6 @@ h3, .h3 {
 .hero-image.home {
   background-image: url("../assets/images/banners/home.png");
 }
-.hero-image.buyers {
-  background-image: url("../assets/images/banners/buyers.png");
-}
 .hero-image.sand {
   background-image: url("../assets/images/banners/sand.png");
 }
@@ -10954,6 +10951,9 @@ h3, .h3 {
 }
 .hero-image.sand .container h2, .hero-image.sand .container .h2 {
   padding-top: 130px;
+}
+.hero-image.buyers {
+  background-image: url("../assets/images/banners/bedroom.png");
 }
 .hero-image .hero-text {
   color: #ffffff;
