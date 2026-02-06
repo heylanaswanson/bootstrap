@@ -171,11 +171,12 @@ h3 {
         border-radius: 5px;
         font-size: 18px;
         border: none;
-        background-color: white;
+        background-color: #d48c7a;
+        color: #fff;
 
         &:hover {
-            background-color: #d48c7a;
-            color: #fff;
+            background-color: #fff;
+
         }
     }
 }
