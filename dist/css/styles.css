@@ -10925,6 +10925,7 @@ h3, .h3 {
   position: absolute;
   background-image: url("../assets/images/transparent-bg.png");
   background-repeat: repeat;
+  height: 100%;
 }
 @media (min-width: 576px) {
   .hero-image .container {
@@ -10935,6 +10936,7 @@ h3, .h3 {
 @media (min-width: 768px) {
   .hero-image .container {
     top: 11%;
+    height: auto;
   }
 }
 @media (min-width: 992px) {
@@ -10942,19 +10944,13 @@ h3, .h3 {
     top: 15%;
   }
 }
-.hero-image .container.buyers {
-  position: absolute;
-  left: 0;
-  text-align: left;
+.hero-image .container h1, .hero-image .container .h1 {
+  padding: 50px 0 20px;
+  width: 80%;
+  margin: 0 auto;
 }
-.hero-image .container.buyers h1, .hero-image .container.buyers .h1 {
-  padding: 50px 50px 0px;
-}
-.hero-image .container.buyers h2, .hero-image .container.buyers .h2 {
+.hero-image .container h2, .hero-image .container .h2 {
   padding: 0 50px;
-}
-.hero-image .container.buyers button {
-  margin-left: 50px;
 }
 .hero-image.home {
   background-image: url("../assets/images/banners/home.png");
@@ -10975,16 +10971,8 @@ h3, .h3 {
 .hero-image.buyers {
   background-image: url("../assets/images/banners/buyers.png");
 }
-.hero-image .hero-text {
-  color: #ffffff;
-  font-size: 48px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000000;
-}
-.hero-image h1, .hero-image .h1 {
-  padding: 50px;
-}
-.hero-image button {
+
+button {
   padding: 10px 30px;
   margin: 40px 0;
   border-radius: 5px;
@@ -10993,7 +10981,7 @@ h3, .h3 {
   background-color: #d48c7a;
   color: #fff;
 }
-.hero-image button:hover {
+button:hover {
   background-color: #fff;
 }
 
