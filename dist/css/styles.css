@@ -10919,8 +10919,13 @@ h3, .h3 {
   z-index: 1;
   position: relative;
 }
+@media (max-width: 991.98px) {
+  .hero-image {
+    height: 45vh;
+  }
+}
 .hero-image .container {
-  padding: 0 50px;
+  padding: 0;
   width: 350px;
   text-align: center;
   color: #3b2f2a;
@@ -10935,6 +10940,11 @@ h3, .h3 {
   }
 }
 @media (min-width: 768px) {
+  .hero-image .container {
+    top: 11%;
+  }
+}
+@media (min-width: 992px) {
   .hero-image .container {
     top: 15%;
   }
@@ -10962,8 +10972,7 @@ h3, .h3 {
   text-shadow: 2px 2px 4px #000000;
 }
 .hero-image h1, .hero-image .h1 {
-  padding-bottom: 20px;
-  margin-top: 80px;
+  padding: 50px;
 }
 .hero-image button {
   padding: 10px 30px;
