@@ -10982,110 +10982,110 @@ section.my-role h3, section.my-role .h3 {
   margin: 0 auto;
 }
 
-.buyer-edu {
+.card-edu {
   --card-bg: #f3eee6;
   --text: #5a5652;
   --title: #3f3a36;
   --muted: #8a847d;
 }
-.buyer-edu .edu-card {
+.card-edu .edu-card {
   background: var(--card-bg);
   border-radius: 18px;
   padding: 28px 28px 26px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 @media (min-width: 992px) {
-  .buyer-edu .edu-card {
+  .card-edu .edu-card {
     padding: 34px 36px 32px;
     border-radius: 22px;
   }
 }
-.buyer-edu .edu-eyebrow {
+.card-edu .edu-eyebrow {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 0.72rem;
   color: rgba(90, 86, 82, 0.55);
   margin-bottom: 14px;
 }
-.buyer-edu .edu-title {
+.card-edu .edu-title {
   color: var(--title);
   margin: 0 0 10px;
   line-height: 1.05;
   font-size: clamp(1.35rem, 2.2vw, 2.05rem);
 }
-.buyer-edu .edu-kicker {
+.card-edu .edu-kicker {
   margin: 0 0 14px;
   color: var(--muted);
   font-size: 1rem;
 }
-.buyer-edu .edu-body {
+.card-edu .edu-body {
   color: var(--text);
   line-height: 1.85;
   font-size: 1rem;
   max-width: 46ch;
 }
 
-.buyer-edu {
+.card-edu {
   --card-bg: #f3eee6;
   --text: #5a5652;
   --title: #3f3a36;
   --muted: #8a847d;
 }
-.buyer-edu .edu-card {
+.card-edu .edu-card {
   background: var(--card-bg);
   border-radius: 18px;
   padding: 28px 28px 26px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 @media (min-width: 992px) {
-  .buyer-edu .edu-card {
+  .card-edu .edu-card {
     padding: 34px 36px 32px;
     border-radius: 22px;
   }
 }
-.buyer-edu .edu-eyebrow {
+.card-edu .edu-eyebrow {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 0.72rem;
   color: rgba(90, 86, 82, 0.55);
   margin-bottom: 14px;
 }
-.buyer-edu .edu-title {
+.card-edu .edu-title {
   color: var(--title);
   margin: 0 0 10px;
   line-height: 1.05;
   font-size: clamp(1.35rem, 2.2vw, 2.05rem);
 }
-.buyer-edu .edu-kicker {
+.card-edu .edu-kicker {
   margin: 0 0 14px;
   color: var(--muted);
   font-size: 1rem;
 }
-.buyer-edu .edu-body {
+.card-edu .edu-body {
   color: var(--text);
   line-height: 1.55;
   font-size: 1rem;
   max-width: 46ch;
 }
 
-.buyer-insights {
+.card-insights {
   background: #ffffff;
 }
-.buyer-insights .insight-card {
+.card-insights .insight-card {
   background: #f3eee6;
   border-radius: 18px;
   padding: 28px 26px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.04);
 }
-.buyer-insights .insight-eyebrow {
+.card-insights .insight-eyebrow {
   margin: 0 0 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 0.72rem;
   color: rgba(0, 0, 0, 0.42);
 }
-.buyer-insights .insight-title {
+.card-insights .insight-title {
   margin: 0 0 10px;
   font-family: "Playfair Display", serif;
   font-weight: 500;
@@ -11093,23 +11093,23 @@ section.my-role h3, section.my-role .h3 {
   line-height: 1.15;
   color: rgba(0, 0, 0, 0.72);
 }
-.buyer-insights .insight-quote {
+.card-insights .insight-quote {
   margin: 0 0 14px;
   font-style: italic;
   color: rgba(0, 0, 0, 0.45);
 }
-.buyer-insights .insight-body {
+.card-insights .insight-body {
   margin: 0;
   color: rgba(0, 0, 0, 0.56);
   line-height: 1.6;
   max-width: 48ch;
 }
 @media (max-width: 576px) {
-  .buyer-insights .insight-card {
+  .card-insights .insight-card {
     padding: 22px 20px;
     border-radius: 16px;
   }
-  .buyer-insights .insight-body {
+  .card-insights .insight-body {
     max-width: 100%;
   }
 }
@@ -11228,7 +11228,7 @@ section.my-role h3, section.my-role .h3 {
   }
 }
 
-.buyer-steps__title {
+.card-steps__title {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   letter-spacing: 0.2px;
@@ -11236,7 +11236,7 @@ section.my-role h3, section.my-role .h3 {
   font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem);
 }
 
-.buyer-step {
+.card-step {
   background: #f3efe7;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 18px;
@@ -11244,7 +11244,7 @@ section.my-role h3, section.my-role .h3 {
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
 }
 
-.buyer-step__kicker {
+.card-step__kicker {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.18em;
@@ -11253,7 +11253,7 @@ section.my-role h3, section.my-role .h3 {
   margin-bottom: 1.25rem;
 }
 
-.buyer-step__headline {
+.card-step__headline {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   color: #2f2f2f;
@@ -11262,7 +11262,7 @@ section.my-role h3, section.my-role .h3 {
   font-size: 40px;
 }
 
-.buyer-step__body {
+.card-step__body {
   font-family: "Inter", sans-serif;
   color: #6d6a66;
   line-height: 1.75;
@@ -11272,15 +11272,15 @@ section.my-role h3, section.my-role .h3 {
 }
 
 @media (max-width: 575.98px) {
-  .buyer-step {
+  .card-step {
     padding: 1.8rem 1.6rem;
   }
-  .buyer-step__body {
+  .card-step__body {
     max-width: none;
   }
 }
 @media (min-width: 992px) {
-  .buyer-steps {
+  .card-steps {
     padding-top: 2rem !important;
     padding-bottom: 2.5rem !important;
   }
