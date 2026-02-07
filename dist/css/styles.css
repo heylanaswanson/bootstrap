@@ -10967,8 +10967,102 @@ button:hover {
 }
 
 section.my-role {
-  background-color: #ecf3f9;
+  background-color: #dbdedb;
   padding: 50px;
+  text-align: center;
+}
+section.my-role h3, section.my-role .h3 {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.buyer-edu {
+  --card-bg: #f3eee6;
+  --text: #5a5652;
+  --title: #3f3a36;
+  --muted: #8a847d;
+}
+.buyer-edu .edu-card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 28px 28px 26px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+@media (min-width: 992px) {
+  .buyer-edu .edu-card {
+    padding: 34px 36px 32px;
+    border-radius: 22px;
+  }
+}
+.buyer-edu .edu-eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: rgba(90, 86, 82, 0.55);
+  margin-bottom: 14px;
+}
+.buyer-edu .edu-title {
+  color: var(--title);
+  margin: 0 0 10px;
+  line-height: 1.05;
+  font-size: clamp(1.35rem, 2.2vw, 2.05rem);
+}
+.buyer-edu .edu-kicker {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.buyer-edu .edu-body {
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 1rem;
+  max-width: 46ch;
+}
+
+.buyer-insights {
+  background: #ffffff;
+}
+.buyer-insights .insight-card {
+  background: #f3eee6;
+  border-radius: 18px;
+  padding: 28px 26px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+.buyer-insights .insight-eyebrow {
+  margin: 0 0 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: rgba(0, 0, 0, 0.42);
+}
+.buyer-insights .insight-title {
+  margin: 0 0 10px;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 1.15rem + 0.6vw, 1.85rem);
+  line-height: 1.15;
+  color: rgba(0, 0, 0, 0.72);
+}
+.buyer-insights .insight-quote {
+  margin: 0 0 14px;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.45);
+}
+.buyer-insights .insight-body {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.56);
+  line-height: 1.6;
+  max-width: 48ch;
+}
+@media (max-width: 576px) {
+  .buyer-insights .insight-card {
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+  .buyer-insights .insight-body {
+    max-width: 100%;
+  }
 }
 
 .listings-headline h1, .listings-headline .h1 {
