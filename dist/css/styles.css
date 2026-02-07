@@ -10915,12 +10915,11 @@ h4, .h4 {
   }
   .site-logo .logo--mobile {
     display: block;
-    height: 34px;
+    height: 64px;
   }
 }
 button {
   padding: 10px 30px;
-  margin: 40px 0;
   border-radius: 5px;
   font-size: 18px;
   border: none;
@@ -11184,6 +11183,7 @@ section.my-role h3, section.my-role .h3 {
   font-size: clamp(1.3rem, 2.6vw, 1.8rem);
   color: #3f3a36;
   margin-bottom: 0.35rem;
+  font-style: normal;
 }
 .cta-footer__subtitle {
   font-size: 0.95rem;
@@ -11423,6 +11423,9 @@ section.my-role h3, section.my-role .h3 {
     width: 100%;
   }
 }
+/* =======================
+   RESOURCES SCSS
+======================= */
 .navbar {
   display: flex;
   gap: 32px;
@@ -11452,14 +11455,223 @@ section.my-role h3, section.my-role .h3 {
   background-color: rgba(210, 143, 115, 0.6);
 }
 
+.resources {
+  padding: 36px 0 52px;
+}
+
+.resources .container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Centered hero */
+.resources-hero {
+  text-align: center;
+}
+
+.resources-hero__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.1;
+  margin: 0;
+  color: #2c2c2c;
+}
+
+.resources-hero__subtitle {
+  max-width: 720px;
+  margin: 14px auto 0;
+  color: #6f6f6f;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.resources-hero__rule {
+  width: 180px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
+  margin: 26px auto 0;
+}
+
+/* Section intro (left aligned like your cards) */
+.resources-intro {
+  margin-top: 0;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.resources-intro h2, .resources-intro .h2 {
+  padding-bottom: 30px;
+}
+
+.resources-intro__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 34px;
+  margin: 0 0 6px;
+  color: #2c2c2c;
+}
+
+.resources-intro__subtitle {
+  margin: 0 0 18px;
+  color: #6f6f6f;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Pills */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  /* attached to content */
+  margin-bottom: 40px;
+}
+
+.pill {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  color: #5b5b5b;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.06s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.pill.is-active {
+  border-color: rgba(197, 135, 110, 0.55);
+  box-shadow: 0 10px 22px rgba(197, 135, 110, 0.16);
+  color: #3a3a3a;
+}
+
+/* Grid */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* Cards */
+.resource-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 18px;
+  background: #f3efe7;
+  /* your warm sand */
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+  padding: 18px 18px 20px;
+  color: inherit;
+  transition: transform 0.12s ease, box-shadow 0.2s ease;
+  min-height: 210px;
+}
+
+.resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.resource-card__tags {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+  max-width: 72%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resource-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.55);
+  flex: 0 0 auto;
+}
+
+.resource-card__icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.resource-card__badge--news {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.resource-card__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.05;
+  margin: 0 0 12px;
+  color: #2c2c2c;
+}
+
+.resource-card__desc {
+  margin: 0;
+  color: #6a6a6a;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .resources-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .resources {
+    padding: 44px 0 60px;
+  }
+  .resources .container {
+    padding: 0 18px;
+  }
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+  .resource-card__title {
+    font-size: 28px;
+  }
+}
 .hero-section {
   position: relative;
   min-height: 70vh;
   padding: 6rem 0;
-  background-image: url("../assets/images/banners/sellers.png");
+  background-image: url("../assets/images/banners/living.png");
 }
 .hero-section.sellers {
-  background-image: url("../assets/images/banners/outdoor.png");
+  background-image: url("../assets/images/banners/sellers.png");
 }
 .hero-section.resources {
   background-image: url("../assets/images/banners/buyers.png");

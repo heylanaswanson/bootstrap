@@ -24,11 +24,11 @@
             <!-- Responsive navbar-->
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <a href="/" class="site-logo">
+                    <a href="index.html" class="site-logo">
                         <img src="assets/images/desktop-logo.png"
                             alt="Lana Swanson Realtor"
                             class="logo logo--desktop" />
-                        <img src="assets/images/logo-mobile.svg"
+                        <img src="assets/images/desktop-logo.png"
                             alt="Lana Swanson Realtor"
                             class="logo logo--mobile" />
                     </a>
@@ -72,67 +72,436 @@
         </header>
         <!-- Page content-->
         <main>
+
             <section
-                class="hero-section listings d-flex align-items-center text-center">
+                class="hero-section resources d-flex align-items-center text-center">
                 <div class="hero-overlay"></div>
 
                 <div class="container position-relative">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-md-10">
 
-                            <h1 class="hero-title">
-                                Search San Diego homes
-
-                            </h1>
-
-                            <p class="hero-subtitle">
-                                Use the tools below to explore available homes.
-                                If something
-                                catches your eye, I’ll handle showings,
-                                strategy, and next
-                                steps — no pressure, ever.
-                            </p>
-
-                            <a href="/contact.html"
-                                class="btn btn-primary hero-btn">
-                                Schedule a conversation
-                            </a>
+                            <header class="resources-hero">
+                                <h1 class="resources-hero__title">Guides &amp;
+                                    resources</h1>
+                                <p class="resources-hero__subtitle">
+                                    Downloadables + quick reads.
+                                </p>
+                                <div class="resources-hero__rule"
+                                    aria-hidden="true"></div>
+                            </header>
 
                         </div>
                     </div>
                 </div>
             </section>
 
-            <div class="row">
-                <div class="col-12 col-md-4 card card-image">
-                    <img class="listing"
-                        src="assets/images/placeholder2.png" />
-                </div>
-                <div class="col-12 col-md-4 card card-image">
-                    <img class="listing"
-                        src="assets/images/placeholder1.png" />
-                </div>
-                <div class="col-12 col-md-4 card card-image">
-                    <img class="listing"
-                        src="assets/images/placeholder3.png" />
-                </div>
+            <!-- =========================
+     RESOURCES SECTION (RESET)
+========================== -->
+            <section class="resources" id="resources">
+                <div class="container">
 
-            </div>
-            <div class="container">
-
-                <div class="row">
-                    <div class="col centered">
-                        <h3>Not seeing what you
-                            want?</h3>
-                        <p>Tell me your price range + must-haves and I’ll send
-                            a short list that matches your
-                            lifestyle.”</p><button>Get a
-                            curated list</button>
+                    <!-- Left section intro -->
+                    <div class="resources-intro">
+                        <h2>Filter by topic
+                            to see
+                            what’s relevant right now.</h2>
+                        <!-- Pills directly above cards -->
+                        <div class="pill-row" role="tablist"
+                            aria-label="Resource filters">
+                            <button class="pill is-active" type="button"
+                                data-filter="all"
+                                aria-pressed="true">All</button>
+                            <button class="pill" type="button"
+                                data-filter="buyers"
+                                aria-pressed="false">Buyers</button>
+                            <button class="pill" type="button"
+                                data-filter="sellers"
+                                aria-pressed="false">Sellers</button>
+                            <button class="pill" type="button"
+                                data-filter="financing"
+                                aria-pressed="false">Financing</button>
+                            <button class="pill" type="button"
+                                data-filter="inspections"
+                                aria-pressed="false">Inspections</button>
+                            <button class="pill" type="button"
+                                data-filter="escrow"
+                                aria-pressed="false">Escrow</button>
+                            <button class="pill" type="button"
+                                data-filter="local"
+                                aria-pressed="false">Local</button>
+                            <button class="pill" type="button"
+                                data-filter="news"
+                                aria-pressed="false">News</button>
+                        </div>
                     </div>
 
-                </div>
-            </div>
+                    <!-- Cards -->
+                    <div class="resources-grid" id="resourceCards">
 
+                        <!-- 1 -->
+                        <a class="resource-card" href="#"
+                            data-tags="buyers financing" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">BUYERS •
+                                    FINANCING</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Budget vs.
+                                Approval</h3>
+                            <p class="resource-card__desc">A quick way to set a
+                                payment range that fits your real life — not
+                                just a lender’s number.</p>
+                        </a>
+
+                        <!-- 2 -->
+                        <a class="resource-card" href="#"
+                            data-tags="buyers financing" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">BUYERS •
+                                    FINANCING</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Down Payment
+                                Options</h3>
+                            <p class="resource-card__desc">A simple overview of
+                                common down payment ranges, trade-offs, and what
+                                they can change.</p>
+                        </a>
+
+                        <!-- 3 -->
+                        <a class="resource-card" href="#"
+                            data-tags="buyers escrow" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">BUYERS •
+                                    ESCROW</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Offer Terms Cheat
+                                Sheet</h3>
+                            <p class="resource-card__desc">The key terms that
+                                shape strength: timing, contingencies, deposits,
+                                and flexibility.</p>
+                        </a>
+
+                        <!-- 4 -->
+                        <a class="resource-card" href="#"
+                            data-tags="buyers inspections" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">BUYERS •
+                                    INSPECTIONS</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Inspection Day
+                                Checklist</h3>
+                            <p class="resource-card__desc">What to look for,
+                                what to ask, and how to separate “fixable” from
+                                “future headache.”</p>
+                        </a>
+
+                        <!-- 5 -->
+                        <a class="resource-card" href="#"
+                            data-tags="buyers local" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">BUYERS •
+                                    LOCAL</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Neighborhood
+                                Priorities Worksheet</h3>
+                            <p class="resource-card__desc">A one-page tool to
+                                rank lifestyle needs, commute, walkability,
+                                light, and long-term resale.</p>
+                        </a>
+
+                        <!-- 6 -->
+                        <a class="resource-card" href="#"
+                            data-tags="buyers financing escrow" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">BUYERS •
+                                    FINANCING • ESCROW</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Closing Costs
+                                Snapshot</h3>
+                            <p class="resource-card__desc">Common line items,
+                                typical ranges, and what you can (sometimes)
+                                negotiate.</p>
+                        </a>
+
+                        <!-- 7 -->
+                        <a class="resource-card" href="#"
+                            data-tags="sellers local" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">SELLERS •
+                                    LOCAL</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Pre-List Prep</h3>
+                            <p class="resource-card__desc">Prep for photos,
+                                showings, and first impressions — a clear plan
+                                you can tackle by week.</p>
+                        </a>
+
+                        <!-- 8 -->
+                        <a class="resource-card" href="#"
+                            data-tags="sellers local" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">SELLERS •
+                                    LOCAL</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Staging Basics</h3>
+                            <p class="resource-card__desc">Room-by-room
+                                guidelines to create light, space, and flow —
+                                without overdoing it.</p>
+                        </a>
+
+                        <!-- 9 -->
+                        <a class="resource-card" href="#"
+                            data-tags="sellers financing" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">SELLERS •
+                                    PRICING</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Pricing
+                                Strategy</h3>
+                            <p class="resource-card__desc">How pricing creates
+                                momentum, attracts buyers early, and supports
+                                stronger terms.</p>
+                        </a>
+
+                        <!-- 10 -->
+                        <a class="resource-card" href="#"
+                            data-tags="sellers escrow" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">SELLERS •
+                                    ESCROW</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Seller
+                                Timeline</h3>
+                            <p class="resource-card__desc">A clean overview from
+                                prep → market → negotiations → closing (with
+                                typical timing).</p>
+                        </a>
+
+                        <!-- 11 -->
+                        <a class="resource-card" href="#"
+                            data-tags="sellers inspections" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">SELLERS •
+                                    INSPECTIONS</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Pre-Inspection
+                                Wins</h3>
+                            <p class="resource-card__desc">Small fixes that
+                                reduce negotiation friction and make inspections
+                                smoother.</p>
+                        </a>
+
+                        <!-- 12 -->
+                        <a class="resource-card" href="#"
+                            data-tags="sellers escrow" data-type="pdf">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">SELLERS •
+                                    ESCROW</span>
+                                <span class="resource-card__badge">
+                                    <img class="resource-card__icon"
+                                        src="assets/images/adobe-icon.png"
+                                        alt="PDF" />
+                                    PDF
+                                </span>
+                            </div>
+                            <h3 class="resource-card__title">Offer Review
+                                Sheet</h3>
+                            <p class="resource-card__desc">Compare offers beyond
+                                price: certainty, timelines, contingencies, and
+                                risk.</p>
+                        </a>
+
+                        <!-- NEWS (13–16) -->
+                        <!-- 13 -->
+                        <a class="resource-card" href="#" data-tags="news local"
+                            data-type="news">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">NEWS •
+                                    LOCAL</span>
+                                <span
+                                    class="resource-card__badge resource-card__badge--news">NEWS</span>
+                            </div>
+                            <h3 class="resource-card__title">Market Update: What
+                                Buyers Should Watch</h3>
+                            <p class="resource-card__desc">A short roundup of
+                                what’s shifting this month — and how it affects
+                                leverage.</p>
+                        </a>
+
+                        <!-- 14 -->
+                        <a class="resource-card" href="#"
+                            data-tags="news buyers financing" data-type="news">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">NEWS • BUYERS
+                                    • FINANCING</span>
+                                <span
+                                    class="resource-card__badge resource-card__badge--news">NEWS</span>
+                            </div>
+                            <h3 class="resource-card__title">Rates &amp;
+                                Affordability: The Practical Take</h3>
+                            <p class="resource-card__desc">How to think about
+                                monthly payment strategy when rates move —
+                                without panic.</p>
+                        </a>
+
+                        <!-- 15 -->
+                        <a class="resource-card" href="#"
+                            data-tags="news sellers local" data-type="news">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">NEWS •
+                                    SELLERS</span>
+                                <span
+                                    class="resource-card__badge resource-card__badge--news">NEWS</span>
+                            </div>
+                            <h3 class="resource-card__title">Seller Spotlight:
+                                What’s Getting Top Offers</h3>
+                            <p class="resource-card__desc">Presentation trends
+                                that are helping listings stand out right
+                                now.</p>
+                        </a>
+
+                        <!-- 16 -->
+                        <a class="resource-card" href="#"
+                            data-tags="news escrow inspections"
+                            data-type="news">
+                            <div class="resource-card__meta">
+                                <span class="resource-card__tags">NEWS • ESCROW
+                                    • INSPECTIONS</span>
+                                <span
+                                    class="resource-card__badge resource-card__badge--news">NEWS</span>
+                            </div>
+                            <h3 class="resource-card__title">Escrow &amp;
+                                Inspections: Timeline Tips</h3>
+                            <p class="resource-card__desc">A quick read on
+                                keeping deadlines clean and avoiding last-minute
+                                surprises.</p>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            <script>
+  // =========================
+  // RESOURCES FILTER JS (RESET)
+  // =========================
+  (function () {
+    const pills = Array.from(document.querySelectorAll(".pill-row .pill"));
+    const cardsWrap = document.getElementById("resourceCards");
+    if (!pills.length || !cardsWrap) return;
+
+    const cards = Array.from(cardsWrap.querySelectorAll(".resource-card"));
+
+    const normalize = (s) => (s || "").toLowerCase().trim();
+
+    const parseTags = (raw) => {
+      if (!raw) return [];
+      // supports: spaces, commas, pipes
+      return raw.split(/[\s,|]+/g).map(normalize).filter(Boolean);
+    };
+
+    const setActive = (filter) => {
+      pills.forEach(btn => {
+        const on = btn.dataset.filter === filter;
+        btn.classList.toggle("is-active", on);
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    };
+
+    const apply = (filter) => {
+      setActive(filter);
+
+      cards.forEach(card => {
+        const tags = parseTags(card.getAttribute("data-tags"));
+        const type = normalize(card.getAttribute("data-type"));
+
+        const show =
+          filter === "all" ? true :
+          filter === "news" ? type === "news" :
+          tags.includes(filter);
+
+        card.hidden = !show;
+      });
+    };
+
+    // default
+    apply("all");
+
+    // clicks
+    document.querySelector(".pill-row").addEventListener("click", (e) => {
+      const btn = e.target.closest(".pill");
+      if (!btn) return;
+      apply(btn.dataset.filter);
+    });
+  })();
+</script>
         </main>
         <section class="cta-footer">
             <div class="container h-100">
