@@ -22,25 +22,14 @@
 
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg">
-            <div class="container">
+            <div class="container-fluid">
                 <a href="/" class="site-logo">
-                    <picture>
-                        <!-- Mobile logo -->
-                        <source
-                            media="(max-width: 575px)"
-                            srcset="/images/logo-mobile.png" />
-
-                        <!-- Tablet logo -->
-                        <source
-                            media="(max-width: 991px)"
-                            srcset="/images/logo-tablet.png" />
-
-                        <!-- Desktop logo -->
-                        <img
-                            src="assets/images/lana-swanson-logo-desktop.png"
-                            alt="Lana Swanson Realtor"
-                            class="logo-img" />
-                    </picture>
+                    <img src="assets/images/desktop-logo.png"
+                        alt="Lana Swanson Realtor"
+                        class="logo logo--desktop" />
+                    <img src="assets/images/logo-mobile.svg"
+                        alt="Lana Swanson Realtor"
+                        class="logo logo--mobile" />
                 </a>
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
@@ -59,7 +48,7 @@
                                 href="buyers.html">Buyers</a></li>
                         <li class="nav-item"><a class="nav-link"
                                 href="sellers.html">Sellers</a></li>
-                        <li class="nav-item"><a class="nav-link"
+                        <li class="nav-item"><a class="nav-link active"
                                 href="listings.html active">Listings</a></li>
                         <li class="nav-item ">
                             <a class="nav-link "
@@ -82,9 +71,12 @@
         <!-- Page content-->
         <main>
             <div class="listings-headline">
-                <h1>San Diego Listings</h1>
-                <p> Want something specific? I’ll curate
-                    options and set up private showings.
+                <h1>Search San Diego homes
+                </h1>
+                <p> Use the tools below to explore available homes. If something
+                    catches your eye, I’ll handle showings, strategy, and next
+                    steps — no pressure, ever.
+
                 </p>
             </div>
 
