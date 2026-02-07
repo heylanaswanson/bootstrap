@@ -10857,11 +10857,12 @@ h3, .h3 {
 }
 
 .logo {
-  width: 200px;
-  position: relative;
-  background-image: url("../assets/images/final-logo.png");
+  width: 450px;
+  height: 101px;
+  background-image: url("../assets/images/lana-swanson-logo-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 2;
-  bottom: 10px;
 }
 @media (max-width: 991.98px) {
   .logo {
@@ -10874,7 +10875,7 @@ h3, .h3 {
   /* bottom: 70px; */
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   z-index: 2;
 }
 
@@ -10911,6 +10912,7 @@ h3, .h3 {
   width: 100%;
   z-index: 1;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 991.98px) {
   .hero-image {
@@ -10925,6 +10927,7 @@ h3, .h3 {
   position: absolute;
   background-image: url("../assets/images/transparent-bg.png");
   background-repeat: repeat;
+  height: 100%;
 }
 @media (min-width: 576px) {
   .hero-image .container {
@@ -10935,6 +10938,7 @@ h3, .h3 {
 @media (min-width: 768px) {
   .hero-image .container {
     top: 11%;
+    height: auto;
   }
 }
 @media (min-width: 992px) {
@@ -10942,19 +10946,17 @@ h3, .h3 {
     top: 15%;
   }
 }
-.hero-image .container.buyers {
-  position: absolute;
-  left: 0;
-  text-align: left;
+.hero-image .container h1, .hero-image .container .h1 {
+  padding: 50px 50px 20px;
+  margin: 0 auto;
 }
-.hero-image .container.buyers h1, .hero-image .container.buyers .h1 {
-  padding: 50px 50px 0px;
+@media (max-width: 767.98px) {
+  .hero-image .container h1, .hero-image .container .h1 {
+    width: 80%;
+  }
 }
-.hero-image .container.buyers h2, .hero-image .container.buyers .h2 {
+.hero-image .container h2, .hero-image .container .h2 {
   padding: 0 50px;
-}
-.hero-image .container.buyers button {
-  margin-left: 50px;
 }
 .hero-image.home {
   background-image: url("../assets/images/banners/home.png");
@@ -10975,16 +10977,11 @@ h3, .h3 {
 .hero-image.buyers {
   background-image: url("../assets/images/banners/buyers.png");
 }
-.hero-image .hero-text {
-  color: #ffffff;
-  font-size: 48px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000000;
+.hero-image.buyers .container h1, .hero-image.buyers .container .h1 {
+  padding: 50px 50px 20px;
 }
-.hero-image h1, .hero-image .h1 {
-  padding: 50px;
-}
-.hero-image button {
+
+button {
   padding: 10px 30px;
   margin: 40px 0;
   border-radius: 5px;
@@ -10993,7 +10990,7 @@ h3, .h3 {
   background-color: #d48c7a;
   color: #fff;
 }
-.hero-image button:hover {
+button:hover {
   background-color: #fff;
 }
 
@@ -11038,6 +11035,33 @@ h3, .h3 {
 section.my-role {
   background-color: #ecf3f9;
   padding: 50px;
+}
+
+.listings-headline h1, .listings-headline .h1 {
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+}
+.listings-headline h2, .listings-headline .h2 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.listings-headline p {
+  padding: 20px 50px;
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
+}
+.centered h1, .centered .h1,
+.centered h2,
+.centered .h2,
+.centered h3,
+.centered .h3,
+.centered p {
+  padding: 30px 30px 0;
+  text-align: center;
 }
 
 footer {
