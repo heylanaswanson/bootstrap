@@ -43,6 +43,10 @@
     margin-top: 0;
     margin-bottom: 18px;
     text-align: center;
+
+    h2 {
+        padding-bottom: 30px;
+    }
 }
 
 .resources-intro__title {
@@ -67,7 +71,7 @@
     gap: 10px;
     justify-content: center;
     /* attached to content */
-    margin-bottom: 22px;
+    margin-bottom: 40px;
 }
 
 .pill {
