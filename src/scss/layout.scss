@@ -59,6 +59,12 @@ h3 {
     font-size: 24px;
 }
 
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    padding: 5px 0 10px;
+}
 
 .navbar-collapse {
     position: relative;
@@ -185,6 +191,12 @@ button {
             color: #807a72;
         }
     }
+
+    h3 {
+        max-width: 18ch;
+    }
+
+
 
     &.card-image {
         padding: 0;
@@ -400,6 +412,7 @@ section.my-role {
         display: block;
         font-size: 0.7rem;
         letter-spacing: 0.12em;
+        opacity: 0.6;
         text-transform: uppercase;
         color: #b6b0a8;
         margin-bottom: 0.75rem;
@@ -470,7 +483,7 @@ section.my-role {
 }
 
 .buyers-intro {
-    background-color: #e6e7e3; // soft warm gray like your screenshot
+    background-color: #eaf5f7; // soft warm gray like your screenshot
     padding: 4rem 0 4.5rem;
     text-align: center;
 
@@ -482,9 +495,10 @@ section.my-role {
         max-width: 700px;
         margin: 0 auto;
         font-family: "Playfair Display", serif;
-        font-size: 1.525rem;
-        line-height: 1.9;
+        font-size: 1.225rem;
+        line-height: 1.59;
         color: #6b6b67;
+        opacity: .8;
 
         @media (max-width: 768px) {
             font-size: 1.05rem;
@@ -537,9 +551,9 @@ $radius: 18px;
     color: $ink;
     line-height: 1.05;
     margin: 0 0 1.25rem;
-
+    font-size: 40px;
     // Big but controlled like your screenshot
-    font-size: clamp(2.1rem, 1.5rem + 1.9vw, 3.1rem);
+    //font-size: clamp(2.1rem, 1.5rem + 1.9vw, 3.1rem);
 }
 
 .buyer-step__body {

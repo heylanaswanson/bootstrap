@@ -10851,6 +10851,13 @@ h3, .h3 {
   font-size: 24px;
 }
 
+h4, .h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  padding: 5px 0 10px;
+}
+
 .navbar-collapse {
   position: relative;
   /* bottom: 70px; */
@@ -10953,6 +10960,9 @@ button:hover {
 }
 .card p.step-body {
   color: #807a72;
+}
+.card h3, .card .h3 {
+  max-width: 18ch;
 }
 .card.card-image {
   padding: 0;
@@ -11134,6 +11144,7 @@ section.my-role h3, section.my-role .h3 {
   display: block;
   font-size: 0.7rem;
   letter-spacing: 0.12em;
+  opacity: 0.6;
   text-transform: uppercase;
   color: #b6b0a8;
   margin-bottom: 0.75rem;
@@ -11192,7 +11203,7 @@ section.my-role h3, section.my-role .h3 {
 }
 
 .buyers-intro {
-  background-color: #e6e7e3;
+  background-color: #eaf5f7;
   padding: 4rem 0 4.5rem;
   text-align: center;
 }
@@ -11205,9 +11216,10 @@ section.my-role h3, section.my-role .h3 {
   max-width: 700px;
   margin: 0 auto;
   font-family: "Playfair Display", serif;
-  font-size: 1.525rem;
-  line-height: 1.9;
+  font-size: 1.225rem;
+  line-height: 1.59;
   color: #6b6b67;
+  opacity: 0.8;
 }
 @media (max-width: 768px) {
   .buyers-intro__text {
@@ -11247,7 +11259,7 @@ section.my-role h3, section.my-role .h3 {
   color: #2f2f2f;
   line-height: 1.05;
   margin: 0 0 1.25rem;
-  font-size: clamp(2.1rem, 1.5rem + 1.9vw, 3.1rem);
+  font-size: 40px;
 }
 
 .buyer-step__body {
@@ -11359,7 +11371,7 @@ section.my-role h3, section.my-role .h3 {
   background-image: url("../assets/images/banners/sellers.png");
 }
 .hero-section.sellers {
-  background-image: url("../assets/images/banners/buyers.png");
+  background-image: url("../assets/images/banners/outdoor.png");
 }
 .hero-section.resources {
   background-image: url("../assets/images/banners/buyers.png");
