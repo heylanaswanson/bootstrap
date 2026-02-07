@@ -11184,6 +11184,7 @@ section.my-role h3, section.my-role .h3 {
   font-size: clamp(1.3rem, 2.6vw, 1.8rem);
   color: #3f3a36;
   margin-bottom: 0.35rem;
+  font-style: normal;
 }
 .cta-footer__subtitle {
   font-size: 0.95rem;
