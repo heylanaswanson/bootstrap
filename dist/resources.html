@@ -72,208 +72,229 @@
         </header>
         <!-- Page content-->
         <main>
-            <!-- RESOURCES PAGE -->
-            <section class="page-hero page-hero--resources">
-                <div class="page-hero__inner">
-                    <h1 class="page-hero__title">Resources</h1>
-                    <p class="page-hero__sub">
-                        Guides, checklists, and simple explanations — so you
-                        feel prepared before you ever make a move.
-                    </p>
-                    <a class="btn btn--primary" href="#downloads">Browse
-                        downloads</a>
-                </div>
-            </section>
-            <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const chips = document.querySelectorAll(".chip");
-    const cards = document.querySelectorAll(".resource-card");
-
-    const getCategories = (card) => {
-      const raw = card.getAttribute("data-category") || "";
-      return raw.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    };
-
-    chips.forEach((chip) => {
-      chip.addEventListener("click", () => {
-        chips.forEach((c) => c.classList.remove("is-active"));
-        chip.classList.add("is-active");
-
-        const filter = (chip.dataset.filter || "all").toLowerCase();
-
-        cards.forEach((card) => {
-          const categories = getCategories(card);
-
-          const shouldShow =
-            filter === "all" ||
-            categories.includes(filter);
-
-          card.style.display = shouldShow ? "" : "none";
-        });
-      });
-    });
-  });
-</script>
-            <section class="resources-intro">
+            <!-- =======================
+     RESOURCES SECTION
+======================== -->
+            <section class="resources" id="resources">
                 <div class="container">
-                    <div class="resources-intro__wrap">
-                        <h2 class="section-title">Start with what you need</h2>
-                        <div class="chip-row" aria-label="Resource filters">
-                            <button class="chip is-active"
-                                data-filter="all">All</button>
-                            <button class="chip"
-                                data-filter="buyers">Buyers</button>
-                            <button class="chip"
-                                data-filter="sellers">Sellers</button>
-                            <button class="chip"
-                                data-filter="financing">Financing</button>
-                            <button class="chip"
-                                data-filter="inspections">Inspections</button>
-                            <button class="chip"
-                                data-filter="escrow">Escrow</button>
-                            <button class="chip"
-                                data-filter="local">Local</button>
+                    <header class="resources__header">
+                        <h1 class="resources__title">Start with what you
+                            need</h1>
+                        <p class="resources__subtitle">Practical guides you can
+                            save, share, or bring to a meeting.</p>
+
+                        <div class="resources__filters" role="tablist"
+                            aria-label="Resource filters">
+                            <button class="chip is-active" type="button"
+                                data-filter="all" role="tab"
+                                aria-selected="true">All</button>
+                            <button class="chip" type="button"
+                                data-filter="buyers" role="tab"
+                                aria-selected="false">Buyers</button>
+                            <button class="chip" type="button"
+                                data-filter="sellers" role="tab"
+                                aria-selected="false">Sellers</button>
+                            <button class="chip" type="button"
+                                data-filter="financing" role="tab"
+                                aria-selected="false">Financing</button>
+                            <button class="chip" type="button"
+                                data-filter="inspections" role="tab"
+                                aria-selected="false">Inspections</button>
+                            <button class="chip" type="button"
+                                data-filter="escrow" role="tab"
+                                aria-selected="false">Escrow</button>
+                            <button class="chip" type="button"
+                                data-filter="local" role="tab"
+                                aria-selected="false">Local</button>
+                        </div>
+                    </header>
+
+                    <!-- Downloadables -->
+                    <div class="resources__section">
+                        <div class="resources__sectionHead">
+                            <h2>Downloadables</h2>
+                            <p>Printable PDFs you can keep on your phone or
+                                bring to a meeting.</p>
                         </div>
 
+                        <div class="resources__grid" id="resourcesGrid">
+                            <!-- CARD -->
+                            <article class="resource-card"
+                                data-category="buyers financing"
+                                data-type="pdf">
+                                <div class="resource-card__meta">
+                                    <span class="kicker">Buyers •
+                                        Financing</span>
+                                    <span class="badge">PDF</span>
+                                </div>
+                                <h3 class="resource-card__title">Budget vs.
+                                    Approval</h3>
+                                <p class="resource-card__desc">A quick worksheet
+                                    to align your monthly comfort number with
+                                    real-world costs.</p>
+                                <div class="resource-card__actions">
+                                    <a class="link" href="#" target="_blank"
+                                        rel="noopener">Download</a>
+                                    <a class="link link--muted"
+                                        href="#">Preview</a>
+                                </div>
+                            </article>
+
+                            <article class="resource-card"
+                                data-category="buyers inspections"
+                                data-type="pdf">
+                                <div class="resource-card__meta">
+                                    <span class="kicker">Buyers •
+                                        Inspections</span>
+                                    <span class="badge">PDF</span>
+                                </div>
+                                <h3 class="resource-card__title">Inspection Day
+                                    Checklist</h3>
+                                <p class="resource-card__desc">What to look for,
+                                    what to ask, and how to prioritize
+                                    findings.</p>
+                                <div class="resource-card__actions">
+                                    <a class="link" href="#" target="_blank"
+                                        rel="noopener">Download</a>
+                                    <a class="link link--muted"
+                                        href="#">Preview</a>
+                                </div>
+                            </article>
+
+                            <article class="resource-card"
+                                data-category="buyers escrow" data-type="pdf">
+                                <div class="resource-card__meta">
+                                    <span class="kicker">Buyers • Escrow</span>
+                                    <span class="badge">PDF</span>
+                                </div>
+                                <h3 class="resource-card__title">Escrow Timeline
+                                    (Plain English)</h3>
+                                <p class="resource-card__desc">A simple timeline
+                                    so you always know what’s next — and
+                                    why.</p>
+                                <div class="resource-card__actions">
+                                    <a class="link" href="#" target="_blank"
+                                        rel="noopener">Download</a>
+                                    <a class="link link--muted"
+                                        href="#">Preview</a>
+                                </div>
+                            </article>
+
+                            <article class="resource-card"
+                                data-category="sellers local" data-type="pdf">
+                                <div class="resource-card__meta">
+                                    <span class="kicker">Sellers • Local</span>
+                                    <span class="badge">PDF</span>
+                                </div>
+                                <h3 class="resource-card__title">Pre-List Prep
+                                    Guide</h3>
+                                <p class="resource-card__desc">A room-by-room
+                                    checklist to help your home show at its
+                                    best.</p>
+                                <div class="resource-card__actions">
+                                    <a class="link" href="#" target="_blank"
+                                        rel="noopener">Download</a>
+                                    <a class="link link--muted"
+                                        href="#">Preview</a>
+                                </div>
+                            </article>
+
+                            <article class="resource-card"
+                                data-category="sellers" data-type="pdf">
+                                <div class="resource-card__meta">
+                                    <span class="kicker">Sellers</span>
+                                    <span class="badge">PDF</span>
+                                </div>
+                                <h3 class="resource-card__title">Pricing
+                                    Strategy Snapshot</h3>
+                                <p class="resource-card__desc">How list price,
+                                    timing, and buyer psychology work
+                                    together.</p>
+                                <div class="resource-card__actions">
+                                    <a class="link" href="#" target="_blank"
+                                        rel="noopener">Download</a>
+                                    <a class="link link--muted"
+                                        href="#">Preview</a>
+                                </div>
+                            </article>
+
+                            <article class="resource-card" data-category="local"
+                                data-type="pdf">
+                                <div class="resource-card__meta">
+                                    <span class="kicker">Local</span>
+                                    <span class="badge">PDF</span>
+                                </div>
+                                <h3 class="resource-card__title">Neighborhood
+                                    Notes</h3>
+                                <p class="resource-card__desc">Quick context to
+                                    help you compare areas and “feel” the
+                                    difference.</p>
+                                <div class="resource-card__actions">
+                                    <a class="link" href="#" target="_blank"
+                                        rel="noopener">Download</a>
+                                    <a class="link link--muted"
+                                        href="#">Preview</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="resources__empty" id="resourcesEmpty"
+                            hidden>
+                            <h3>No matches</h3>
+                            <p>Try a different filter — or pick
+                                <strong>All</strong> to show everything.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="resources-grid">
-                <div class="container">
-                    <div class="card-grid card-grid--3">
+            <!-- =======================
+     FILTER JS
+======================== -->
+            <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const chips = document.querySelectorAll(".resources .chip");
+  const cards = document.querySelectorAll(".resources .resource-card");
+  const empty = document.getElementById("resourcesEmpty");
 
-                        <!-- CARD -->
-                        <article class="resource-card">
-                            <p class="resource-card__kicker">BUYERS</p>
-                            <h3 class="resource-card__title">The Buyer
-                                Roadmap</h3>
-                            <p class="resource-card__desc">
-                                A clear, step-by-step overview from first
-                                conversation to keys — including timelines and
-                                decision points.
-                            </p>
-                            <a class="resource-card__link" href="#">Read
-                                guide</a>
-                        </article>
+  const getCategories = (card) => {
+    const raw = (card.getAttribute("data-category") || "").toLowerCase().trim();
+    return raw ? raw.split(/\s+/).filter(Boolean) : [];
+  };
 
-                        <article class="resource-card">
-                            <p class="resource-card__kicker">FINANCING</p>
-                            <h3 class="resource-card__title">Pre-Approval
-                                Checklist</h3>
-                            <p class="resource-card__desc">
-                                What lenders look for, what to gather, and how
-                                to avoid common “oops” moments while you shop.
-                            </p>
-                            <a class="resource-card__link" href="#">Open
-                                checklist</a>
-                        </article>
+  const setActive = (btn) => {
+    chips.forEach(c => {
+      c.classList.remove("is-active");
+      c.setAttribute("aria-selected", "false");
+    });
+    btn.classList.add("is-active");
+    btn.setAttribute("aria-selected", "true");
+  };
 
-                        <article class="resource-card">
-                            <p class="resource-card__kicker">ESCROW</p>
-                            <h3 class="resource-card__title">What Happens After
-                                You’re in Contract</h3>
-                            <p class="resource-card__desc">
-                                Inspections, appraisals, timelines, and the
-                                paperwork that matters — explained without the
-                                jargon.
-                            </p>
-                            <a class="resource-card__link" href="#">Learn
-                                more</a>
-                        </article>
+  const applyFilter = (filter) => {
+    let shown = 0;
 
-                        <article class="resource-card">
-                            <p class="resource-card__kicker">SELLERS</p>
-                            <h3 class="resource-card__title">Pricing Strategy
-                                Basics</h3>
-                            <p class="resource-card__desc">
-                                How price influences momentum, showings, and the
-                                quality of offers — and why “highest” isn’t
-                                always best.
-                            </p>
-                            <a class="resource-card__link" href="#">Read
-                                guide</a>
-                        </article>
+    cards.forEach(card => {
+      const categories = getCategories(card);
+      const show = filter === "all" || categories.includes(filter);
+      card.style.display = show ? "" : "none";
+      if (show) shown++;
+    });
 
-                        <article class="resource-card">
-                            <p class="resource-card__kicker">INSPECTIONS</p>
-                            <h3 class="resource-card__title">Inspection Day:
-                                What to Expect</h3>
-                            <p class="resource-card__desc">
-                                A quick walkthrough of what’s happening, what’s
-                                normal, and how we decide what to negotiate.
-                            </p>
-                            <a class="resource-card__link" href="#">Read
-                                guide</a>
-                        </article>
+    if (empty) empty.hidden = shown !== 0;
+  };
 
-                        <article class="resource-card">
-                            <p class="resource-card__kicker">LOCAL</p>
-                            <h3 class="resource-card__title">San Diego
-                                Neighborhood Notes</h3>
-                            <p class="resource-card__desc">
-                                A simple framework for comparing areas: commute,
-                                walkability, noise, light, and long-term resale.
-                            </p>
-                            <a class="resource-card__link" href="#">Explore</a>
-                        </article>
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const filter = (chip.dataset.filter || "all").toLowerCase();
+      setActive(chip);
+      applyFilter(filter);
+    });
+  });
 
-                    </div>
-                </div>
-            </section>
-
-            <section class="downloads-strip" id="downloads">
-                <div class="container">
-                    <div class="downloads-strip__head">
-                        <h2 class="section-title">Downloadables</h2>
-                        <p class="section-sub">Printable PDFs you can keep on
-                            your phone or bring to a meeting.</p>
-                    </div>
-
-                    <div class="downloads-row">
-                        <a class="download-tile" href="#">
-                            <span class="download-tile__tag">PDF</span>
-                            <span class="download-tile__title">Buyer Timeline
-                                (3–6 months)</span>
-                            <span class="download-tile__meta">1 page</span>
-                        </a>
-
-                        <a class="download-tile" href="#">
-                            <span class="download-tile__tag">PDF</span>
-                            <span class="download-tile__title">Offer Terms Cheat
-                                Sheet</span>
-                            <span class="download-tile__meta">2 pages</span>
-                        </a>
-
-                        <a class="download-tile" href="#">
-                            <span class="download-tile__tag">PDF</span>
-                            <span class="download-tile__title">Seller Prep
-                                Checklist</span>
-                            <span class="download-tile__meta">2 pages</span>
-                        </a>
-
-                        <a class="download-tile" href="#">
-                            <span class="download-tile__tag">PDF</span>
-                            <span class="download-tile__title">Open House Prep
-                                Guide</span>
-                            <span class="download-tile__meta">1 page</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="cta-band">
-                <div class="container">
-                    <div class="cta-band__inner">
-                        <h2 class="cta-band__title">Want this tailored to your
-                            timeline?</h2>
-                        <p class="cta-band__sub">Tell me what you’re thinking,
-                            and I’ll map out your best next steps.</p>
-                        <a class="btn btn--primary" href="#">Schedule a
-                            conversation</a>
-                    </div>
-                </div>
-            </section>
+  applyFilter("all");
+});
+</script>
 
         </main>
         <section class="cta-footer">
