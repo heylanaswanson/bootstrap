@@ -6,14 +6,22 @@
     min-height: 70vh;
     padding: 6rem 0;
 
-    background-image: url("../assets/images/banners/home.png");
+    background-image: url("../assets/images/banners/sellers.png");
 
     &.sellers {
-        background-image: url("../assets/images/banners/sellers.png");
+        background-image: url("../assets/images/banners/outdoor.png");
+    }
+
+    &.resources {
+        background-image: url("../assets/images/banners/buyers.png");
+    }
+
+    &.listings {
+        background-image: url("../assets/images/banners/buyers.png");
     }
 
     &.buyers {
-        background-image: url("../assets/images/banners/buyers.png");
+        background-image: url("../assets/images/banners/home.png");
     }
 
     background-size: cover;
@@ -40,7 +48,7 @@
     // Typography
     .hero-title {
         font-family: "Playfair Display", serif;
-        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-size: clamp(2rem, 3.8vw, 3.2rem);
         color: $hero-title-color;
         margin-bottom: 1rem;
     }
