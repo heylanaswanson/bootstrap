@@ -34,21 +34,17 @@ h2 {
     }
 
     &.statement {
-        padding: 50px 0;
         text-align: center;
 
-        @include media-breakpoint-down(md) {
-            padding: 30px 40px 10px;
-        }
-
         &.standalone {
-            padding: 50px 40px;
+            width: 80%;
+            margin: 0 auto;
             text-align: center;
             line-height: 1.45;
-            letter-spacing: .5;
+            letter-spacing: .5px;
 
             @include media-breakpoint-up(sm) {
-                padding: 75px 120px;
+                padding: 30px 75px;
             }
 
         }
@@ -400,14 +396,16 @@ section.my-role {
     }
 }
 
-//Footer
-footer {
-    padding: 50px;
 
-    a {
-        display: block;
-        line-height: 3;
-        text-decoration: none;
-        color: #000;
-    }
+.buyers-intro {
+    background-color: #dcded8; // your soft sage/stone
+    padding: 3rem 1.5rem; // down from whatever it is now
+}
+
+.buyers-intro__text {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
