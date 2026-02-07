@@ -100,11 +100,49 @@ h3 {
     }
 }
 
-// LOGO
+//LOGO
 .site-logo {
-    img {
-        width: 80%;
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+
+    .logo {
+        //display: none;
+        width: 332px;
+        height: 79px;
     }
+}
+
+/* =========================
+   Desktop ≥ 992px
+   ========================= */
+@media (min-width: 992px) {
+    .logo--desktop {
+        display: block;
+    }
+}
+
+/* =========================
+   Tablet 768px–991px
+   ========================= */
+@media (min-width: 768px) and (max-width: 991px) {
+    .logo--tablet {
+        display: block;
+        height: 40px;
+    }
+}
+
+/* =========================
+   Mobile ≤ 767px
+   ========================= */
+@media (max-width: 767px) {
+    .logo--mobile {
+        display: block;
+        height: 36px;
+    }
+
+
+
 }
 
 // BUTTONS

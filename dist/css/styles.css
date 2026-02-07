@@ -10888,10 +10888,42 @@ h3, .h3 {
   padding: 20px 10px 15px;
 }
 
-.site-logo img {
-  width: 80%;
+.site-logo {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+}
+.site-logo .logo {
+  width: 332px;
+  height: 79px;
 }
 
+/* =========================
+   Desktop ≥ 992px
+   ========================= */
+@media (min-width: 992px) {
+  .logo--desktop {
+    display: block;
+  }
+}
+/* =========================
+   Tablet 768px–991px
+   ========================= */
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo--tablet {
+    display: block;
+    height: 40px;
+  }
+}
+/* =========================
+   Mobile ≤ 767px
+   ========================= */
+@media (max-width: 767px) {
+  .logo--mobile {
+    display: block;
+    height: 36px;
+  }
+}
 button {
   padding: 10px 30px;
   margin: 40px 0;
@@ -10990,6 +11022,14 @@ footer a {
   min-height: 70vh;
   padding: 6rem 0;
   background-image: url("../assets/images/banners/home.png");
+}
+.hero-section.sellers {
+  background-image: url("../assets/images/banners/sellers.png");
+}
+.hero-section.buyers {
+  background-image: url("../assets/images/banners/buyers.png");
+}
+.hero-section {
   background-size: cover;
   background-position: center;
   display: flex;
