@@ -10856,26 +10856,13 @@ h3, .h3 {
   font-size: 24px;
 }
 
-.logo {
-  width: 200px;
-  position: relative;
-  background-image: url("../assets/images/final-logo.png");
-  background-repeat: no-repeat;
-  z-index: 2;
-  bottom: 10px;
-}
-@media (max-width: 991.98px) {
-  .logo {
-    width: 150px;
-  }
-}
-
 .navbar-collapse {
   position: relative;
   /* bottom: 70px; */
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
   z-index: 2;
 }
 
@@ -10901,84 +10888,8 @@ h3, .h3 {
   padding: 20px 10px 15px;
 }
 
-.hero-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-  overflow: hidden;
-}
-@media (max-width: 991.98px) {
-  .hero-image {
-    height: 45vh;
-  }
-}
-.hero-image .container {
-  padding: 0;
-  width: auto;
-  text-align: center;
-  color: #3b2f2a;
-  position: absolute;
-  background-image: url("../assets/images/transparent-bg.png");
-  background-repeat: repeat;
-  height: 100%;
-}
-@media (min-width: 576px) {
-  .hero-image .container {
-    top: 0;
-    width: auto;
-  }
-}
-@media (min-width: 768px) {
-  .hero-image .container {
-    top: 11%;
-    height: auto;
-  }
-}
-@media (min-width: 992px) {
-  .hero-image .container {
-    top: 15%;
-  }
-}
-.hero-image .container h1, .hero-image .container .h1 {
-  padding: 50px 50px 20px;
-  margin: 0 auto;
-}
-@media (max-width: 767.98px) {
-  .hero-image .container h1, .hero-image .container .h1 {
-    width: 80%;
-  }
-}
-.hero-image .container h2, .hero-image .container .h2 {
-  padding: 0 50px;
-}
-.hero-image.home {
-  background-image: url("../assets/images/banners/home.png");
-}
-.hero-image.sand {
-  background-image: url("../assets/images/banners/sand.png");
-}
-.hero-image.sand .container {
-  min-height: auto;
-  background-image: none;
-}
-.hero-image.sand .container h2, .hero-image.sand .container .h2 {
-  padding-top: 130px;
-}
-.hero-image.sellers {
-  background-image: url("../assets/images/banners/sellers.png");
-}
-.hero-image.buyers {
-  background-image: url("../assets/images/banners/buyers.png");
-}
-.hero-image.buyers .container h1, .hero-image.buyers .container .h1 {
-  padding: 50px 50px 20px;
+.site-logo img {
+  width: 80%;
 }
 
 button {

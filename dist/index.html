@@ -23,9 +23,25 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img class="logo"
-                        src="assets/images/final-logo.png" /></a>
+                <a href="/" class="site-logo">
+                    <picture>
+                        <!-- Mobile logo -->
+                        <source
+                            media="(max-width: 575px)"
+                            srcset="/images/logo-mobile.png" />
+
+                        <!-- Tablet logo -->
+                        <source
+                            media="(max-width: 991px)"
+                            srcset="/images/logo-tablet.png" />
+
+                        <!-- Desktop logo -->
+                        <img
+                            src="assets/images/lana-swanson-logo-desktop.png"
+                            alt="Lana Swanson Realtor"
+                            class="logo-img" />
+                    </picture>
+                </a>
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"

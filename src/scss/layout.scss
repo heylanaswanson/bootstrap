@@ -8,6 +8,7 @@ body {
 }
 
 
+
 h1 {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -62,27 +63,14 @@ h3 {
     font-size: 24px;
 }
 
-.logo {
-    width: 200px;
-    position: relative;
-    background-image: url('../assets/images/final-logo.png');
-    background-repeat: no-repeat;
-    z-index: 2;
-    bottom: 10px;
-
-    @include media-breakpoint-down(lg) {
-        width: 150px;
-    }
-
-
-}
 
 .navbar-collapse {
     position: relative;
     /* bottom: 70px; */
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
     z-index: 2;
 }
 
@@ -112,104 +100,14 @@ h3 {
     }
 }
 
-
-.hero-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-
-    @include media-breakpoint-down(lg) {
-        height: 45vh;
+// LOGO
+.site-logo {
+    img {
+        width: 80%;
     }
-
-
-    .container {
-        padding: 0;
-        width: auto;
-        text-align: center;
-        color: #3b2f2a;
-        position: absolute;
-        background-image: url('../assets/images/transparent-bg.png');
-        background-repeat: repeat;
-        height: 100%;
-
-
-
-        @include media-breakpoint-up(sm) {
-            top: 0;
-            width: auto;
-        }
-
-        @include media-breakpoint-up(md) {
-            top: 11%;
-            height: auto;
-        }
-
-        @include media-breakpoint-up(lg) {
-            top: 15%;
-        }
-
-        h1 {
-            padding: 50px 50px 20px;
-            margin: 0 auto;
-
-            @include media-breakpoint-down(md) {
-                width: 80%;
-            }
-
-        }
-
-        h2 {
-            padding: 0 50px;
-        }
-
-
-
-
-    }
-
-    &.home {
-        background-image: url('../assets/images/banners/home.png');
-
-    }
-
-
-    &.sand {
-        background-image: url('../assets/images/banners/sand.png');
-
-        .container {
-            min-height: auto;
-            background-image: none;
-
-            h2 {
-                padding-top: 130px;
-            }
-        }
-
-    }
-
-    &.sellers {
-        background-image: url('../assets/images/banners/sellers.png');
-
-    }
-
-    &.buyers {
-        background-image: url('../assets/images/banners/buyers.png');
-
-        .container h1 {
-            padding: 50px 50px 20px;
-        }
-    }
-
 }
+
+// BUTTONS
 
 button {
     padding: 10px 30px;
