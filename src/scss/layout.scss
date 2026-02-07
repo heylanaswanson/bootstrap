@@ -100,53 +100,34 @@ h3 {
     }
 }
 
-//LOGO
 .site-logo {
     display: flex;
     align-items: center;
 
     .logo {
-        width: 332px;
-        height: 79px;
+        height: 75px;
+        width: auto;
+        position: relative;
+        bottom: 9px;
+    }
 
-        @media (max-width: 767px) {
-            position: absolute;
-            left: 0;
-            top: 5px;
+    .logo--mobile {
+        display: none;
+    }
+}
+
+// Tablet & down
+@media (max-width: 768px) {
+    .site-logo {
+        .logo--desktop {
+            display: none;
+        }
+
+        .logo--mobile {
+            display: block;
+            height: 34px;
         }
     }
-}
-
-/* =========================
-   Desktop ≥ 992px
-   ========================= */
-@media (min-width: 992px) {
-    .logo--desktop {
-        display: block;
-    }
-}
-
-/* =========================
-   Tablet 768px–991px
-   ========================= */
-@media (min-width: 768px) and (max-width: 991px) {
-    .logo--tablet {
-        display: block;
-        height: 40px;
-    }
-}
-
-/* =========================
-   Mobile ≤ 767px
-   ========================= */
-@media (max-width: 767px) {
-    .logo--mobile {
-        display: block;
-        height: 36px;
-    }
-
-
-
 }
 
 // BUTTONS
