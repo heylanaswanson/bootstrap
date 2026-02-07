@@ -72,66 +72,208 @@
         </header>
         <!-- Page content-->
         <main>
-            <section
-                class="hero-section listings d-flex align-items-center text-center">
-                <div class="hero-overlay"></div>
+            <!-- RESOURCES PAGE -->
+            <section class="page-hero page-hero--resources">
+                <div class="page-hero__inner">
+                    <h1 class="page-hero__title">Resources</h1>
+                    <p class="page-hero__sub">
+                        Guides, checklists, and simple explanations — so you
+                        feel prepared before you ever make a move.
+                    </p>
+                    <a class="btn btn--primary" href="#downloads">Browse
+                        downloads</a>
+                </div>
+            </section>
+            <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const chips = document.querySelectorAll(".chip");
+    const cards = document.querySelectorAll(".resource-card");
 
-                <div class="container position-relative">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 col-md-10">
+    const getCategories = (card) => {
+      const raw = card.getAttribute("data-category") || "";
+      return raw.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    };
 
-                            <h1 class="hero-title">
-                                Search San Diego homes
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        chips.forEach((c) => c.classList.remove("is-active"));
+        chip.classList.add("is-active");
 
-                            </h1>
+        const filter = (chip.dataset.filter || "all").toLowerCase();
 
-                            <p class="hero-subtitle">
-                                Use the tools below to explore available homes.
-                                If something
-                                catches your eye, I’ll handle showings,
-                                strategy, and next
-                                steps — no pressure, ever.
-                            </p>
+        cards.forEach((card) => {
+          const categories = getCategories(card);
 
-                            <a href="/contact.html"
-                                class="btn btn-primary hero-btn">
-                                Schedule a conversation
-                            </a>
+          const shouldShow =
+            filter === "all" ||
+            categories.includes(filter);
 
+          card.style.display = shouldShow ? "" : "none";
+        });
+      });
+    });
+  });
+</script>
+            <section class="resources-intro">
+                <div class="container">
+                    <div class="resources-intro__wrap">
+                        <h2 class="section-title">Start with what you need</h2>
+                        <div class="chip-row" aria-label="Resource filters">
+                            <button class="chip is-active"
+                                data-filter="all">All</button>
+                            <button class="chip"
+                                data-filter="buyers">Buyers</button>
+                            <button class="chip"
+                                data-filter="sellers">Sellers</button>
+                            <button class="chip"
+                                data-filter="financing">Financing</button>
+                            <button class="chip"
+                                data-filter="inspections">Inspections</button>
+                            <button class="chip"
+                                data-filter="escrow">Escrow</button>
+                            <button class="chip"
+                                data-filter="local">Local</button>
                         </div>
+
                     </div>
                 </div>
             </section>
 
-            <div class="row">
-                <div class="col-12 col-md-4 card card-image">
-                    <img class="listing"
-                        src="assets/images/placeholder2.png" />
-                </div>
-                <div class="col-12 col-md-4 card card-image">
-                    <img class="listing"
-                        src="assets/images/placeholder1.png" />
-                </div>
-                <div class="col-12 col-md-4 card card-image">
-                    <img class="listing"
-                        src="assets/images/placeholder3.png" />
-                </div>
+            <section class="resources-grid">
+                <div class="container">
+                    <div class="card-grid card-grid--3">
 
-            </div>
-            <div class="container">
+                        <!-- CARD -->
+                        <article class="resource-card">
+                            <p class="resource-card__kicker">BUYERS</p>
+                            <h3 class="resource-card__title">The Buyer
+                                Roadmap</h3>
+                            <p class="resource-card__desc">
+                                A clear, step-by-step overview from first
+                                conversation to keys — including timelines and
+                                decision points.
+                            </p>
+                            <a class="resource-card__link" href="#">Read
+                                guide</a>
+                        </article>
 
-                <div class="row">
-                    <div class="col centered">
-                        <h3>Not seeing what you
-                            want?</h3>
-                        <p>Tell me your price range + must-haves and I’ll send
-                            a short list that matches your
-                            lifestyle.”</p><button>Get a
-                            curated list</button>
+                        <article class="resource-card">
+                            <p class="resource-card__kicker">FINANCING</p>
+                            <h3 class="resource-card__title">Pre-Approval
+                                Checklist</h3>
+                            <p class="resource-card__desc">
+                                What lenders look for, what to gather, and how
+                                to avoid common “oops” moments while you shop.
+                            </p>
+                            <a class="resource-card__link" href="#">Open
+                                checklist</a>
+                        </article>
+
+                        <article class="resource-card">
+                            <p class="resource-card__kicker">ESCROW</p>
+                            <h3 class="resource-card__title">What Happens After
+                                You’re in Contract</h3>
+                            <p class="resource-card__desc">
+                                Inspections, appraisals, timelines, and the
+                                paperwork that matters — explained without the
+                                jargon.
+                            </p>
+                            <a class="resource-card__link" href="#">Learn
+                                more</a>
+                        </article>
+
+                        <article class="resource-card">
+                            <p class="resource-card__kicker">SELLERS</p>
+                            <h3 class="resource-card__title">Pricing Strategy
+                                Basics</h3>
+                            <p class="resource-card__desc">
+                                How price influences momentum, showings, and the
+                                quality of offers — and why “highest” isn’t
+                                always best.
+                            </p>
+                            <a class="resource-card__link" href="#">Read
+                                guide</a>
+                        </article>
+
+                        <article class="resource-card">
+                            <p class="resource-card__kicker">INSPECTIONS</p>
+                            <h3 class="resource-card__title">Inspection Day:
+                                What to Expect</h3>
+                            <p class="resource-card__desc">
+                                A quick walkthrough of what’s happening, what’s
+                                normal, and how we decide what to negotiate.
+                            </p>
+                            <a class="resource-card__link" href="#">Read
+                                guide</a>
+                        </article>
+
+                        <article class="resource-card">
+                            <p class="resource-card__kicker">LOCAL</p>
+                            <h3 class="resource-card__title">San Diego
+                                Neighborhood Notes</h3>
+                            <p class="resource-card__desc">
+                                A simple framework for comparing areas: commute,
+                                walkability, noise, light, and long-term resale.
+                            </p>
+                            <a class="resource-card__link" href="#">Explore</a>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="downloads-strip" id="downloads">
+                <div class="container">
+                    <div class="downloads-strip__head">
+                        <h2 class="section-title">Downloadables</h2>
+                        <p class="section-sub">Printable PDFs you can keep on
+                            your phone or bring to a meeting.</p>
                     </div>
 
+                    <div class="downloads-row">
+                        <a class="download-tile" href="#">
+                            <span class="download-tile__tag">PDF</span>
+                            <span class="download-tile__title">Buyer Timeline
+                                (3–6 months)</span>
+                            <span class="download-tile__meta">1 page</span>
+                        </a>
+
+                        <a class="download-tile" href="#">
+                            <span class="download-tile__tag">PDF</span>
+                            <span class="download-tile__title">Offer Terms Cheat
+                                Sheet</span>
+                            <span class="download-tile__meta">2 pages</span>
+                        </a>
+
+                        <a class="download-tile" href="#">
+                            <span class="download-tile__tag">PDF</span>
+                            <span class="download-tile__title">Seller Prep
+                                Checklist</span>
+                            <span class="download-tile__meta">2 pages</span>
+                        </a>
+
+                        <a class="download-tile" href="#">
+                            <span class="download-tile__tag">PDF</span>
+                            <span class="download-tile__title">Open House Prep
+                                Guide</span>
+                            <span class="download-tile__meta">1 page</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="cta-band">
+                <div class="container">
+                    <div class="cta-band__inner">
+                        <h2 class="cta-band__title">Want this tailored to your
+                            timeline?</h2>
+                        <p class="cta-band__sub">Tell me what you’re thinking,
+                            and I’ll map out your best next steps.</p>
+                        <a class="btn btn--primary" href="#">Schedule a
+                            conversation</a>
+                    </div>
+                </div>
+            </section>
 
         </main>
         <section class="cta-footer">
