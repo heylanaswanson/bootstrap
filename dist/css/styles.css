@@ -11455,6 +11455,79 @@ section.my-role h3, section.my-role .h3 {
   background-color: rgba(210, 143, 115, 0.6);
 }
 
+.hero-section {
+  position: relative;
+  min-height: 70vh;
+  padding: 6rem 0;
+  background-image: url("../assets/images/banners/living.png");
+}
+.hero-section.sellers {
+  background-image: url("../assets/images/banners/sellers.png");
+}
+.hero-section.resources {
+  background-image: url("../assets/images/banners/buyers.png");
+}
+.hero-section.listings {
+  background-image: url("../assets/images/banners/buyers.png");
+}
+.hero-section.buyers {
+  background-image: url("../assets/images/banners/home.png");
+}
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  z-index: 0;
+}
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+.hero-section .hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  color: #3a332e;
+  margin-bottom: 1rem;
+}
+.hero-section .hero-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  color: #6f6a65;
+  margin-bottom: 2rem;
+}
+.hero-section .hero-btn {
+  background-color: #d48b73;
+  border: none;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+}
+.hero-section .hero-btn:hover {
+  background-color: #c07a64;
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: 60vh;
+    padding: 4rem 1rem;
+  }
+  .hero-section::before {
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .hero-section .hero-title {
+    font-size: 2rem;
+  }
+  .hero-section .hero-subtitle {
+    font-size: 0.95rem;
+  }
+}
 .resources {
   padding: 36px 0 52px;
 }
@@ -11662,78 +11735,5 @@ section.my-role h3, section.my-role .h3 {
   }
   .resource-card__title {
     font-size: 28px;
-  }
-}
-.hero-section {
-  position: relative;
-  min-height: 70vh;
-  padding: 6rem 0;
-  background-image: url("../assets/images/banners/living.png");
-}
-.hero-section.sellers {
-  background-image: url("../assets/images/banners/sellers.png");
-}
-.hero-section.resources {
-  background-image: url("../assets/images/banners/buyers.png");
-}
-.hero-section.listings {
-  background-image: url("../assets/images/banners/buyers.png");
-}
-.hero-section.buyers {
-  background-image: url("../assets/images/banners/home.png");
-}
-.hero-section {
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.55);
-  z-index: 0;
-}
-.hero-section .container {
-  position: relative;
-  z-index: 1;
-}
-.hero-section .hero-title {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
-  color: #3a332e;
-  margin-bottom: 1rem;
-}
-.hero-section .hero-subtitle {
-  font-family: "Inter", sans-serif;
-  font-size: 1.05rem;
-  color: #6f6a65;
-  margin-bottom: 2rem;
-}
-.hero-section .hero-btn {
-  background-color: #d48b73;
-  border: none;
-  padding: 0.75rem 1.75rem;
-  font-size: 0.95rem;
-}
-.hero-section .hero-btn:hover {
-  background-color: #c07a64;
-}
-
-@media (max-width: 576px) {
-  .hero-section {
-    min-height: 60vh;
-    padding: 4rem 1rem;
-  }
-  .hero-section::before {
-    background: rgba(255, 255, 255, 0.7);
-  }
-  .hero-section .hero-title {
-    font-size: 2rem;
-  }
-  .hero-section .hero-subtitle {
-    font-size: 0.95rem;
   }
 }
