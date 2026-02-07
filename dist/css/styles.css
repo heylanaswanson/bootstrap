@@ -10860,6 +10860,7 @@ h3, .h3 {
   width: 200px;
   position: relative;
   background-image: url("../assets/images/final-logo.png");
+  background-repeat: no-repeat;
   z-index: 2;
   bottom: 10px;
 }
@@ -10911,6 +10912,7 @@ h3, .h3 {
   width: 100%;
   z-index: 1;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 991.98px) {
   .hero-image {
@@ -10945,9 +10947,13 @@ h3, .h3 {
   }
 }
 .hero-image .container h1, .hero-image .container .h1 {
-  padding: 50px 10px 20px;
-  width: 80%;
+  padding: 50px 50px 20px;
   margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+  .hero-image .container h1, .hero-image .container .h1 {
+    width: 80%;
+  }
 }
 .hero-image .container h2, .hero-image .container .h2 {
   padding: 0 50px;
@@ -11029,6 +11035,33 @@ button:hover {
 section.my-role {
   background-color: #ecf3f9;
   padding: 50px;
+}
+
+.listings-headline h1, .listings-headline .h1 {
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+}
+.listings-headline h2, .listings-headline .h2 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.listings-headline p {
+  padding: 20px 50px;
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
+}
+.centered h1, .centered .h1,
+.centered h2,
+.centered .h2,
+.centered h3,
+.centered .h3,
+.centered p {
+  padding: 30px 30px 0;
+  text-align: center;
 }
 
 footer {
