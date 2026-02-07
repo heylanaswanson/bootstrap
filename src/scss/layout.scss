@@ -63,12 +63,12 @@ h3 {
 }
 
 .logo {
-    width: 200px;
-    position: relative;
-    background-image: url('../assets/images/final-logo.png');
+    width: 450px;
+    height: 101px;
+    background-image: url('../assets/images/lana-swanson-logo-desktop.png');
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: 2;
-    bottom: 10px;
 
     @include media-breakpoint-down(lg) {
         width: 150px;
@@ -82,7 +82,7 @@ h3 {
     /* bottom: 70px; */
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     z-index: 2;
 }
 
