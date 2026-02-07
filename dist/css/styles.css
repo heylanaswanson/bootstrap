@@ -10891,11 +10891,17 @@ h3, .h3 {
 .site-logo {
   display: flex;
   align-items: center;
-  border: 1px solid red;
 }
 .site-logo .logo {
   width: 332px;
   height: 79px;
+}
+@media (max-width: 767px) {
+  .site-logo .logo {
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
 }
 
 /* =========================
