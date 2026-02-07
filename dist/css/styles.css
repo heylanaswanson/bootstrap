@@ -11455,12 +11455,8 @@ section.my-role h3, section.my-role .h3 {
   background-color: rgba(210, 143, 115, 0.6);
 }
 
-/* =========================
-     RESOURCES (RESET CSS)
-     Scoped so it won't collide
-  ========================== */
 .resources {
-  padding: 56px 0 72px;
+  padding: 36px 0 52px;
 }
 
 .resources .container {
@@ -11502,6 +11498,7 @@ section.my-role h3, section.my-role .h3 {
 .resources-intro {
   margin-top: 0;
   margin-bottom: 18px;
+  text-align: center;
 }
 
 .resources-intro__title {
