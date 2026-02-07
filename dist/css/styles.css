@@ -11456,10 +11456,10 @@ section.my-role h3, section.my-role .h3 {
   position: relative;
   min-height: 70vh;
   padding: 6rem 0;
-  background-image: url("../assets/images/banners/sellers.png");
+  background-image: url("../assets/images/banners/living.png");
 }
 .hero-section.sellers {
-  background-image: url("../assets/images/banners/outdoor.png");
+  background-image: url("../assets/images/banners/sellers.png");
 }
 .hero-section.resources {
   background-image: url("../assets/images/banners/buyers.png");
