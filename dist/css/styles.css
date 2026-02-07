@@ -10888,6 +10888,10 @@ h3, .h3 {
   padding: 20px 10px 15px;
 }
 
+.site-header {
+  background-color: white;
+}
+
 .site-logo {
   display: flex;
   align-items: center;
