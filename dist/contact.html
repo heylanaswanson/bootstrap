@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>Lana Swanson - San Diego Realtor</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/layout.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <header class="site-header sticky-top">
+            <!-- Responsive navbar-->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a href="index.html" class="site-logo">
+                        <img src="assets/images/desktop-logo.png"
+                            alt="Lana Swanson Realtor"
+                            class="logo logo--desktop" />
+                        <img src="assets/images/desktop-logo.png"
+                            alt="Lana Swanson Realtor"
+                            class="logo logo--mobile" />
+                    </a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link"
+                                    aria-current="page"
+                                    href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link "
+                                    href="buyers.html">Buyers</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="sellers.html">Sellers</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="listings.html">Listings</a></li>
+                            <li class="nav-item ">
+                                <a class="nav-link "
+                                    href="resources.html">Resources
+                                </a>
+
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active"
+                                    href="contact.html">
+                                    CONTACT
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Page content-->
+        <main>
+
+            <!-- CONTACT FORM -->
+            <!-- CONTACT PAGE BODY -->
+            <section class="contact-wrap">
+                <div class="container contact-wrap__inner">
+
+                    <!-- Schedule CTA card -->
+                    <div class="contact-ctaCard">
+                        <h1 class="contact-ctaCard__title">Get in touch</h1>
+                        <p class="contact-ctaCard__sub">
+                            Schedule a conversation, or send a quick note below.
+                        </p>
+                        <a class="btn btn--primary"
+                            href="https://calendly.com/YOUR-LINK"
+                            target="_blank" rel="noopener">
+                            Schedule a conversation
+                        </a>
+                    </div>
+
+                    <!-- Form heading -->
+                    <header class="contact-formHeader">
+                        <h2 class="contact-formHeader__title">Send a note</h2>
+                        <p class="contact-formHeader__sub">
+                            I’ll reply within 1 business day. If it’s
+                            time-sensitive, scheduling is the fastest option.
+                        </p>
+                    </header>
+
+                    <!-- Netlify-ready form -->
+                    <form class="contact-formCard"
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field">
+
+                        <input type="hidden" name="form-name" value="contact" />
+
+                        <!-- Honeypot -->
+                        <p class="sr-only">
+                            <label>Don’t fill this out: <input
+                                    name="bot-field" /></label>
+                        </p>
+
+                        <div class="contact-formGrid">
+                            <div class="field">
+                                <label for="fullName">Full name <span
+                                        aria-hidden="true">*</span></label>
+                                <input id="fullName" name="fullName" type="text"
+                                    autocomplete="name" required />
+                            </div>
+
+                            <div class="field">
+                                <label for="email">Email <span
+                                        aria-hidden="true">*</span></label>
+                                <input id="email" name="email" type="email"
+                                    autocomplete="email" required />
+                            </div>
+
+                            <div class="field">
+                                <label for="phone">Phone</label>
+                                <input id="phone" name="phone" type="tel"
+                                    autocomplete="tel" inputmode="tel" />
+                            </div>
+
+                            <div class="field">
+                                <label for="contactMethod">Preferred
+                                    contact</label>
+                                <select id="contactMethod" name="contactMethod">
+                                    <option value selected>Choose one</option>
+                                    <option>Email</option>
+                                    <option>Text</option>
+                                    <option>Call</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="reason">I’m a…</label>
+                                <select id="reason" name="reason">
+                                    <option value selected>Choose one</option>
+                                    <option>Buyer</option>
+                                    <option>Seller</option>
+                                    <option>Both</option>
+                                    <option>Just exploring</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="timeframe">Timeframe</label>
+                                <select id="timeframe" name="timeframe">
+                                    <option value selected>Choose one</option>
+                                    <option>0–3 months</option>
+                                    <option>3–6 months</option>
+                                    <option>6–12 months</option>
+                                    <option>12+ months</option>
+                                    <option>Not sure yet</option>
+                                </select>
+                            </div>
+
+                            <div class="field field--full">
+                                <label for="message">Message <span
+                                        aria-hidden="true">*</span></label>
+                                <textarea id="message" name="message" rows="6"
+                                    required
+                                    placeholder="Tell me what you’re looking for (or what you’re selling), timing, and any questions."></textarea>
+                            </div>
+
+                            <div class="field field--full field--check">
+                                <label class="check">
+                                    <input type="checkbox" name="consent"
+                                        value="yes" />
+                                    <span>It’s okay to email or text me about my
+                                        request.</span>
+                                </label>
+                            </div>
+
+                            <div class="field field--full contact-actions">
+                                <button class="btn btn--primary"
+                                    type="submit">Send message</button>
+                                <p class="contact-note">
+                                    By submitting, you agree to be contacted
+                                    regarding your inquiry. You can opt out
+                                    anytime.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </section>
+
+        </main>
+        <section class="cta-footer">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col text-center">
+                        <h4 class="cta-footer__title">
+                            Ready to take the next step?
+                        </h4>
+
+                        <p class="cta-footer__subtitle">
+                            Let’s talk through your timeline, goals, and
+                            options.
+                        </p>
+
+                        <a href="/contact.html" class="btn cta-footer__btn">
+                            Schedule a conversation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bootstrap core JS-->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
