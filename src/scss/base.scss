@@ -1,0 +1,107 @@
+/* =========================
+   TOKENS
+========================= */
+:root {
+    --font-sans: "Inter", sans-serif;
+    --font-serif: "Playfair Display", serif;
+
+    --text: #6f6a65;
+    --ink: #2f2f2f;
+    --muted: #807a72;
+    --muted-2: #c2bbb1;
+
+    --paper: #fff;
+    --sand: #f2eee6; // warm sand
+    --mist: #eaf5f7; // light blue wash
+
+    --accent: #d48c7a;
+    --line: rgba(0, 0, 0, .08);
+
+    --radius: 18px;
+    --radius-lg: 22px;
+    --shadow: 0 18px 40px rgba(0, 0, 0, .06);
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text);
+}
+
+/* Keep headings consistent; “semantic variants” are classes below */
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--ink);
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+@include media-breakpoint-down(md) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Small supporting heading style */
+.heading-kicker {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(47, 47, 47, .45);
+}
+
+/* Semantic “title styles” (use these instead of h2.statement etc.) */
+.title--center {
+    text-align: center;
+}
+
+.title--standalone {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.45;
+    letter-spacing: .5px;
+
+    @include media-breakpoint-up(sm) {
+        padding: 30px 75px;
+    }
+}
+
+/* “Lead” paragraph (hero / intro sections) */
+.lead {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(111, 106, 101, .88);
+}
+
+/* A subtle separator line */
+.divider {
+    height: 1px;
+    background: var(--line);
+    border: 0;
+    width: min(220px, 60%);
+    margin: 18px auto 0;
+}
