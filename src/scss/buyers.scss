@@ -6,7 +6,7 @@
 .featured-listing__inner {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr; // 2-col desktop
-    border-radius: 18px;
+    border-radius: 0;
     overflow: hidden;
     background: #f7f3ed;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
@@ -92,7 +92,7 @@
     align-items: center;
     justify-content: center;
     padding: 12px 18px;
-    border-radius: 12px;
+    border-radius: $button-border-radius;
     font-size: 14px;
     text-decoration: none;
     border: 1px solid transparent;

@@ -37,7 +37,7 @@ h2 {
         text-align: center;
 
         &.standalone {
-            width: 90%;
+            width: 95%;
             margin: 0 auto;
             text-align: center;
             line-height: 1.45;
@@ -146,7 +146,7 @@ h4 {
 button {
     padding: 10px 30px;
     //margin: 40px 0;
-    border-radius: 5px;
+    border-radius: $button-border-radius;
     font-size: 18px;
     border: none;
     background-color: #d48c7a;
@@ -164,7 +164,7 @@ button {
 .card {
     padding: 30px;
     background-color: $brand-beige;
-    border-radius: 15px;
+    border-radius: $default-border-radius;
     margin: 0px;
     border: 10px solid #ffffff;
     border-bottom: none;
@@ -227,21 +227,17 @@ section.my-role {
 
 
 .card-edu {
-    // tweak these to match your palette
-    --card-bg: #f3eee6;
-    --text: #5a5652;
-    --title: #3f3a36;
-    --muted: #8a847d;
+
 
     .edu-card {
         background: var(--card-bg);
-        border-radius: 18px;
+        border-radius: $default-border-radius;
         padding: 28px 28px 26px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
         @media (min-width: 992px) {
             padding: 34px 36px 32px;
-            border-radius: 22px;
+            border-radius: $default-border-radius;
         }
     }
 
@@ -288,13 +284,13 @@ section.my-role {
 
     .edu-card {
         background: var(--card-bg);
-        border-radius: 18px;
+        border-radius: $default-border-radius;
         padding: 28px 28px 26px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
         @media (min-width: 992px) {
             padding: 34px 36px 32px;
-            border-radius: 22px;
+            border-radius: $default-border-radius;
         }
     }
 
@@ -332,7 +328,7 @@ section.my-role {
 
     .insight-card {
         background: #f3eee6; // warm sand
-        border-radius: 18px;
+        border-radius: $default-border-radius;
         padding: 28px 26px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
         border: 1px solid rgba(0, 0, 0, 0.04);
@@ -372,7 +368,7 @@ section.my-role {
     @media (max-width: 576px) {
         .insight-card {
             padding: 22px 20px;
-            border-radius: 16px;
+            border-radius: $default-border-radius;
         }
 
         .insight-body {
@@ -393,7 +389,7 @@ section.my-role {
 
     .step-card {
         background: #f5efe6;
-        border-radius: 20px;
+        border-radius: $default-border-radius;
         padding: 2.5rem 2rem;
         height: 100%;
 
@@ -476,7 +472,7 @@ section.my-role {
     &__btn {
         background-color: #d58b73;
         color: #fff;
-        border-radius: 10px;
+        border-radius: $button-border-radius;
         padding: 0.65rem 1.4rem;
         font-size: 0.9rem;
         border: none;
@@ -531,7 +527,7 @@ section.my-role {
 .card-step {
     background: $card;
     border: 1px solid $stroke;
-    border-radius: $radius;
+    border-radius: $default-border-radius;
     padding: 2.25rem 2.1rem;
     box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
 }
