@@ -10878,6 +10878,11 @@ h4, .h4 {
   color: #d48c7a;
 }
 
+.nav-link {
+  font-size: 14px;
+  letter-spacing: 0.07em;
+}
+
 .navbar-toggler {
   position: relative;
 }
@@ -10889,6 +10894,7 @@ h4, .h4 {
 
 .navbar-collapse .navbar-nav {
   position: relative;
+  bottom: 6px;
   background-color: white;
 }
 .navbar-collapse .navbar-nav .nav-item {
@@ -10907,8 +10913,6 @@ h4, .h4 {
 .site-logo .logo {
   height: 75px;
   width: auto;
-  position: relative;
-  bottom: 9px;
 }
 .site-logo .logo--mobile {
   display: none;
@@ -11361,14 +11365,18 @@ section.my-role h3, section.my-role .h3 {
   color: #6f6a65;
   margin-bottom: 2rem;
 }
-.hero-section .hero-btn {
+
+.hero-btn {
   background-color: #d48b73;
   border: none;
   padding: 0.75rem 1.75rem;
   font-size: 0.95rem;
+  color: white;
+  text-decoration: none;
 }
-.hero-section .hero-btn:hover {
+.hero-btn:hover {
   background-color: #c07a64;
+  color: white;
 }
 
 @media (max-width: 576px) {

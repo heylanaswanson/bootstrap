@@ -85,6 +85,11 @@ h4 {
     color: #d48c7a;
 }
 
+.nav-link {
+    font-size: 14px;
+    letter-spacing: .07em;
+}
+
 .navbar-toggler {
     position: relative;
 
@@ -98,7 +103,7 @@ h4 {
 
 .navbar-collapse .navbar-nav {
     position: relative;
-
+    bottom: 6px;
     background-color: white;
 
     .nav-item {
@@ -118,8 +123,6 @@ h4 {
     .logo {
         height: 75px;
         width: auto;
-        position: relative;
-        bottom: 9px;
     }
 
     .logo--mobile {
