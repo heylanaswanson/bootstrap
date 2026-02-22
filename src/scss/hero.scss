@@ -62,16 +62,21 @@
         margin-bottom: 2rem;
     }
 
-    // CTA Button
-    .hero-btn {
-        background-color: $brand-accent;
-        border: none;
-        padding: 0.75rem 1.75rem;
-        font-size: 0.95rem;
 
-        &:hover {
-            background-color: $brand-accent-hover;
-        }
+}
+
+// CTA Button
+.hero-btn {
+    background-color: $brand-accent;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $brand-accent-hover;
+        color: white;
     }
 }
 
