@@ -104,7 +104,7 @@
 
                     <!-- Left section intro -->
                     <div class="resources-intro">
-                        <h2>Filter by topic
+                        <h2 class="card-steps__title">Filter by topic
                             to see
                             what’s relevant right now.</h2>
                         <!-- Pills directly above cards -->
@@ -516,9 +516,17 @@
                             options.
                         </p>
 
-                        <a href="/contact.html" class="btn cta-footer__btn">
-                            Schedule a conversation
-                        </a>
+                        <!-- Calendly link widget begin -->
+                        <link
+                            href="https://assets.calendly.com/assets/external/widget.css"
+                            rel="stylesheet">
+                        <script
+                            src="https://assets.calendly.com/assets/external/widget.js"
+                            type="text/javascript" async></script>
+                        <a class="hero-btn" href
+                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/theagentlana/introduction'});return false;">Schedule
+                            a conversation</a>
+                        <!-- Calendly link widget end -->
                     </div>
                 </div>
             </div>

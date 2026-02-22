@@ -70,31 +70,53 @@
         </header>
         <!-- Page content-->
         <main>
+            <section
+                class="hero-section contact d-flex align-items-center text-center">
+                <div class="hero-overlay"></div>
 
+                <div class="container position-relative">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-10">
+
+                            <h1 class="hero-title">
+                                Get in touch.
+                            </h1>
+
+                            <p class="hero-subtitle">
+                                Here to Help, Every Step of the Way
+
+                            </p>
+
+                            <!-- Calendly link widget begin -->
+                            <link
+                                href="https://assets.calendly.com/assets/external/widget.css"
+                                rel="stylesheet">
+                            <script
+                                src="https://assets.calendly.com/assets/external/widget.js"
+                                type="text/javascript" async></script>
+                            <a class="hero-btn" href
+                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/theagentlana/introduction'});return false;">Schedule
+                                a conversation</a>
+                            <!-- Calendly link widget end -->
+
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- CONTACT FORM -->
             <!-- CONTACT PAGE BODY -->
             <section class="contact-wrap">
                 <div class="container contact-wrap__inner">
 
                     <!-- Schedule CTA card -->
-                    <div class="contact-ctaCard">
-                        <h1 class="contact-ctaCard__title">Get in touch</h1>
-                        <p class="contact-ctaCard__sub">
-                            Schedule a conversation, or send a quick note below.
-                        </p>
-                        <a class="btn btn--primary"
-                            href="https://calendly.com/YOUR-LINK"
-                            target="_blank" rel="noopener">
-                            Schedule a conversation
-                        </a>
-                    </div>
 
                     <!-- Form heading -->
                     <header class="contact-formHeader">
-                        <h2 class="contact-formHeader__title">Send a note</h2>
+                        <h2 class="card-steps__title">Send a note</h2>
                         <p class="contact-formHeader__sub">
-                            I’ll reply within 1 business day. If it’s
-                            time-sensitive, scheduling is the fastest option.
+                            I’ll reply within 1 business day.<br /> If it’s
+                            time-sensitive, scheduling above is the fastest
+                            option.
                         </p>
                     </header>
 
