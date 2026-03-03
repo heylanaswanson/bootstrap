@@ -7,7 +7,10 @@ body {
     color: #6f6a65;
 }
 
-
+> * {
+    position: relative;
+    z-index: 1;
+}
 
 h1 {
     font-family: "Playfair Display", serif;
@@ -82,11 +85,11 @@ h4 {
 
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
-    color: #d48c7a;
+    color: $brand-accent;
 }
 
 .nav-link {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: .07em;
 }
 
@@ -152,7 +155,7 @@ button {
     border-radius: $button-border-radius;
     font-size: 18px;
     border: none;
-    background-color: #d48c7a;
+    background-color: $brand-accent;
     color: #fff;
 
     &:hover {
@@ -580,5 +583,55 @@ section.my-role {
     .card-steps {
         padding-top: 2rem !important;
         padding-bottom: 2.5rem !important;
+    }
+}
+
+.site-footer {
+    background-color: #f7f5f2; // soft neutral
+    //border-top: 2px solid #0C2D6B; // CB blue accent
+    color: #5f5a55;
+
+    a {
+        color: #5f5a55;
+        text-decoration: none;
+
+        &:hover {
+            color: #0C2D6B;
+        }
+    }
+
+    .footer-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .footer-sub {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #88827c;
+    }
+
+    .footer-heading {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #88827c;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .footer-divider {
+        border-color: #e2ded9;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        color: #9a948e;
     }
 }
