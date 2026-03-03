@@ -7,7 +7,10 @@ body {
     color: #6f6a65;
 }
 
-
+> * {
+    position: relative;
+    z-index: 1;
+}
 
 h1 {
     font-family: "Playfair Display", serif;
@@ -82,11 +85,11 @@ h4 {
 
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
-    color: #d48c7a;
+    color: $brand-accent;
 }
 
 .nav-link {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: .07em;
 }
 
@@ -152,7 +155,7 @@ button {
     border-radius: $button-border-radius;
     font-size: 18px;
     border: none;
-    background-color: #d48c7a;
+    background-color: $brand-accent;
     color: #fff;
 
     &:hover {

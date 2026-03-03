@@ -10801,6 +10801,11 @@ body {
   color: #6f6a65;
 }
 
+> * {
+  position: relative;
+  z-index: 1;
+}
+
 h1, .h1 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -10875,11 +10880,11 @@ h4, .h4 {
 
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
-  color: #d48c7a;
+  color: #00205B;
 }
 
 .nav-link {
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.07em;
 }
 
@@ -10932,7 +10937,7 @@ button {
   border-radius: 5px;
   font-size: 18px;
   border: none;
-  background-color: #d48c7a;
+  background-color: #00205B;
   color: #fff;
 }
 button:hover {
@@ -11305,7 +11310,7 @@ section.my-role h3, section.my-role .h3 {
   color: #4a4a4a;
 }
 .navbar a.active {
-  color: #d28f73;
+  color: #00205B;
 }
 .navbar a.active::after {
   content: "";
@@ -11314,14 +11319,14 @@ section.my-role h3, section.my-role .h3 {
   bottom: 0;
   width: 100%;
   height: 1px;
-  background-color: rgba(210, 143, 115, 0.6);
+  background-color: #00205B;
 }
 
 .hero-section {
   position: relative;
   min-height: 70vh;
   padding: 6rem 0;
-  background-image: url("../assets/images/banners/living.png");
+  background-image: url("../assets/images/banners/patio.png");
 }
 .hero-section.sellers {
   background-image: url("../assets/images/banners/sellers.png");
@@ -11349,8 +11354,8 @@ section.my-role h3, section.my-role .h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.55);
   z-index: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.65) 40%, rgba(255, 255, 255, 0.35) 75%, rgba(255, 255, 255, 0.25) 100%);
 }
 .hero-section .container {
   position: relative;
@@ -11359,27 +11364,28 @@ section.my-role h3, section.my-role .h3 {
 .hero-section .hero-title {
   font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 3.8vw, 3.2rem);
-  color: #3a332e;
+  color: #2f2c29;
   margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 .hero-section .hero-subtitle {
   font-family: "Inter", sans-serif;
   font-size: 1.05rem;
-  color: #6f6a65;
+  color: #2f2c29;
   margin-bottom: 2rem;
 }
 
 .hero-btn {
-  background-color: #d48b73;
+  background-color: #00205B;
   border: none;
-  padding: 0.75rem 1.75rem;
+  padding: 1rem 2rem;
   font-size: 0.95rem;
   color: white;
   text-decoration: none;
 }
 .hero-btn:hover {
-  background-color: #c07a64;
-  color: white;
+  background-color: white;
+  color: #00205B;
 }
 
 @media (max-width: 576px) {
@@ -11388,7 +11394,7 @@ section.my-role h3, section.my-role .h3 {
     padding: 4rem 1rem;
   }
   .hero-section::before {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.4);
   }
   .hero-section .hero-title {
     font-size: 2rem;
