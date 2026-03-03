@@ -11335,7 +11335,7 @@ section.my-role h3, section.my-role .h3 {
   background-image: url("../assets/images/banners/indoor-outdoor.png");
 }
 .hero-section.resources {
-  background-image: url("../assets/images/banners/buyers.png");
+  background-image: url("../assets/images/banners/living.png");
 }
 .hero-section.listings {
   background-image: url("../assets/images/banners/buyers.png");
@@ -11665,7 +11665,7 @@ section.my-role h3, section.my-role .h3 {
 }
 
 .btn--primary {
-  background: #d7a389;
+  background: #00205B;
   color: #fff;
 }
 .btn--primary:hover {

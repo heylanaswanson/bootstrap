@@ -104,7 +104,7 @@
 }
 
 .btn--primary {
-    background: #d7a389; // your warm sand/coral button tone
+    background: $brand-accent; // your warm sand/coral button tone
     color: #fff;
 
     &:hover {
