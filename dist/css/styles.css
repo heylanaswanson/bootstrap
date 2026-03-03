@@ -11293,6 +11293,47 @@ section.my-role h3, section.my-role .h3 {
     padding-bottom: 2.5rem !important;
   }
 }
+.site-footer {
+  background-color: #f7f5f2;
+  color: #5f5a55;
+}
+.site-footer a {
+  color: #5f5a55;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #0C2D6B;
+}
+.site-footer .footer-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.site-footer .footer-sub {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #88827c;
+}
+.site-footer .footer-heading {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #88827c;
+}
+.site-footer .footer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.site-footer .footer-divider {
+  border-color: #e2ded9;
+}
+.site-footer .footer-bottom {
+  font-size: 0.8rem;
+  color: #9a948e;
+}
+
 .navbar {
   display: flex;
   gap: 32px;
