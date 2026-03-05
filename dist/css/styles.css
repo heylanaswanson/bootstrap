@@ -10884,7 +10884,7 @@ h4, .h4 {
 }
 
 .nav-link {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.07em;
 }
 
@@ -10916,7 +10916,7 @@ h4, .h4 {
   align-items: center;
 }
 .site-logo .logo {
-  height: 75px;
+  height: 55px;
   width: auto;
 }
 .site-logo .logo--mobile {
@@ -11177,7 +11177,7 @@ section.my-role h3, section.my-role .h3 {
 }
 
 .cta-footer {
-  height: 300px;
+  height: 400px;
   background-image: url("../assets/images/banners/sand.png");
   background-size: cover;
   background-position: center;
@@ -11196,10 +11196,10 @@ section.my-role h3, section.my-role .h3 {
 .cta-footer__subtitle {
   font-size: 0.95rem;
   color: #6f6a64;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.2rem;
 }
 .cta-footer__btn {
-  background-color: #d58b73;
+  background-color: #00205B;
   color: #fff;
   border-radius: 5px;
   padding: 0.65rem 1.4rem;
@@ -11207,11 +11207,10 @@ section.my-role h3, section.my-role .h3 {
   border: none;
 }
 .cta-footer__btn:hover {
-  background-color: rgb(205.9384615385, 119.4967032967, 91.4615384615);
+  background-color: #c07a64;
 }
 
 .buyers-intro {
-  background-color: #eaf5f7;
   padding: 4rem 0 4.5rem;
   text-align: center;
 }
@@ -11226,8 +11225,6 @@ section.my-role h3, section.my-role .h3 {
   font-family: "Playfair Display", serif;
   font-size: 1.225rem;
   line-height: 1.59;
-  color: #6b6b67;
-  opacity: 0.8;
 }
 @media (max-width: 768px) {
   .buyers-intro__text {
@@ -11241,7 +11238,7 @@ section.my-role h3, section.my-role .h3 {
   font-weight: 400;
   letter-spacing: 0.2px;
   color: #2f2f2f;
-  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem);
+  font-size: 24px;
 }
 
 .card-step {
@@ -11376,7 +11373,7 @@ section.my-role h3, section.my-role .h3 {
   background-image: url("../assets/images/banners/indoor-outdoor.png");
 }
 .hero-section.resources {
-  background-image: url("../assets/images/banners/living.png");
+  background-image: url("../assets/images/banners/buyers.png");
 }
 .hero-section.listings {
   background-image: url("../assets/images/banners/buyers.png");
@@ -11414,6 +11411,7 @@ section.my-role h3, section.my-role .h3 {
   font-size: 1.05rem;
   color: #2f2c29;
   margin-bottom: 2rem;
+  min-height: 40px;
 }
 
 .hero-btn {
