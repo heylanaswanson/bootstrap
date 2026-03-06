@@ -185,11 +185,11 @@
 }
 
 /* -------- Process -------- */
-
 .step-list {
     list-style: none;
     padding: 0;
     margin: 34px 0 0;
+
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 18px;
@@ -202,14 +202,38 @@
     padding: 22px 18px;
 }
 
+/* small uppercase number label */
+
+.step__number {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #8a847f;
+    margin-bottom: 6px;
+}
+
+.step__number::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 1px;
+    background: rgba(0, 0, 0, .15);
+    margin-top: 6px;
+}
+
+/* title */
+
 .step__title {
-    margin: 0 0 8px;
+    margin: 8px 0;
     font-family: "Playfair Display", serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 1.2;
     color: var(--ink);
 }
+
+/* body text */
 
 .step__text {
     margin: 0;
@@ -347,7 +371,7 @@
     justify-content: center;
     min-height: 46px;
     padding: 12px 18px;
-    border-radius: 999px;
+    border-radius: 8px;
     font-family: "Inter", "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     font-size: 13px;
     font-weight: 500;
@@ -362,13 +386,13 @@
 }
 
 .btn--primary {
-    background: var(--ink);
+    background: $brand-accent;
     color: #fff;
     border: 1px solid rgba(43, 42, 40, 0.18);
 }
 
 .btn--primary:hover {
-    background: rgba(43, 42, 40, 0.92);
+    background: $brand-accent-hover;
 }
 
 .btn--secondary {
@@ -378,7 +402,7 @@
 }
 
 .btn--secondary:hover {
-    background: rgba(43, 42, 40, 0.03);
+    background: $brand-secondary-accent-hover;
 }
 
 /* -------- Footer -------- */
@@ -443,4 +467,42 @@
     .value-card--featured {
         max-width: none;
     }
+}
+
+/* =========================================
+   SELLERS PAGE HERO OVERRIDES
+========================================= */
+
+body.page--sellers {
+
+    /* HERO OVERLAY — warmer tone for sunset image */
+    .page-hero__overlay {
+        background: linear-gradient(to bottom,
+                rgba(255, 255, 255, .40) 0%,
+                rgba(255, 255, 255, .18) 45%,
+                rgba(255, 255, 255, .06) 100%);
+    }
+
+    /* EYEBROW TEXT */
+    .page-hero__eyebrow {
+        color: rgba(255, 255, 255, .85);
+        letter-spacing: .18em;
+    }
+
+    /* MAIN HEADLINE */
+    .page-hero__title {
+        color: rgba(255, 255, 255, .85);
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .35);
+    }
+
+    /* SUBTEXT */
+    .page-hero__sub {
+        color: rgba(255, 255, 255, .85);
+    }
+
+    /* OPTIONAL — slightly stronger focus on text */
+    .page-hero__content {
+        max-width: 780px;
+    }
+
 }
