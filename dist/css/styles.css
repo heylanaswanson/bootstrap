@@ -14331,3 +14331,143 @@ body.page--listings .page-hero__sub {
     max-width: 320px;
   }
 }
+/* =========================================
+   LUXURY LISTING GRID UPGRADE
+========================================= */
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.listing-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.listing-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--rule-strong);
+  box-shadow: 0 14px 34px rgba(43, 42, 40, 0.08);
+}
+
+.listing-card__image-link {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.listing-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.listing-card:hover .listing-card__image {
+  transform: scale(1.02);
+}
+
+.listing-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 18px 18px 20px;
+}
+
+.listing-card__price {
+  margin: 0 0 4px;
+  font-family: "Inter", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--brand-blue);
+}
+
+.listing-card__address {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.18;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.listing-card__location {
+  margin: 4px 0 6px;
+  font-family: "Inter", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.listing-card__details {
+  margin: 0 0 14px;
+  font-family: "Inter", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.listing-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  font-family: "Inter", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--brand-blue);
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.listing-card__link::after {
+  content: "→";
+  font-size: 13px;
+  line-height: 1;
+  transition: transform 160ms ease;
+}
+
+.listing-card__link:hover {
+  color: #163d8f;
+}
+
+.listing-card__link:hover::after {
+  transform: translateX(2px);
+}
+
+/* Optional: if you want the whole card clickable later */
+.listing-card--clickable {
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .listing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .listing-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .listing-card__address {
+    font-size: 22px;
+  }
+  .listing-card__price {
+    font-size: 17px;
+  }
+}
