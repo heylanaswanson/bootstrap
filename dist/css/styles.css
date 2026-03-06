@@ -11351,7 +11351,7 @@ h6,
   z-index: 2;
   max-width: 880px;
   margin: 0 auto;
-  padding: clamp(2px, 16vh, 190px) 24px 88px;
+  padding: clamp(2px, 12vh, 190px) 24px 88px;
   text-align: center;
 }
 
@@ -11391,6 +11391,7 @@ h6,
 /* ---------- HOME ---------- */
 body.page--home .page-hero__content {
   text-align: left;
+  padding: clamp(2px, 17vh, 190px) 24px 88px;
 }
 body.page--home .page-hero__content .btn {
   background: #2f5fa7;
@@ -11487,27 +11488,8 @@ body.page--buyers .page-hero__overlay {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.22) 42%, rgba(255, 255, 255, 0.08) 100%);
 }
 
-body.page--sellers {
-  background: #163d8f;
-}
-body.page--sellers .page-hero__overlay {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.05) 65%, rgba(0, 0, 0, 0) 100%);
-}
-body.page--sellers .page-hero__overlay .page-hero__content {
-  text-align: left;
-  padding: clamp(20px, 10vh, 190px) 0 88px;
-}
 body.page--sellers .page-hero__title {
-  text-align: left;
-  margin-inline: 0;
-}
-body.page--sellers .page-hero__eyebrow {
-  color: rgba(255, 255, 255, 0.85);
-}
-body.page--sellers .page-hero__title,
-body.page--sellers .page-hero__sub {
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  max-width: 17ch;
 }
 
 /* ---------- RESOURCES ---------- */
