@@ -1478,4 +1478,29 @@ body.page--home {
         background: rgba(255, 255, 255, 0.78);
         border-color: rgba(30, 79, 163, 0.28);
     }
+
+}
+
+.faq__item summary::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 14px;
+    height: 1px;
+    background: #8a847f;
+}
+
+.faq__item summary::after {
+    content: "";
+    position: absolute;
+    left: 6.5px;
+    top: 4px;
+    width: 1px;
+    height: 14px;
+    background: #8a847f;
+}
+
+.faq__item[open] summary::after {
+    display: none;
 }
