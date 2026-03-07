@@ -1165,6 +1165,94 @@ body.page--contact {
   }
 }
 
+body.page--thank-you {
+  .thank-you-section {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 20px;
+    background: #f8f6f3;
+  }
+
+  .thank-you-card {
+    width: min(720px, 100%);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(43, 42, 40, 0.10);
+    border-radius: 8px;
+    padding: 44px 40px;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(43, 42, 40, 0.05);
+  }
+
+  .thank-you-card__eyebrow {
+    margin: 0 0 10px;
+    font-family: "Inter", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #8b847d;
+  }
+
+  .thank-you-card__title {
+    margin: 0 0 14px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.05;
+    font-weight: 400;
+    color: #2b2a28;
+    text-wrap: balance;
+  }
+
+  .thank-you-card__text {
+    max-width: 38ch;
+    margin: 0 auto 14px;
+    font-family: "Inter", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #6f6a65;
+  }
+
+  .thank-you-card__text--small {
+    font-size: 15px;
+    color: #8b847d;
+  }
+
+  .thank-you-card__text a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .thank-you-card__text a:hover {
+    color: #1e4fa3;
+  }
+
+  .thank-you-card__actions {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 767px) {
+    .thank-you-card {
+      padding: 34px 22px;
+    }
+
+    .thank-you-card__actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .thank-you-card__actions .btn {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+}
+
 /* =========================================================
    8. RESPONSIVE
 ========================================================= */
