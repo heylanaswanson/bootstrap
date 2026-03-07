@@ -362,10 +362,19 @@ h6 {
   border-radius: var(--radius-sm);
   padding: 24px 22px;
   text-decoration: none;
+
   transition:
     transform 160ms ease,
     border-color 160ms ease,
     box-shadow 160ms ease;
+}
+
+.resource-card::after {
+  content: "PDF";
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .5;
 }
 
 .resource-card:hover {
