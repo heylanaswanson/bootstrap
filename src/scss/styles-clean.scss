@@ -302,8 +302,8 @@ h6 {
 .btn--secondary:hover,
 .btn--secondary:active,
 .btn--secondary:focus {
-  background: rgba(30, 79, 163, 0.04);
-  border-color: var(--brand-blue);
+  background: rgba(30, 79, 163, 0.04) !important;
+  border-color: var(--brand-blue) !important;
   color: white !important;
 }
 
@@ -592,6 +592,7 @@ h6 {
 
 /* ---------- HOME ---------- */
 body.page--home {
+
   .page-hero__content {
     text-align: left;
     padding: clamp(2px, 17vh, 190px) 24px 88px;
@@ -647,6 +648,12 @@ body.page--home {
     position: relative;
     bottom: 40px;
     right: 103px;
+  }
+
+  .section--intro {
+    background: #e9bea721;
+    padding-top: clamp(52px, 7vw, 84px);
+    padding-bottom: clamp(42px, 5vw, 64px);
   }
 
 

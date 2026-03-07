@@ -11112,8 +11112,8 @@ h6,
 .btn--secondary:hover,
 .btn--secondary:active,
 .btn--secondary:focus {
-  background: rgba(30, 79, 163, 0.04);
-  border-color: var(--brand-blue);
+  background: rgba(30, 79, 163, 0.04) !important;
+  border-color: var(--brand-blue) !important;
   color: white !important;
 }
 
@@ -11436,6 +11436,11 @@ body.page--home .page-hero__content .cta-band__actions {
   position: relative;
   bottom: 40px;
   right: 103px;
+}
+body.page--home .section--intro {
+  background: rgba(233, 190, 167, 0.1294117647);
+  padding-top: clamp(52px, 7vw, 84px);
+  padding-bottom: clamp(42px, 5vw, 64px);
 }
 
 /* ---------- BUYERS + SELLERS PROCESS CARDS ---------- */
