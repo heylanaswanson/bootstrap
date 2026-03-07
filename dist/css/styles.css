@@ -11104,16 +11104,13 @@ h6,
 }
 
 .btn--secondary {
-  background: transparent;
+  background: white;
   color: var(--brand-blue);
   border: 1px solid var(--brand-blue-soft);
 }
-
-.btn--secondary:hover,
-.btn--secondary:active,
-.btn--secondary:focus {
-  background: rgba(30, 79, 163, 0.04);
-  border-color: var(--brand-blue);
+.btn--secondary:hover, .btn--secondary:active, .btn--secondary:focus {
+  background: rgba(30, 79, 163, 0.04) !important;
+  border-color: var(--brand-blue) !important;
   color: white !important;
 }
 
@@ -11292,6 +11289,10 @@ h6,
   align-items: center;
   flex-wrap: wrap;
 }
+.cta-band__actions .btn--secondary:hover {
+  background: #174a97 !important;
+  color: white !important;
+}
 
 /* Footer */
 .site-footer {
@@ -11397,8 +11398,14 @@ body.page--home .page-hero__content {
   text-align: left;
   padding: clamp(2px, 17vh, 190px) 24px 88px;
 }
+@media (max-width: 767px) {
+  body.page--home .page-hero__content {
+    padding: clamp(2px, 5vh, 190px) 24px 88px;
+  }
+}
 body.page--home .page-hero__content .btn {
   background: #2f5fa7;
+  margin-bottom: 10px;
 }
 body.page--home .page-hero__content .btn:hover {
   background: #244a84;
@@ -11436,6 +11443,20 @@ body.page--home .page-hero__content .cta-band__actions {
   position: relative;
   bottom: 40px;
   right: 103px;
+}
+@media (max-width: 767px) {
+  body.page--home .page-hero__sub,
+  body.page--home .page-hero__eyebrow,
+  body.page--home .page-hero__title,
+  body.page--home .page-hero__content .cta-band__actions {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+}
+body.page--home .section--intro {
+  padding-top: clamp(52px, 7vw, 84px);
+  padding-bottom: clamp(42px, 7vw, 64px);
 }
 
 /* ---------- BUYERS + SELLERS PROCESS CARDS ---------- */
@@ -11863,6 +11884,81 @@ body.page--contact .contact-form textarea {
 body.page--contact .contact-form__actions {
   grid-column: 1/-1;
   margin-top: 4px;
+}
+
+body.page--thank-you .thank-you-section {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 20px;
+  background: #f8f6f3;
+}
+body.page--thank-you .thank-you-card {
+  width: min(720px, 100%);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(43, 42, 40, 0.1);
+  border-radius: 8px;
+  padding: 44px 40px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(43, 42, 40, 0.05);
+}
+body.page--thank-you .thank-you-card__eyebrow {
+  margin: 0 0 10px;
+  font-family: "Inter", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8b847d;
+}
+body.page--thank-you .thank-you-card__title {
+  margin: 0 0 14px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.05;
+  font-weight: 400;
+  color: #2b2a28;
+  text-wrap: balance;
+}
+body.page--thank-you .thank-you-card__text {
+  max-width: 38ch;
+  margin: 0 auto 14px;
+  font-family: "Inter", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6f6a65;
+}
+body.page--thank-you .thank-you-card__text--small {
+  font-size: 15px;
+  color: #8b847d;
+}
+body.page--thank-you .thank-you-card__text a {
+  color: inherit;
+  text-decoration: none;
+}
+body.page--thank-you .thank-you-card__text a:hover {
+  color: #1e4fa3;
+}
+body.page--thank-you .thank-you-card__actions {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  body.page--thank-you .thank-you-card {
+    padding: 34px 22px;
+  }
+  body.page--thank-you .thank-you-card__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  body.page--thank-you .thank-you-card__actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 /* =========================================================
