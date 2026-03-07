@@ -294,17 +294,17 @@ h6 {
 }
 
 .btn--secondary {
-  background: transparent;
+  background: white;
   color: var(--brand-blue);
   border: 1px solid var(--brand-blue-soft);
-}
 
-.btn--secondary:hover,
-.btn--secondary:active,
-.btn--secondary:focus {
-  background: rgba(30, 79, 163, 0.04) !important;
-  border-color: var(--brand-blue) !important;
-  color: white !important;
+  &:hover,
+  &:active,
+  &:focus {
+    background: rgba(30, 79, 163, 0.04) !important;
+    border-color: var(--brand-blue) !important;
+    color: white !important;
+  }
 }
 
 /* Shared value cards */
@@ -484,6 +484,11 @@ h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+  .btn--secondary:hover {
+    background: #174a97 !important;
+    color: white !important;
+  }
 }
 
 /* Footer */
@@ -651,11 +656,9 @@ body.page--home {
   }
 
   .section--intro {
-    background: #e9bea721;
     padding-top: clamp(52px, 7vw, 84px);
-    padding-bottom: clamp(42px, 5vw, 64px);
+    padding-bottom: clamp(42px, 7vw, 64px);
   }
-
 
 
 }
