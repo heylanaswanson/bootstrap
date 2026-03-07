@@ -602,8 +602,14 @@ body.page--home {
     text-align: left;
     padding: clamp(2px, 17vh, 190px) 24px 88px;
 
+    @media (max-width: 767px) {
+
+      padding: clamp(2px, 5vh, 190px) 24px 88px;
+    }
+
     .btn {
       background: #2f5fa7;
+      margin-bottom: 10px;
 
       &:hover {
         background: #244a84;
@@ -653,6 +659,18 @@ body.page--home {
     position: relative;
     bottom: 40px;
     right: 103px;
+  }
+
+  @media (max-width: 767px) {
+
+    .page-hero__sub,
+    .page-hero__eyebrow,
+    .page-hero__title,
+    .page-hero__content .cta-band__actions {
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
   }
 
   .section--intro {
