@@ -11405,13 +11405,15 @@ h6,
 /* =========================================================
    7. PAGE-SPECIFIC STYLES
 ========================================================= */
-/* ---------- HOME ---------- */
-body.page--home .section--resources {
+.section--resources {
   background: #edf6fb;
 }
-body.page--home .section--values {
+
+.section--values {
   background: rgba(229, 223, 221, 0.368627451);
 }
+
+/* ---------- HOME ---------- */
 body.page--home .approach {
   padding: 80px 24px;
 }
@@ -11566,6 +11568,15 @@ body.page--home .page-hero__content {
   box-shadow: var(--shadow-panel);
 }
 
+body.page--buyers .page-hero,
+body.page--sellers .page-hero {
+  position: relative;
+  max-height: 720px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 body.page--buyers .step-list,
 body.page--sellers .step-list {
   list-style: none;

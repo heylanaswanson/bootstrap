@@ -610,16 +610,17 @@ h6 {
 /* =========================================================
    7. PAGE-SPECIFIC STYLES
 ========================================================= */
+.section--resources {
+  background: #edf6fb; //light blue
+}
+
+.section--values {
+  background: #e5dfdd5e; //light tan
+}
 
 /* ---------- HOME ---------- */
 body.page--home {
-  .section--resources {
-    background: #edf6fb;
-  }
 
-  .section--values {
-    background: #e5dfdd5e;
-  }
 
   .approach {
     padding: 80px 24px;
@@ -833,6 +834,16 @@ body.page--home {
 
 body.page--buyers,
 body.page--sellers {
+
+  .page-hero {
+    position: relative;
+    max-height: 720px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .step-list {
     list-style: none;
