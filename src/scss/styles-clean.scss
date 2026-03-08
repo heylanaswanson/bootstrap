@@ -368,6 +368,9 @@ h6 {
   padding: 24px 22px;
   text-decoration: none;
 
+  border: 1px solid #e6e3df;
+  border-radius: 8px;
+
   transition:
     transform 160ms ease,
     border-color 160ms ease,
@@ -396,6 +399,7 @@ h6 {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
+
 }
 
 .resource-card__title {
@@ -554,6 +558,47 @@ h6 {
   justify-content: center;
 }
 
+@media (max-width: 767px) {
+  .page-hero {
+    min-height: 520px;
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-hero__content {
+    width: calc(100% - 32px);
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 28px 22px;
+
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    border-radius: 8px;
+  }
+
+  .page-hero__eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    margin-bottom: 12px;
+  }
+
+  .page-hero__title {
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 0.98;
+    margin-bottom: 14px;
+  }
+
+  .page-hero__sub {
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
 .page-hero__media {
   position: absolute;
   inset: 0;
@@ -581,7 +626,6 @@ h6 {
   padding: clamp(2px, 12vh, 190px) 24px 88px;
   text-align: center;
   max-width: 620px;
-  margin-top: 40px;
   padding: 40px 48px;
   background: rgba(255, 255, 255, 0.46);
   backdrop-filter: blur(8px);
@@ -604,7 +648,7 @@ h6 {
   margin: 0;
   max-width: 12ch;
   margin-inline: auto;
-  font-size: clamp(40px, 5vw, 74px);
+  font-size: clamp(40px, 4vw, 74px);
   line-height: 0.98;
   color: var(--ink);
   text-wrap: balance;
@@ -626,11 +670,11 @@ h6 {
    7. PAGE-SPECIFIC STYLES
 ========================================================= */
 .section--resources {
-  background: #edf6fb; //light blue
+  background: #edf1f3; //light blue
 }
 
 .section--values {
-  background: #e5dfdd5e; //light tan
+  background: #edf1f3; //light tan
 }
 
 /* ---------- HOME ---------- */
@@ -946,6 +990,7 @@ body.page--resources {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--muted);
+    text-align: center;
   }
 
   .resource-group__lede {
