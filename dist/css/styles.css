@@ -11402,14 +11402,72 @@ h6,
    7. PAGE-SPECIFIC STYLES
 ========================================================= */
 /* ---------- HOME ---------- */
-body.page--home .page-hero__content {
-  text-align: left;
-  padding: clamp(2px, 17vh, 190px) 24px 88px;
+body.page--home .section--values {
+  background: rgba(229, 223, 221, 0.368627451);
 }
-@media (max-width: 767px) {
-  body.page--home .page-hero__content {
-    padding: clamp(2px, 5vh, 190px) 24px 88px;
+body.page--home .approach {
+  padding: 50px 24px;
+}
+body.page--home .approach .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+body.page--home .approach__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  body.page--home .approach__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
+}
+body.page--home .approach__content h2, body.page--home .approach__content .h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #2f2b28;
+}
+body.page--home .approach__content h2::after, body.page--home .approach__content .h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background: #d6d1cb;
+  margin-top: 18px;
+}
+body.page--home .approach__content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #6f6a65;
+  max-width: 480px;
+}
+body.page--home .approach__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+body.page--home .page-hero__content {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 120px 24px 110px;
+  text-align: center;
+}
+body.page--home .page-hero__title {
+  max-width: 10ch;
+  margin: 0 auto 28px;
+  font-size: clamp(44px, 6vw, 78px);
+  line-height: 0.98;
+  color: #2f2b28;
+  text-wrap: balance;
+}
+body.page--home .page-hero__actions {
+  justify-content: center;
+  gap: 14px;
 }
 body.page--home .page-hero__content .btn {
   background: #2f5fa7;
@@ -11428,13 +11486,46 @@ body.page--home .page-hero__content h1, body.page--home .page-hero__content .h1 
 body.page--home .page-hero__content p {
   color: rgba(0, 0, 0, 0.7);
 }
-body.page--home .page-hero__title {
-  text-align: left;
-  margin-inline: 0;
-  max-width: 17ch;
+body.page--home .page-hero__content .approach {
+  padding: 120px 24px;
 }
-body.page--home .page-hero__eyebrow {
-  margin: 0 0 12px 7px;
+body.page--home .page-hero__content .approach .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+body.page--home .page-hero__content .approach__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  body.page--home .page-hero__content .approach__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+body.page--home .page-hero__content .approach__content h2, body.page--home .page-hero__content .approach__content .h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #2f2b28;
+}
+body.page--home .page-hero__content .approach__content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #6f6a65;
+  max-width: 480px;
+}
+body.page--home .page-hero__content .approach__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+body.page--home .page-hero__title {
+  max-width: 17ch;
 }
 body.page--home .page-hero__sub {
   margin: 30px 0;
@@ -11443,24 +11534,6 @@ body.page--home .page-hero__sub {
 body.page--home .cta-band__actions {
   margin-top: 24px;
   display: block;
-}
-body.page--home .page-hero__sub,
-body.page--home .page-hero__eyebrow,
-body.page--home .page-hero__title,
-body.page--home .page-hero__content .cta-band__actions {
-  position: relative;
-  bottom: 40px;
-  right: 103px;
-}
-@media (max-width: 767px) {
-  body.page--home .page-hero__sub,
-  body.page--home .page-hero__eyebrow,
-  body.page--home .page-hero__title,
-  body.page--home .page-hero__content .cta-band__actions {
-    position: relative;
-    bottom: 0;
-    right: 0;
-  }
 }
 body.page--home .section--intro {
   padding-top: clamp(52px, 7vw, 84px);
