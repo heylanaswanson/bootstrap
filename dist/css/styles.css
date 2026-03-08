@@ -11099,7 +11099,7 @@ h6,
 .btn--primary:hover,
 .btn--primary:active,
 .btn--primary:focus {
-  background: #174a97;
+  background: #174a97 !important;
   color: #fff !important;
 }
 
@@ -11119,7 +11119,7 @@ h6,
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
-  margin-top: 34px;
+  margin-top: 50px;
 }
 
 .value-card {
@@ -11127,6 +11127,10 @@ h6,
   border: 1px solid var(--rule);
   border-radius: var(--radius-sm);
   padding: 26px 24px 22px;
+}
+.value-card .btn--secondary:hover {
+  background: #174a97 !important;
+  color: white !important;
 }
 
 .value-card__title {
@@ -11402,11 +11406,15 @@ h6,
    7. PAGE-SPECIFIC STYLES
 ========================================================= */
 /* ---------- HOME ---------- */
+body.page--home .section--resources {
+  background: #edf6fb;
+}
 body.page--home .section--values {
   background: rgba(229, 223, 221, 0.368627451);
+  padding: clamp(56px, 4vw, 108px) 0;
 }
 body.page--home .approach {
-  padding: 50px 24px;
+  padding: 80px 24px;
 }
 body.page--home .approach .container {
   max-width: 1100px;
@@ -11415,7 +11423,7 @@ body.page--home .approach .container {
 body.page--home .approach__grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
+  gap: 56px;
   align-items: center;
 }
 @media (max-width: 900px) {
@@ -11454,13 +11462,13 @@ body.page--home .approach__image img {
 body.page--home .page-hero__content {
   max-width: 820px;
   margin: 0 auto;
-  padding: 120px 24px 110px;
+  padding: 80px 24px 110px;
   text-align: center;
 }
 body.page--home .page-hero__title {
   max-width: 10ch;
   margin: 0 auto 28px;
-  font-size: clamp(44px, 6vw, 78px);
+  font-size: clamp(34px, 6vw, 58px);
   line-height: 0.98;
   color: #2f2b28;
   text-wrap: balance;
@@ -11485,6 +11493,7 @@ body.page--home .page-hero__content h1, body.page--home .page-hero__content .h1 
 }
 body.page--home .page-hero__content p {
   color: rgba(0, 0, 0, 0.7);
+  opacity: 0.5;
 }
 body.page--home .page-hero__content .approach {
   padding: 120px 24px;
@@ -11524,6 +11533,9 @@ body.page--home .page-hero__content .approach__image img {
   border-radius: 6px;
   display: block;
 }
+body.page--home .section--process {
+  padding: clamp(56px, 0vw, 108px) 0;
+}
 body.page--home .page-hero__title {
   max-width: 17ch;
 }
@@ -11541,6 +11553,19 @@ body.page--home .section--intro {
 }
 
 /* ---------- BUYERS + SELLERS PROCESS CARDS ---------- */
+body.page--buyers .page-hero__content,
+body.page--sellers .page-hero__content,
+body.page--resources .page-hero__content {
+  max-width: 620px;
+  margin-top: 40px;
+  padding: 40px 48px;
+  background: rgba(255, 255, 255, 0.46);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-panel);
+}
+
 body.page--buyers .step-list,
 body.page--sellers .step-list {
   list-style: none;
