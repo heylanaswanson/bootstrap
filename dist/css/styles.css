@@ -11396,7 +11396,7 @@ h6,
   margin: 18px auto 0;
   max-width: 54ch;
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.8;
   color: rgba(43, 42, 40, 0.72);
   text-wrap: pretty;
@@ -11411,7 +11411,6 @@ body.page--home .section--resources {
 }
 body.page--home .section--values {
   background: rgba(229, 223, 221, 0.368627451);
-  padding: clamp(56px, 4vw, 108px) 0;
 }
 body.page--home .approach {
   padding: 80px 24px;
@@ -11555,7 +11554,8 @@ body.page--home .section--intro {
 /* ---------- BUYERS + SELLERS PROCESS CARDS ---------- */
 body.page--buyers .page-hero__content,
 body.page--sellers .page-hero__content,
-body.page--resources .page-hero__content {
+body.page--resources .page-hero__content,
+body.page--home .page-hero__content {
   max-width: 620px;
   margin-top: 40px;
   padding: 40px 48px;

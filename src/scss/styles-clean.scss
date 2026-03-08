@@ -599,7 +599,7 @@ h6 {
   margin: 18px auto 0;
   max-width: 54ch;
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.8;
   color: rgba(43, 42, 40, 0.72);
   text-wrap: pretty;
@@ -619,7 +619,6 @@ body.page--home {
 
   .section--values {
     background: #e5dfdd5e;
-    padding: clamp(56px, 4vw, 108px) 0;
   }
 
   .approach {
@@ -803,13 +802,23 @@ body.page--home {
     padding-bottom: clamp(42px, 7vw, 64px);
   }
 
+  // .section--intro::after {
+  //   content: "";
+  //   display: block;
+  //   width: 70px;
+  //   height: 1px;
+  //   background: #d6d1cb;
+  //   margin-top: 18px;
+  // }
+
 
 }
 
 /* ---------- BUYERS + SELLERS PROCESS CARDS ---------- */
 body.page--buyers,
 body.page--sellers,
-body.page--resources {
+body.page--resources,
+body.page--home {
   .page-hero__content {
     max-width: 620px;
     margin-top: 40px;
