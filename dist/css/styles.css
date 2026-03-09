@@ -11435,7 +11435,7 @@ h6,
   margin: 0;
   max-width: 12ch;
   margin-inline: auto;
-  font-size: clamp(40px, 4vw, 74px);
+  font-size: clamp(40px, 3vw, 74px);
   line-height: 0.98;
   color: var(--ink);
   text-wrap: balance;
@@ -11484,7 +11484,7 @@ body.page--home .approach__grid {
 }
 body.page--home .approach__content h2, body.page--home .approach__content .h2 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(32px, 4vw, 48px);
+  font-size: clamp(32px, 3vw, 48px);
   line-height: 1.2;
   margin-bottom: 20px;
   color: #2f2b28;
@@ -11552,7 +11552,7 @@ body.page--home .page-hero__content .approach__grid {
 }
 body.page--home .page-hero__content .approach__content h2, body.page--home .page-hero__content .approach__content .h2 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(32px, 4vw, 48px);
+  font-size: clamp(32px, 3vw, 48px);
   line-height: 1.2;
   margin-bottom: 20px;
   color: #2f2b28;
@@ -11748,7 +11748,7 @@ body.page--listings .listing-hero__eyebrow {
 }
 body.page--listings .listing-hero__title {
   margin: 0 0 10px;
-  font-size: clamp(38px, 4.2vw, 64px);
+  font-size: clamp(38px, 3vw, 64px);
   line-height: 1.02;
   text-wrap: balance;
 }
@@ -11899,7 +11899,7 @@ body.page--contact .contact-info {
   padding-top: 8px;
 }
 body.page--contact .contact-info__eyebrow {
-  margin: 0 0 8px;
+  margin: 0 0 20px;
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 500;
