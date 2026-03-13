@@ -11508,6 +11508,9 @@ body.page--home .approach__image img {
   height: auto;
   border-radius: 6px;
   display: block;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 520px;
 }
 body.page--home .page-hero__actions {
   justify-content: center;
