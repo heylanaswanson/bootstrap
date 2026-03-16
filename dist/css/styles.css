@@ -11052,6 +11052,9 @@ h6,
   color: var(--text);
   text-wrap: pretty;
 }
+.section__lede a {
+  color: var(--brand-blue);
+}
 
 .section__lede--left {
   max-width: 680px;

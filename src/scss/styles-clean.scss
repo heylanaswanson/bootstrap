@@ -246,6 +246,10 @@ h6 {
   text-align: center;
   color: var(--text);
   text-wrap: pretty;
+
+  a {
+    color: var(--brand-blue);
+  }
 }
 
 .section__lede--left {
