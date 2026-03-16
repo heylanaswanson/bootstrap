@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Monthly Home Budget Calculator | Lana Swanson</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Jost:wght@300;400;500&display=swap"
+            rel="stylesheet" />
+        <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1b2a4a;
+      --navy-light: #2c3e6b;
+      --gold: #b89a6a;
+      --bg: #f4f3f0;
+      --card: #ffffff;
+      --border: #e0ddd8;
+      --text: #2a2a2a;
+      --muted: #888580;
+      --green: #4a7c59;
+      --red: #b05252;
+      --input-bg: #fafaf8;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 0 0 80px;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: var(--navy);
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header__brand {
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+    }
+    .site-header__sub {
+      color: var(--gold);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    .site-header__link {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 400;
+    }
+    .site-header__link:hover { color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      padding: 56px 40px 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .hero__eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .hero__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: white;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero__desc {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem;
+      font-weight: 300;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* LAYOUT */
+    .calculator {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 0;
+      display: grid;
+      gap: 24px;
+    }
+
+    /* CARDS */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .card__header {
+      background: var(--navy);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .card__header-title {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+    .card__header-line {
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+    }
+    .card__body {
+      padding: 28px 28px 24px;
+    }
+
+    /* FIELD ROWS */
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .field-row:last-child { border-bottom: none; }
+    .field-label {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--text);
+    }
+    .field-hint {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 2px;
+      font-weight: 300;
+    }
+
+    /* INPUTS */
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-prefix {
+      position: absolute;
+      left: 12px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      pointer-events: none;
+      font-weight: 400;
+    }
+    .input-suffix {
+      position: absolute;
+      right: 12px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      pointer-events: none;
+    }
+    input[type="number"], input[type="text"], select {
+      width: 100%;
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 9px 12px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+      -moz-appearance: textfield;
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+    input:focus, select:focus { border-color: var(--navy); }
+    .has-prefix input { padding-left: 26px; }
+    .has-suffix input { padding-right: 28px; }
+
+    select {
+      appearance: none;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+    }
+
+    /* COMPUTED FIELD */
+    .computed-value {
+      text-align: right;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--navy);
+      padding: 9px 12px;
+      background: #f0ede8;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      min-width: 100%;
+    }
+
+    /* TOTALS CARD */
+    .totals-card {
+      background: var(--navy);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .totals-card__inner {
+      padding: 32px 36px;
+    }
+    .totals-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    .total-item {}
+    .total-item__label {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .total-item__value {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: white;
+      font-weight: 400;
+    }
+    .total-item__value.goal { color: var(--gold); }
+
+    .difference-bar {
+      background: rgba(255,255,255,0.08);
+      border-radius: 3px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .diff-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .diff-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    .diff-value.positive { color: #7dba8f; }
+    .diff-value.negative { color: #e07b7b; }
+    .diff-value.neutral { color: rgba(255,255,255,0.7); }
+
+    .price-range-row {
+      background: rgba(255,255,255,0.05);
+      border-radius: 3px;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .price-range-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .price-range-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+    }
+    .price-range-note {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 3px;
+      text-align: right;
+    }
+
+    /* CTA */
+    .cta-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 36px 36px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+    .cta-card__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .cta-card__text {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 180px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+    }
+    .btn--primary {
+      background: var(--navy);
+      color: white;
+    }
+    .btn--primary:hover { background: var(--navy-light); }
+    .btn--outline {
+      background: transparent;
+      color: var(--navy);
+      border: 1px solid var(--navy);
+    }
+    .btn--outline:hover { background: var(--navy); color: white; }
+
+    /* DIVIDER */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 0 0;
+    }
+    .section-divider__text {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      font-weight: 500;
+    }
+    .section-divider__line { flex: 1; height: 1px; background: var(--border); }
+
+    /* FOOTER */
+    .site-footer {
+      text-align: center;
+      padding: 48px 24px 0;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 600px) {
+      .site-header { padding: 20px 20px; }
+      .hero { padding: 40px 20px 48px; }
+      .calculator { padding: 32px 16px 0; }
+      .card__body { padding: 20px 20px 16px; }
+      .field-row { grid-template-columns: 1fr 140px; }
+      .totals-grid { grid-template-columns: 1fr; gap: 16px; }
+      .cta-card { grid-template-columns: 1fr; }
+      .cta-actions { flex-direction: row; flex-wrap: wrap; }
+      .totals-card__inner { padding: 24px 20px; }
+    }
+  </style>
+    </head>
+    <body>
+
+        <header class="site-header">
+            <div>
+                <div class="site-header__brand">Lana Swanson</div>
+                <div class="site-header__sub">Realtor® &nbsp;·&nbsp; Coldwell
+                    Banker Realty</div>
+            </div>
+            <a href="https://lanaswanson.com" class="site-header__link">← Back
+                to site</a>
+        </header>
+
+        <div class="hero">
+            <div class="hero__eyebrow">Buyer Resource</div>
+            <h1 class="hero__title">Monthly Home Budget<br>Calculator</h1>
+            <p class="hero__desc">Mortgage payments are only part of the
+                picture. Use this to estimate your full monthly housing cost
+                before making an offer.</p>
+        </div>
+
+        <div class="calculator">
+
+            <!-- POTENTIAL HOME DETAILS -->
+            <div class="card">
+                <div class="card__header">
+                    <span class="card__header-title">Potential Home
+                        Details</span>
+                    <div class="card__header-line"></div>
+                </div>
+                <div class="card__body">
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Target Home Price</div>
+                        </div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="homePrice" placeholder="0"
+                                oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Down Payment</div>
+                            <div class="field-hint">Enter as dollar amount</div>
+                        </div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="downPayment"
+                                placeholder="0" oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Loan Amount</div>
+                            <div class="field-hint">Calculated
+                                automatically</div>
+                        </div>
+                        <div class="computed-value" id="loanAmount">—</div>
+                    </div>
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Estimated Interest
+                                Rate</div>
+                        </div>
+                        <div class="input-wrap has-suffix">
+                            <input type="number" id="interestRate"
+                                placeholder="6.5" step="0.1"
+                                oninput="calculate()" />
+                            <span class="input-suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Loan Term</div>
+                        </div>
+                        <div class="input-wrap">
+                            <select id="loanTerm" onchange="calculate()">
+                                <option value="30">30 years</option>
+                                <option value="15">15 years</option>
+                                <option value="20">20 years</option>
+                                <option value="10">10 years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ESTIMATED MONTHLY MORTGAGE -->
+            <div class="card">
+                <div class="card__header">
+                    <span class="card__header-title">Estimated Monthly
+                        Mortgage</span>
+                    <div class="card__header-line"></div>
+                </div>
+                <div class="card__body">
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Principal + Interest</div>
+                            <div class="field-hint">Calculated from your inputs
+                                above</div>
+                        </div>
+                        <div class="computed-value"
+                            id="principalInterest">—</div>
+                    </div>
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Property Taxes</div>
+                            <div class="field-hint">Approx. 1.1% of home price /
+                                yr in CA</div>
+                        </div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="propertyTax"
+                                placeholder="0" oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Homeowners Insurance</div>
+                            <div class="field-hint">Approx. $100–200/mo for most
+                                homes</div>
+                        </div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="insurance" placeholder="0"
+                                oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Mortgage Insurance
+                                (PMI)</div>
+                            <div class="field-hint">If down payment is less than
+                                20%</div>
+                        </div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="pmi" placeholder="0"
+                                oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">HOA Fees</div>
+                            <div class="field-hint">If applicable</div>
+                        </div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="hoa" placeholder="0"
+                                oninput="calculate()" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ONGOING HOUSEHOLD EXPENSES -->
+            <div class="card">
+                <div class="card__header">
+                    <span class="card__header-title">Ongoing Household
+                        Expenses</span>
+                    <div class="card__header-line"></div>
+                </div>
+                <div class="card__body">
+                    <div class="field-row">
+                        <div><div class="field-label">Utilities</div></div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="utilities" placeholder="0"
+                                oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div><div class="field-label">Internet /
+                                Cable</div></div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="internet" placeholder="0"
+                                oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div>
+                            <div class="field-label">Home Maintenance
+                                Reserve</div>
+                            <div class="field-hint">Typically 1% of home value /
+                                yr</div>
+                        </div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="maintenance"
+                                placeholder="0" oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div><div class="field-label">Landscaping /
+                                Exterior</div></div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="landscaping"
+                                placeholder="0" oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div><div class="field-label">Parking /
+                                Storage</div></div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="parking" placeholder="0"
+                                oninput="calculate()" />
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div><div class="field-label">Repairs / Unexpected
+                                Expenses</div></div>
+                        <div class="input-wrap has-prefix">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="repairs" placeholder="0"
+                                oninput="calculate()" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOTALS -->
+            <div class="totals-card">
+                <div class="totals-card__inner">
+                    <div class="totals-grid">
+                        <div class="total-item">
+                            <div class="total-item__label">Total Estimated
+                                Monthly Cost</div>
+                            <div class="total-item__value"
+                                id="totalCost">$0</div>
+                        </div>
+                        <div class="total-item">
+                            <div class="total-item__label">Your Goal Comfortable
+                                Monthly Cost</div>
+                            <div class="input-wrap has-prefix"
+                                style="margin-top:4px;">
+                                <span class="input-prefix"
+                                    style="color:rgba(255,255,255,0.4)">$</span>
+                                <input type="number" id="goalCost"
+                                    placeholder="0" oninput="calculate()"
+                                    style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:white;font-family:'Playfair Display',serif;font-size:1.6rem;padding:6px 12px 6px 26px;" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="difference-bar">
+                        <div>
+                            <div class="diff-label">Difference</div>
+                        </div>
+                        <div>
+                            <div class="diff-value neutral"
+                                id="diffValue">—</div>
+                        </div>
+                    </div>
+
+                    <div class="price-range-row">
+                        <div>
+                            <div class="price-range-label">Estimated Affordable
+                                Home Price Range</div>
+                            <div class="price-range-note">Based on your goal
+                                monthly cost × 200</div>
+                        </div>
+                        <div style="text-align:right">
+                            <div class="price-range-value"
+                                id="priceRange">—</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-card">
+                <div>
+                    <div class="cta-card__title">Not sure where to start?</div>
+                    <p class="cta-card__text">Most people aren't. Send me your
+                        numbers and I'll help you figure out what makes sense
+                        for your situation — no pressure, no commitment.</p>
+                </div>
+                <div class="cta-actions">
+                    <a
+                        href="mailto:lanaswanson@cbrealty.com?subject=Monthly Home Budget Worksheet"
+                        class="btn btn--primary">Email My Numbers</a>
+                    <a href="https://lanaswanson.com/contact.html"
+                        class="btn btn--outline">Schedule a Call</a>
+                </div>
+            </div>
+
+            <div class="site-footer">
+                Lana Swanson &nbsp;·&nbsp; REALTOR® &nbsp;·&nbsp; DRE #02382714
+                &nbsp;·&nbsp; <a href="https://lanaswanson.com"
+                    style="color:var(--muted)">lanaswanson.com</a>
+            </div>
+
+        </div>
+
+        <script>
+  function fmt(n) {
+    if (isNaN(n) || n === 0) return '—';
+    return '$' + Math.round(n).toLocaleString();
+  }
+
+  function fmtSigned(n) {
+    if (isNaN(n) || n === 0) return '—';
+    const sign = n > 0 ? '+' : '';
+    return sign + '$' + Math.round(Math.abs(n)).toLocaleString();
+  }
+
+  function val(id) {
+    return parseFloat(document.getElementById(id).value) || 0;
+  }
+
+  function calcPI(principal, annualRate, years) {
+    if (!principal || !annualRate || !years) return 0;
+    const r = annualRate / 100 / 12;
+    const n = years * 12;
+    return principal * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+  }
+
+  function calculate() {
+    const homePrice = val('homePrice');
+    const downPayment = val('downPayment');
+    const loanAmount = Math.max(0, homePrice - downPayment);
+    const rate = val('interestRate');
+    const term = parseInt(document.getElementById('loanTerm').value);
+
+    document.getElementById('loanAmount').textContent = loanAmount > 0 ? '$' + Math.round(loanAmount).toLocaleString() : '—';
+
+    const pi = calcPI(loanAmount, rate, term);
+    document.getElementById('principalInterest').textContent = pi > 0 ? '$' + Math.round(pi).toLocaleString() : '—';
+
+    const total =
+      pi +
+      val('propertyTax') +
+      val('insurance') +
+      val('pmi') +
+      val('hoa') +
+      val('utilities') +
+      val('internet') +
+      val('maintenance') +
+      val('landscaping') +
+      val('parking') +
+      val('repairs');
+
+    document.getElementById('totalCost').textContent = total > 0 ? '$' + Math.round(total).toLocaleString() : '$0';
+
+    const goal = val('goalCost');
+    const diff = goal - total;
+    const diffEl = document.getElementById('diffValue');
+    if (goal > 0 && total > 0) {
+      diffEl.textContent = fmtSigned(diff);
+      diffEl.className = 'diff-value ' + (diff >= 0 ? 'positive' : 'negative');
+    } else {
+      diffEl.textContent = '—';
+      diffEl.className = 'diff-value neutral';
+    }
+
+    const priceRange = goal > 0 ? goal * 200 : 0;
+    document.getElementById('priceRange').textContent = priceRange > 0 ? '$' + Math.round(priceRange).toLocaleString() : '—';
+  }
+
+  calculate();
+</script>
+
+    </body>
+</html>

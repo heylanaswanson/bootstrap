@@ -472,6 +472,28 @@ h6 {
 
 }
 
+.resource-card__actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.resource-card__link {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy, #1b2a4a);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.resource-card__link:hover {
+  opacity: 0.6;
+}
+
 .resource-card__title {
   margin: 0 0 8px;
   font-size: 24px;
