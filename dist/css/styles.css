@@ -11008,6 +11008,10 @@ h6,
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   max-width: 520px;
 }
+.approach.reverse .approach__image img {
+  width: auto;
+  max-height: 520px;
+}
 
 .section__inner,
 .site-footer__inner {
