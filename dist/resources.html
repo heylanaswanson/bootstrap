@@ -135,10 +135,31 @@
                                 <a class="nav-link"
                                     href="listings.html">Listings</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="resources.html">Resources</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"
+                                    id="navbarDropdown" href="#" role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false">Resources</a>
+                                <ul class="dropdown-menu dropdown-menu-end"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item"
+                                            href="resources.html">All
+                                            Resources</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+
+                                    <li><a class="dropdown-item"
+                                            href="budget-calculator.html">Monthly
+                                            Home Budget
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="resources.html#buyer-resources">Buyer
+                                            Resources</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="resources.html#seller-resources">Seller
+                                            Resources</a></li>
+                                </ul>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link"
                                     href="contact.html">Contact</a>
@@ -398,18 +419,19 @@
                         <div class="resource-grid resource-grid--three"
                             role="list" aria-label="Seller resources">
 
-                            <a class="resource-card"
+                            <a
+                                class="resource-card"
                                 role="listitem"
-                                href="#"
-                                rel="noopener">
-
-                                <p class="resource-card__eyebrow">Checklist</p>
+                                target="_blank"
+                                href="assets/pdfs/prep-to-sell.pdf"
+                                aria-label="Download Prep to Sell Checklist PDF">
+                                <p class="resource-card__eyebrow">PDF Guide</p>
                                 <h3 class="resource-card__title">Prep to Sell
                                     Checklist</h3>
-
                                 <p class="resource-card__text">
                                     A room-by-room checklist to prepare your
-                                    home for photos and showings.
+                                    home
+                                    for photos and showings.
                                 </p>
                             </a>
 

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Monthly Home Budget Calculator | Lana Swanson</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Jost:wght@300;400;500&display=swap"
-            rel="stylesheet" />
-        <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Home Budget Calculator | Lana Swanson</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet" />
+    <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -282,7 +282,7 @@
       font-size: 1.5rem;
       font-weight: 400;
     }
-    .diff-value.positive { color: #7dba8f; }
+    .diff-value.positive { color: #fff; }
     .diff-value.negative { color: #e07b7b; }
     .diff-value.neutral { color: rgba(255,255,255,0.7); }
 
@@ -406,305 +406,297 @@
       .totals-card__inner { padding: 24px 20px; }
     }
   </style>
-    </head>
-    <body>
+  </head>
+  <body>
 
-        <header class="site-header">
+    <header class="site-header">
+      <div>
+        <div class="site-header__brand">Lana Swanson</div>
+        <div class="site-header__sub">Realtor® &nbsp;·&nbsp; Coldwell
+          Banker Realty</div>
+      </div>
+      <a href="index.html" class="site-header__link">← Back
+        to site</a>
+    </header>
+
+    <div class="hero">
+      <div class="hero__eyebrow">Buyer Resource</div>
+      <h1 class="hero__title">Monthly Home Budget<br>Calculator</h1>
+      <p class="hero__desc">Mortgage payments are only part of the
+        picture. Use this to estimate your full monthly housing cost
+        before making an offer.</p>
+    </div>
+
+    <div class="calculator">
+
+      <!-- POTENTIAL HOME DETAILS -->
+      <div class="card">
+        <div class="card__header">
+          <span class="card__header-title">Potential Home
+            Details</span>
+          <div class="card__header-line"></div>
+        </div>
+        <div class="card__body">
+          <div class="field-row">
             <div>
-                <div class="site-header__brand">Lana Swanson</div>
-                <div class="site-header__sub">Realtor® &nbsp;·&nbsp; Coldwell
-                    Banker Realty</div>
+              <div class="field-label">Target Home Price</div>
             </div>
-            <a href="https://lanaswanson.com" class="site-header__link">← Back
-                to site</a>
-        </header>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="homePrice" placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div>
+              <div class="field-label">Down Payment</div>
+              <div class="field-hint">Enter as dollar amount</div>
+            </div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="downPayment"
+                placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div>
+              <div class="field-label">Loan Amount</div>
+              <div class="field-hint">Calculated
+                automatically</div>
+            </div>
+            <div class="computed-value" id="loanAmount">—</div>
+          </div>
+          <div class="field-row">
+            <div>
+              <div class="field-label">Estimated Interest
+                Rate</div>
+            </div>
+            <div class="input-wrap has-suffix">
+              <input type="number" id="interestRate" placeholder="6.5"
+                step="0.1" value="6.5" />
 
-        <div class="hero">
-            <div class="hero__eyebrow">Buyer Resource</div>
-            <h1 class="hero__title">Monthly Home Budget<br>Calculator</h1>
-            <p class="hero__desc">Mortgage payments are only part of the
-                picture. Use this to estimate your full monthly housing cost
-                before making an offer.</p>
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+          <div class="field-row">
+            <div>
+              <div class="field-label">Loan Term</div>
+            </div>
+            <div class="input-wrap">
+              <select id="loanTerm">
+                <option value="30">30 years</option>
+                <option value="15">15 years</option>
+                <option value="20">20 years</option>
+                <option value="10">10 years</option>
+              </select>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="calculator">
-
-            <!-- POTENTIAL HOME DETAILS -->
-            <div class="card">
-                <div class="card__header">
-                    <span class="card__header-title">Potential Home
-                        Details</span>
-                    <div class="card__header-line"></div>
-                </div>
-                <div class="card__body">
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Target Home Price</div>
-                        </div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="homePrice" placeholder="0"
-                                oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Down Payment</div>
-                            <div class="field-hint">Enter as dollar amount</div>
-                        </div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="downPayment"
-                                placeholder="0" oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Loan Amount</div>
-                            <div class="field-hint">Calculated
-                                automatically</div>
-                        </div>
-                        <div class="computed-value" id="loanAmount">—</div>
-                    </div>
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Estimated Interest
-                                Rate</div>
-                        </div>
-                        <div class="input-wrap has-suffix">
-                            <input type="number" id="interestRate"
-                                placeholder="6.5" step="0.1"
-                                oninput="calculate()" />
-                            <span class="input-suffix">%</span>
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Loan Term</div>
-                        </div>
-                        <div class="input-wrap">
-                            <select id="loanTerm" onchange="calculate()">
-                                <option value="30">30 years</option>
-                                <option value="15">15 years</option>
-                                <option value="20">20 years</option>
-                                <option value="10">10 years</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ESTIMATED MONTHLY MORTGAGE -->
-            <div class="card">
-                <div class="card__header">
-                    <span class="card__header-title">Estimated Monthly
-                        Mortgage</span>
-                    <div class="card__header-line"></div>
-                </div>
-                <div class="card__body">
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Principal + Interest</div>
-                            <div class="field-hint">Calculated from your inputs
-                                above</div>
-                        </div>
-                        <div class="computed-value"
-                            id="principalInterest">—</div>
-                    </div>
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Property Taxes</div>
-                            <div class="field-hint">Approx. 1.1% of home price /
-                                yr in CA</div>
-                        </div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="propertyTax"
-                                placeholder="0" oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Homeowners Insurance</div>
-                            <div class="field-hint">Approx. $100–200/mo for most
-                                homes</div>
-                        </div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="insurance" placeholder="0"
-                                oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Mortgage Insurance
-                                (PMI)</div>
-                            <div class="field-hint">If down payment is less than
-                                20%</div>
-                        </div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="pmi" placeholder="0"
-                                oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">HOA Fees</div>
-                            <div class="field-hint">If applicable</div>
-                        </div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="hoa" placeholder="0"
-                                oninput="calculate()" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ONGOING HOUSEHOLD EXPENSES -->
-            <div class="card">
-                <div class="card__header">
-                    <span class="card__header-title">Ongoing Household
-                        Expenses</span>
-                    <div class="card__header-line"></div>
-                </div>
-                <div class="card__body">
-                    <div class="field-row">
-                        <div><div class="field-label">Utilities</div></div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="utilities" placeholder="0"
-                                oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div><div class="field-label">Internet /
-                                Cable</div></div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="internet" placeholder="0"
-                                oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div>
-                            <div class="field-label">Home Maintenance
-                                Reserve</div>
-                            <div class="field-hint">Typically 1% of home value /
-                                yr</div>
-                        </div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="maintenance"
-                                placeholder="0" oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div><div class="field-label">Landscaping /
-                                Exterior</div></div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="landscaping"
-                                placeholder="0" oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div><div class="field-label">Parking /
-                                Storage</div></div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="parking" placeholder="0"
-                                oninput="calculate()" />
-                        </div>
-                    </div>
-                    <div class="field-row">
-                        <div><div class="field-label">Repairs / Unexpected
-                                Expenses</div></div>
-                        <div class="input-wrap has-prefix">
-                            <span class="input-prefix">$</span>
-                            <input type="number" id="repairs" placeholder="0"
-                                oninput="calculate()" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TOTALS -->
-            <div class="totals-card">
-                <div class="totals-card__inner">
-                    <div class="totals-grid">
-                        <div class="total-item">
-                            <div class="total-item__label">Total Estimated
-                                Monthly Cost</div>
-                            <div class="total-item__value"
-                                id="totalCost">$0</div>
-                        </div>
-                        <div class="total-item">
-                            <div class="total-item__label">Your Goal Comfortable
-                                Monthly Cost</div>
-                            <div class="input-wrap has-prefix"
-                                style="margin-top:4px;">
-                                <span class="input-prefix"
-                                    style="color:rgba(255,255,255,0.4)">$</span>
-                                <input type="number" id="goalCost"
-                                    placeholder="0" oninput="calculate()"
-                                    style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:white;font-family:'Playfair Display',serif;font-size:1.6rem;padding:6px 12px 6px 26px;" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="difference-bar">
-                        <div>
-                            <div class="diff-label">Difference</div>
-                        </div>
-                        <div>
-                            <div class="diff-value neutral"
-                                id="diffValue">—</div>
-                        </div>
-                    </div>
-
-                    <div class="price-range-row">
-                        <div>
-                            <div class="price-range-label">Estimated Affordable
-                                Home Price Range</div>
-                            <div class="price-range-note">Based on your goal
-                                monthly cost × 200</div>
-                        </div>
-                        <div style="text-align:right">
-                            <div class="price-range-value"
-                                id="priceRange">—</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="cta-card">
-                <div>
-                    <div class="cta-card__title">Not sure where to start?</div>
-                    <p class="cta-card__text">Most people aren't. Send me your
-                        numbers and I'll help you figure out what makes sense
-                        for your situation — no pressure, no commitment.</p>
-                </div>
-                <div class="cta-actions">
-                    <a
-                        href="mailto:lanaswanson@cbrealty.com?subject=Monthly Home Budget Worksheet"
-                        class="btn btn--primary">Email My Numbers</a>
-                    <a href="https://lanaswanson.com/contact.html"
-                        class="btn btn--outline">Schedule a Call</a>
-                </div>
-            </div>
-
-            <div class="site-footer">
-                Lana Swanson &nbsp;·&nbsp; REALTOR® &nbsp;·&nbsp; DRE #02382714
-                &nbsp;·&nbsp; <a href="https://lanaswanson.com"
-                    style="color:var(--muted)">lanaswanson.com</a>
-            </div>
-
+      <!-- ESTIMATED MONTHLY MORTGAGE -->
+      <div class="card">
+        <div class="card__header">
+          <span class="card__header-title">Estimated Monthly
+            Mortgage</span>
+          <div class="card__header-line"></div>
         </div>
+        <div class="card__body">
+          <div class="field-row">
+            <div>
+              <div class="field-label">Principal + Interest</div>
+              <div class="field-hint">Calculated from your inputs
+                above</div>
+            </div>
+            <div class="computed-value"
+              id="principalInterest">—</div>
+          </div>
+          <div class="field-row">
+            <div>
+              <div class="field-label">Property Taxes</div>
+              <div class="field-hint">Approx. 1.1% of home price /
+                yr in CA</div>
+            </div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="propertyTax"
+                placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div>
+              <div class="field-label">Homeowners Insurance</div>
+              <div class="field-hint">Approx. $100–200/mo for most
+                homes</div>
+            </div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="insurance" placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div>
+              <div class="field-label">Mortgage Insurance
+                (PMI)</div>
+              <div class="field-hint">If down payment is less than
+                20%</div>
+            </div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="pmi" placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div>
+              <div class="field-label">HOA Fees</div>
+              <div class="field-hint">If applicable</div>
+            </div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="hoa" placeholder="0" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <script>
+      <!-- ONGOING HOUSEHOLD EXPENSES -->
+      <div class="card">
+        <div class="card__header">
+          <span class="card__header-title">Ongoing Household
+            Expenses</span>
+          <div class="card__header-line"></div>
+        </div>
+        <div class="card__body">
+          <div class="field-row">
+            <div><div class="field-label">Utilities</div></div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="utilities" placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div><div class="field-label">Internet /
+                Cable</div></div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="internet" placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div>
+              <div class="field-label">Home Maintenance
+                Reserve</div>
+              <div class="field-hint">Typically 1% of home value /
+                yr</div>
+            </div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="maintenance"
+                placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div><div class="field-label">Landscaping /
+                Exterior</div></div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="landscaping"
+                placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div><div class="field-label">Parking /
+                Storage</div></div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="parking" placeholder="0" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div><div class="field-label">Repairs / Unexpected
+                Expenses</div></div>
+            <div class="input-wrap has-prefix">
+              <span class="input-prefix">$</span>
+              <input type="number" id="repairs" placeholder="0" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOTALS -->
+      <div class="totals-card">
+        <div class="totals-card__inner">
+          <div class="totals-grid">
+            <div class="total-item">
+              <div class="total-item__label">Total Estimated
+                Monthly Cost</div>
+              <div class="total-item__value"
+                id="totalCost">$0</div>
+            </div>
+            <div class="total-item">
+              <div class="total-item__label">Your Goal Comfortable
+                Monthly Cost</div>
+              <div class="input-wrap has-prefix"
+                style="margin-top:4px;">
+                <span class="input-prefix"
+                  style="color:rgba(255,255,255,0.4)">$</span>
+                <input type="number" id="goalCost"
+                  placeholder="0"
+                  style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:white;font-family:'Playfair Display',serif;font-size:1.6rem;padding:6px 12px 6px 26px;" />
+              </div>
+            </div>
+          </div>
+
+          <div class="difference-bar">
+            <div>
+              <div class="diff-label">Difference</div>
+            </div>
+            <div>
+              <div class="diff-value neutral"
+                id="diffValue">—</div>
+            </div>
+          </div>
+
+          <div class="price-range-row">
+            <div>
+              <div class="price-range-label">Estimated Affordable
+                Home Price Range</div>
+              <div class="price-range-note">Based on your goal
+                monthly cost × 200</div>
+            </div>
+            <div style="text-align:right">
+              <div class="price-range-value"
+                id="priceRange">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-card">
+        <div>
+          <div class="cta-card__title">Not sure where to start?</div>
+          <p class="cta-card__text">Most people aren't. Send me your
+            numbers and I'll help you figure out what makes sense
+            for your situation — no pressure, no commitment.</p>
+        </div>
+        <div class="cta-actions">
+          <a
+            href="mailto:lanaswanson@cbrealty.com?subject=Monthly Home Budget Worksheet"
+            class="btn btn--primary">Email My Numbers</a>
+          <a href="contact.html"
+            class="btn btn--outline">Schedule a Call</a>
+        </div>
+      </div>
+
+      <div class="site-footer">
+        Lana Swanson &nbsp;·&nbsp; REALTOR® &nbsp;·&nbsp; DRE #02382714
+        &nbsp;·&nbsp; <a href="https://lanaswanson.com"
+          style="color:var(--muted)">lanaswanson.com</a>
+      </div>
+
+    </div>
+
+    <script>
   function fmt(n) {
     if (isNaN(n) || n === 0) return '—';
     return '$' + Math.round(n).toLocaleString();
@@ -769,8 +761,26 @@
     document.getElementById('priceRange').textContent = priceRange > 0 ? '$' + Math.round(priceRange).toLocaleString() : '—';
   }
 
-  calculate();
+  // Event listeners AFTER calculate() is defined
+  document.addEventListener('DOMContentLoaded', function() {
+    const inputs = [
+      'homePrice', 'downPayment', 'interestRate', 'loanTerm',
+      'propertyTax', 'insurance', 'pmi', 'hoa',
+      'utilities', 'internet', 'maintenance', 'landscaping',
+      'parking', 'repairs', 'goalCost'
+    ];
+
+    inputs.forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', calculate);
+        el.addEventListener('change', calculate);
+      }
+    });
+
+    calculate();
+  });
 </script>
 
-    </body>
+  </body>
 </html>
