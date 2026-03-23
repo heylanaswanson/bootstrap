@@ -290,9 +290,25 @@ h6 {
   display: none;
 }
 
+.dropdown-item {
+  --bs-dropdown-link-hover-bg: #edf1f3;
+  --bs-dropdown-link-active-color: #fff;
+  --bs-dropdown-link-active-bg: #edf1f3;
+}
 
-.dropdown-item:active {
-  background: #efefef;
+.navbar-expand-lg .navbar-nav {
+  .dropdown-menu {
+    padding: 0;
+
+    li {
+      margin: 10px;
+    }
+  }
+
+  .dropdown-divider {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .navbar {
@@ -342,6 +358,7 @@ h6 {
 .navbar-nav .nav-link.active {
   color: var(--brand-blue);
 }
+
 
 .nav-link {
   font-size: 11px;
