@@ -40,9 +40,9 @@
   --line: rgba(0, 0, 0, 0.08);
 
   --brand-blue: #1e4fa3;
-  --brand-blue-bright: #1e5bb8;
+  --brand-blue-bright: #03236c;
   --brand-blue-soft: rgba(30, 79, 163, 0.4);
-  --brand-blue-dark: #163d8f;
+  --brand-blue-dark: #03236c;
 
   --shadow-soft: 0 8px 24px rgba(43, 42, 40, 0.04);
   --shadow-card: 0 14px 34px rgba(43, 42, 40, 0.08);
@@ -415,7 +415,7 @@ h6 {
 .btn--primary:hover,
 .btn--primary:active,
 .btn--primary:focus {
-  background: #174a97 !important;
+  background: #03236c !important;
   color: #fff !important;
 }
 
@@ -448,7 +448,7 @@ h6 {
   padding: 26px 24px 22px;
 
   .btn--secondary:hover {
-    background: #174a97 !important;
+    background: #03236c !important;
     color: white !important;
   }
 }
@@ -652,7 +652,7 @@ h6 {
   flex-wrap: wrap;
 
   .btn--secondary:hover {
-    background: #174a97 !important;
+    background: #03236c !important;
     color: white !important;
   }
 }
@@ -841,11 +841,11 @@ body.page--home {
   .page-hero__content {
 
     .btn {
-      background: #2f5fa7;
+      background: #03236c;
       margin-bottom: 10px;
 
       &:hover {
-        background: #244a84;
+        background: #1c4d96 !important;
       }
     }
 
@@ -1196,7 +1196,7 @@ body.page--listings {
     flex-wrap: wrap;
 
     .btn--secondary:hover {
-      background: #174a97 !important;
+      background: #03236c !important;
       color: white !important;
     }
   }
@@ -1551,7 +1551,6 @@ body.page--thank-you {
 
   .site-logo .logo--mobile {
     display: block;
-    height: 48px;
     margin-top: 0;
     margin-left: 0;
   }

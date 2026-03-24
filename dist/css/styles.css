@@ -10829,9 +10829,9 @@ textarea.form-control-lg {
   --rule-strong: rgba(43, 42, 40, 0.20);
   --line: rgba(0, 0, 0, 0.08);
   --brand-blue: #1e4fa3;
-  --brand-blue-bright: #1e5bb8;
+  --brand-blue-bright: #03236c;
   --brand-blue-soft: rgba(30, 79, 163, 0.4);
-  --brand-blue-dark: #163d8f;
+  --brand-blue-dark: #03236c;
   --shadow-soft: 0 8px 24px rgba(43, 42, 40, 0.04);
   --shadow-card: 0 14px 34px rgba(43, 42, 40, 0.08);
   --shadow-panel: 0 20px 50px rgba(0, 0, 0, 0.06);
@@ -11174,7 +11174,7 @@ h6,
 .btn--primary:hover,
 .btn--primary:active,
 .btn--primary:focus {
-  background: #174a97 !important;
+  background: #03236c !important;
   color: #fff !important;
 }
 
@@ -11204,7 +11204,7 @@ h6,
   padding: 26px 24px 22px;
 }
 .value-card .btn--secondary:hover {
-  background: #174a97 !important;
+  background: #03236c !important;
   color: white !important;
 }
 
@@ -11401,7 +11401,7 @@ h6,
   flex-wrap: wrap;
 }
 .cta-band__actions .btn--secondary:hover {
-  background: #174a97 !important;
+  background: #03236c !important;
   color: white !important;
 }
 
@@ -11565,11 +11565,11 @@ body.page--home .page-hero__actions {
   gap: 14px;
 }
 body.page--home .page-hero__content .btn {
-  background: #2f5fa7;
+  background: #03236c;
   margin-bottom: 10px;
 }
 body.page--home .page-hero__content .btn:hover {
-  background: #244a84;
+  background: #1c4d96 !important;
 }
 body.page--home .page-hero__content .btn--secondary {
   background: white;
@@ -11844,7 +11844,7 @@ body.page--listings .listing-hero__actions {
   flex-wrap: wrap;
 }
 body.page--listings .listing-hero__actions .btn--secondary:hover {
-  background: #174a97 !important;
+  background: #03236c !important;
   color: white !important;
 }
 body.page--listings .listing-grid {
@@ -12144,7 +12144,6 @@ body.page--thank-you .thank-you-card__actions {
   }
   .site-logo .logo--mobile {
     display: block;
-    height: 48px;
     margin-top: 0;
     margin-left: 0;
   }
