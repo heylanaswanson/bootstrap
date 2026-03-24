@@ -11565,11 +11565,11 @@ body.page--home .page-hero__actions {
   gap: 14px;
 }
 body.page--home .page-hero__content .btn {
-  background: #2f5fa7;
+  background: #03236c;
   margin-bottom: 10px;
 }
 body.page--home .page-hero__content .btn:hover {
-  background: #244a84;
+  background: #1c4d96 !important;
 }
 body.page--home .page-hero__content .btn--secondary {
   background: white;
