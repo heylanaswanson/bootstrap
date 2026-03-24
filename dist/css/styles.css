@@ -11174,7 +11174,7 @@ h6,
 .btn--primary:hover,
 .btn--primary:active,
 .btn--primary:focus {
-  background: #174a97 !important;
+  background: #03236c !important;
   color: #fff !important;
 }
 
@@ -11204,7 +11204,7 @@ h6,
   padding: 26px 24px 22px;
 }
 .value-card .btn--secondary:hover {
-  background: #174a97 !important;
+  background: #03236c !important;
   color: white !important;
 }
 
@@ -11401,7 +11401,7 @@ h6,
   flex-wrap: wrap;
 }
 .cta-band__actions .btn--secondary:hover {
-  background: #174a97 !important;
+  background: #03236c !important;
   color: white !important;
 }
 
@@ -11844,7 +11844,7 @@ body.page--listings .listing-hero__actions {
   flex-wrap: wrap;
 }
 body.page--listings .listing-hero__actions .btn--secondary:hover {
-  background: #174a97 !important;
+  background: #03236c !important;
   color: white !important;
 }
 body.page--listings .listing-grid {
