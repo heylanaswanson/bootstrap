@@ -16,7 +16,7 @@
         <meta name="author" content="Lana Swanson">
         <meta name="robots" content="index, follow">
 
-        <link rel="canonical" href="https://lanaswanson.com/buyers.html">
+        <link rel="canonical" href="https://lanaswanson.com/buyers">
 
         <!-- Open Graph -->
         <meta property="og:type" content="website">
@@ -68,7 +68,13 @@
   "postalCode":"92037",
   "addressCountry":"US"
  },
- "areaServed":"San Diego County",
+ "areaServed": [
+                {"@type": "City", "name": "La Jolla"},
+                {"@type": "Neighborhood", "name": "Bird Rock"},
+                {"@type": "Neighborhood", "name": "La Jolla Shores"},
+                {"@type": "Neighborhood", "name": "The Village"},
+                {"@type": "City", "name": "San Diego"}
+              ],
  "memberOf":{
   "@type":"Organization",
   "name":"Coldwell Banker Realty"
