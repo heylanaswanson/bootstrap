@@ -40,9 +40,9 @@
   --line: rgba(0, 0, 0, 0.08);
 
   --brand-blue: #1e4fa3;
-  --brand-blue-bright: #1e5bb8;
+  --brand-blue-bright: #03236c;
   --brand-blue-soft: rgba(30, 79, 163, 0.4);
-  --brand-blue-dark: #163d8f;
+  --brand-blue-dark: #03236c;
 
   --shadow-soft: 0 8px 24px rgba(43, 42, 40, 0.04);
   --shadow-card: 0 14px 34px rgba(43, 42, 40, 0.08);
@@ -1551,7 +1551,6 @@ body.page--thank-you {
 
   .site-logo .logo--mobile {
     display: block;
-    height: 48px;
     margin-top: 0;
     margin-left: 0;
   }
