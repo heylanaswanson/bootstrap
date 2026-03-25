@@ -1201,6 +1201,12 @@ body.page--listings {
     }
   }
 
+  .listing-text-intro {
+    .listing-text p {
+      margin: 40px;
+    }
+  }
+
   .listing-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));

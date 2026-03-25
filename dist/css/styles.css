@@ -11847,6 +11847,9 @@ body.page--listings .listing-hero__actions .btn--secondary:hover {
   background: #03236c !important;
   color: white !important;
 }
+body.page--listings .listing-text-intro .listing-text p {
+  margin: 40px;
+}
 body.page--listings .listing-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
