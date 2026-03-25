@@ -97,9 +97,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
             rel="stylesheet">
-        <link
-            href="css/styles.css"
-            rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
         <style>
@@ -119,11 +117,14 @@ html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--sand);color:var(--text);min-height:100vh;font-size:15px;line-height:1.6}
 
 /* header provided by site template */
+/* SKIP LINK */
+.skip-link{position:absolute;top:-100px;left:1rem;background:var(--ocean);color:#fff;padding:8px 16px;border-radius:0 0 var(--radius-sm) var(--radius-sm);font-size:14px;font-weight:500;text-decoration:none;z-index:9999;transition:top .15s}
+.skip-link:focus{top:0}
+
 /* PAGE HERO */
 .page-hero{background:var(--ocean);color:#fff;padding:2.5rem 2rem 3.5rem;position:relative;overflow:hidden}
 .page-hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:48px;background:var(--sand);clip-path:ellipse(58% 100% at 50% 100%)}
 .hero-inner{max-width:1120px;margin:0 auto;position:relative;z-index:1}
-.hero-inner h1 {color:white}
 .eyebrow{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:10px}
 h1{font-family:'DM Serif Display',serif;font-size:clamp(26px,4.5vw,46px);line-height:1.08;margin-bottom:10px}
 h1 em{font-style:italic;color:#9ECFEE}
@@ -131,6 +132,7 @@ h1 em{font-style:italic;color:#9ECFEE}
 .hstats{display:flex;gap:2.5rem;margin-top:1.75rem;flex-wrap:wrap}
 .hstat-num{font-family:'DM Serif Display',serif;font-size:26px;color:#9ECFEE}
 .hstat-label{font-size:11px;color:rgba(255,255,255,.45);margin-top:1px}
+.hero-inner h1{color:white}
 
 
 /* LAYOUT */
@@ -143,9 +145,7 @@ h1 em{font-style:italic;color:#9ECFEE}
 .tab-btn:hover:not(.active){background:rgba(26,74,107,.08);color:var(--ocean)}
 
 .section{display:none}
-
-.section.active{display:block;animation:fadeIn .22s ease;padding: 0;
-    background: transparent}
+.section.active{display:block;animation:fadeIn .22s ease;padding:0;background:transparent}
 @keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 
 /* FILTERS */
@@ -266,6 +266,8 @@ h1 em{font-style:italic;color:#9ECFEE}
     </head>
     <body>
 
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
         <header class="site-header sticky-top">
             <nav class="navbar navbar-expand-lg"
                 aria-label="Primary navigation">
@@ -306,20 +308,23 @@ h1 em{font-style:italic;color:#9ECFEE}
                             <li class="nav-item"><a class="nav-link"
                                     href="listings.html">Listings</a></li>
                             <li class="nav-item">
-                                <a class="nav-link"
-                                    href="neighborhood-explorer.html">Neighborhoods</a>
+                                <a class="nav-link active"
+                                    href="neighborhood-explorer.html"
+                                    aria-current="page">Neighborhoods</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle"
                                     id="navbarDropdown" href="#" role="button"
                                     data-bs-toggle="dropdown"
+                                    aria-haspopup="true"
                                     aria-expanded="false">Resources</a>
                                 <ul class="dropdown-menu dropdown-menu-end"
                                     aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item"
                                             href="resources.html">All
                                             Resources</a></li>
-                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><hr class="dropdown-divider"
+                                            aria-hidden="true" /></li>
                                     <li><a class="dropdown-item"
                                             href="resources.html#buyer-resources">Buyer
                                             Resources</a></li>
@@ -340,7 +345,7 @@ h1 em{font-style:italic;color:#9ECFEE}
             </nav>
         </header>
 
-        <div class="page-hero">
+        <div class="page-hero" role="region" aria-label="Page introduction">
             <div class="hero-inner">
                 <div class="eyebrow">San Diego Region</div>
                 <h1>Neighborhood<br><em>Explorer</em></h1>
@@ -359,55 +364,71 @@ h1 em{font-style:italic;color:#9ECFEE}
             </div>
         </div>
 
-        <main id="main-content" class="main" role="main">
+        <main class="main" id="main-content" role="main">
 
-            <nav class="tab-nav">
-                <button class="tab-btn active"
-                    onclick="showTab('explore')">Explore</button>
-                <button class="tab-btn" onclick="showTab('map')">Map</button>
-                <button class="tab-btn"
-                    onclick="showTab('compare')">Compare</button>
-                <button class="tab-btn"
-                    onclick="showTab('charts')">Charts</button>
+            <nav class="tab-nav" aria-label="Content sections">
+                <button class="tab-btn active" onclick="showTab('explore')"
+                    role="tab" aria-selected="true" aria-controls="tab-explore"
+                    id="tab-btn-explore">Explore</button>
+                <button class="tab-btn" onclick="showTab('map')" role="tab"
+                    aria-selected="false" aria-controls="tab-map"
+                    id="tab-btn-map">Map</button>
+                <button class="tab-btn" onclick="showTab('compare')" role="tab"
+                    aria-selected="false" aria-controls="tab-compare"
+                    id="tab-btn-compare">Compare</button>
+                <button class="tab-btn" onclick="showTab('charts')" role="tab"
+                    aria-selected="false" aria-controls="tab-charts"
+                    id="tab-btn-charts">Charts</button>
             </nav>
 
             <!-- EXPLORE TAB -->
-            <div class="section active" id="tab-explore">
-                <div class="filter-row">
+            <div class="section active" id="tab-explore" role="tabpanel"
+                aria-labelledby="tab-btn-explore">
+                <div class="filter-row" role="group"
+                    aria-label="Filter neighborhoods by zone">
                     <span class="flabel">Filter:</span>
-                    <button class="fb on" onclick="setFilter('all',this)">All
-                        (16)</button>
-                    <button class="fb" onclick="setFilter('north',this)">North
-                        County</button>
-                    <button class="fb"
-                        onclick="setFilter('central',this)">Central
-                        Coast</button>
-                    <button class="fb" onclick="setFilter('south',this)">South /
-                        Peninsula</button>
-                    <button class="fb" onclick="setFilter('urban',this)">Urban
-                        Core</button>
+                    <button class="fb on" onclick="setFilter('all',this)"
+                        aria-pressed="true">All (16)</button>
+                    <button class="fb" onclick="setFilter('north',this)"
+                        aria-pressed="false">North County</button>
+                    <button class="fb" onclick="setFilter('central',this)"
+                        aria-pressed="false">Central Coast</button>
+                    <button class="fb" onclick="setFilter('south',this)"
+                        aria-pressed="false">South / Peninsula</button>
+                    <button class="fb" onclick="setFilter('urban',this)"
+                        aria-pressed="false">Urban Core</button>
                 </div>
-                <div class="detail-panel" id="detail-panel"></div>
-                <div class="cards-grid" id="cards-grid"></div>
+                <div class="detail-panel" id="detail-panel" role="region"
+                    aria-label="Neighborhood detail" aria-live="polite"></div>
+                <div class="cards-grid" id="cards-grid" role="list"
+                    aria-label="Neighborhood cards"></div>
             </div>
 
             <!-- MAP TAB -->
-            <div class="section" id="tab-map">
-                <div class="map-legend">
-                    <div class="map-legend-item"><div class="legend-dot"
+            <div class="section" id="tab-map" role="tabpanel"
+                aria-labelledby="tab-btn-map" aria-hidden="true">
+                <div class="map-legend" role="list"
+                    aria-label="Map color legend">
+                    <div class="map-legend-item" role="listitem"><div
+                            class="legend-dot"
                             style="background:#2D5A3D"></div>North County</div>
-                    <div class="map-legend-item"><div class="legend-dot"
+                    <div class="map-legend-item" role="listitem"><div
+                            class="legend-dot"
                             style="background:#2E6E9E"></div>Central Coast</div>
-                    <div class="map-legend-item"><div class="legend-dot"
+                    <div class="map-legend-item" role="listitem"><div
+                            class="legend-dot"
                             style="background:#B84B30"></div>South /
                         Peninsula</div>
-                    <div class="map-legend-item"><div class="legend-dot"
+                    <div class="map-legend-item" role="listitem"><div
+                            class="legend-dot"
                             style="background:#5A3472"></div>Urban Core</div>
                 </div>
                 <div class="map-outer" id="map-outer" style="height:600px">
                     <svg width="100%" height="100%" viewBox="0 0 700 600"
                         xmlns="http://www.w3.org/2000/svg"
-                        style="position:absolute;top:0;left:0">
+                        style="position:absolute;top:0;left:0" role="img"
+                        aria-label="Map of San Diego coastal communities from Oceanside in the north to Little Italy in the south"><title>San
+                            Diego coastal neighborhoods map</title>
                         <rect width="700" height="600" fill="#C0D8EC" />
                         <path
                             d="M168,0 L168,40 L165,80 L162,120 L159,160 L156,200 L153,240 L150,280 L147,320 L144,360 L141,400 L138,440 L135,480 L132,520 L129,560 L126,600 L700,600 L700,0 Z"
@@ -463,11 +484,13 @@ h1 em{font-style:italic;color:#9ECFEE}
                         style="position:absolute;bottom:12px;right:14px;font-size:11px;color:#1A4A6B;background:rgba(255,255,255,.85);padding:3px 10px;border-radius:20px;border:1px solid rgba(26,74,107,.2)">Click
                         a pin to explore ↑ N · S ↓</div>
                 </div>
-                <div class="detail-panel" id="map-detail-panel"></div>
+                <div class="detail-panel" id="map-detail-panel" role="region"
+                    aria-label="Neighborhood detail" aria-live="polite"></div>
             </div>
 
             <!-- COMPARE TAB -->
-            <div class="section" id="tab-compare">
+            <div class="section" id="tab-compare" role="tabpanel"
+                aria-labelledby="tab-btn-compare" aria-hidden="true">
                 <p class="compare-intro">Select two neighborhoods to compare
                     side-by-side. Click cards in the <strong>Explore</strong>
                     tab to pick them, or use the dropdowns below.</p>
@@ -477,6 +500,7 @@ h1 em{font-style:italic;color:#9ECFEE}
                             style="font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:6px">Neighborhood
                             A</div>
                         <select id="sel-a" onchange="updateCompare()"
+                            aria-label="Select first neighborhood to compare"
                             style="width:100%;padding:9px 12px;border:1px solid var(--border-mid);border-radius:var(--radius-sm);background:#fff;font-family:inherit;font-size:14px;color:var(--text)">
                             <option value>Choose...</option>
                         </select>
@@ -486,17 +510,20 @@ h1 em{font-style:italic;color:#9ECFEE}
                             style="font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:6px">Neighborhood
                             B</div>
                         <select id="sel-b" onchange="updateCompare()"
+                            aria-label="Select second neighborhood to compare"
                             style="width:100%;padding:9px 12px;border:1px solid var(--border-mid);border-radius:var(--radius-sm);background:#fff;font-family:inherit;font-size:14px;color:var(--text)">
                             <option value>Choose...</option>
                         </select>
                     </div>
                 </div>
-                <div id="compare-output"></div>
+                <div id="compare-output" aria-live="polite"
+                    aria-label="Comparison results"></div>
             </div>
 
             <!-- CHARTS TAB -->
-            <div class="section" id="tab-charts">
-                <p class="chart-intro">Visual data across all 15 communities —
+            <div class="section" id="tab-charts" role="tabpanel"
+                aria-labelledby="tab-btn-charts" aria-hidden="true">
+                <p class="chart-intro">Visual data across all 16 communities —
                     home prices, population, walkability, schools, and commute
                     times.</p>
                 <div class="chart-card">
@@ -715,8 +742,9 @@ function renderCards(){
 
 function setFilter(f, btn){
   activeFilter=f;
-  document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.fb').forEach(b=>{b.classList.remove('on');b.setAttribute('aria-pressed','false');});
   btn.classList.add('on');
+  btn.setAttribute('aria-pressed','true');
   renderCards();
 }
 
@@ -822,10 +850,14 @@ function drawCharts(){
 }
 
 function showTab(t){
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('tab-'+t).classList.add('active');
-  event.target.classList.add('active');
+  document.querySelectorAll('.section').forEach(s=>{s.classList.remove('active');s.setAttribute('aria-hidden','true');});
+  document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});
+  const panel = document.getElementById('tab-'+t);
+  panel.classList.add('active');
+  panel.setAttribute('aria-hidden','false');
+  const btn = document.getElementById('tab-btn-'+t);
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
   if(t==='charts') setTimeout(drawCharts,50);
 }
 
