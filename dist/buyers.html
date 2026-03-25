@@ -37,20 +37,15 @@
         <meta name="twitter:image"
             content="https://lanaswanson.com/assets/images/banners/buyers.png">
 
-        <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-
-        <!-- CSS -->
         <link href="css/styles.css" rel="stylesheet">
 
-        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
             rel="stylesheet">
 
-        <!-- Real Estate Schema -->
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -85,7 +80,11 @@
     </head>
 
     <body class="page page--buyers">
-        <header class="site-header sticky-top">
+
+        <a class="visually-hidden-focusable" href="#main-content">Skip to main
+            content</a>
+
+        <header class="site-header sticky-top" role="banner">
             <nav class="navbar navbar-expand-lg"
                 aria-label="Primary navigation">
                 <div class="container-fluid">
@@ -104,7 +103,8 @@
                         aria-controls="navbarSupportedContent"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"
+                            aria-hidden="true"></span>
                     </button>
                     <div class="collapse navbar-collapse"
                         id="navbarSupportedContent">
@@ -126,13 +126,15 @@
                                 <a class="nav-link dropdown-toggle"
                                     id="navbarDropdown" href="#" role="button"
                                     data-bs-toggle="dropdown"
+                                    aria-haspopup="true"
                                     aria-expanded="false">Resources</a>
                                 <ul class="dropdown-menu dropdown-menu-end"
                                     aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item"
                                             href="resources.html">All
                                             Resources</a></li>
-                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><hr class="dropdown-divider"
+                                            aria-hidden="true" /></li>
                                     <li><a class="dropdown-item"
                                             href="resources.html#buyer-resources">Buyer
                                             Resources</a></li>
@@ -286,9 +288,10 @@
 
                     <ol class="step-list"
                         aria-label="Five steps in the home buying process">
-                        <li class="step">
-                            <p class="step__number">ONE</p>
-                            <h3 class="step__title">Pre-approval &amp;
+                        <li class="step" aria-labelledby="step1-title">
+                            <p class="step__number" aria-hidden="true">ONE</p>
+                            <h3 class="step__title"
+                                id="step1-title">Pre-approval &amp;
                                 Planning</h3>
                             <p class="step__text">
                                 We start by getting clear on what you want, what
@@ -299,9 +302,10 @@
                                 to ask.
                             </p>
                         </li>
-                        <li class="step">
-                            <p class="step__number">TWO</p>
-                            <h3 class="step__title">Search &amp; showings</h3>
+                        <li class="step" aria-labelledby="step2-title">
+                            <p class="step__number" aria-hidden="true">TWO</p>
+                            <h3 class="step__title" id="step2-title">Search
+                                &amp; showings</h3>
                             <p class="step__text">
                                 A focused search through La Jolla, Bird Rock, La
                                 Jolla Shores,
@@ -312,9 +316,10 @@
                                 home appears.
                             </p>
                         </li>
-                        <li class="step">
-                            <p class="step__number">THREE</p>
-                            <h3 class="step__title">Offer strategy</h3>
+                        <li class="step" aria-labelledby="step3-title">
+                            <p class="step__number" aria-hidden="true">THREE</p>
+                            <h3 class="step__title" id="step3-title">Offer
+                                strategy</h3>
                             <p class="step__text">
                                 We craft terms that protect you while staying
                                 competitive in the
@@ -323,9 +328,10 @@
                                 negotiation approach.
                             </p>
                         </li>
-                        <li class="step">
-                            <p class="step__number">FOUR</p>
-                            <h3 class="step__title">Inspections &amp;
+                        <li class="step" aria-labelledby="step4-title">
+                            <p class="step__number" aria-hidden="true">FOUR</p>
+                            <h3 class="step__title" id="step4-title">Inspections
+                                &amp;
                                 contingencies</h3>
                             <p class="step__text">
                                 We review disclosures and inspections, then
@@ -333,9 +339,10 @@
                                 credits if needed before moving forward.
                             </p>
                         </li>
-                        <li class="step">
-                            <p class="step__number">FIVE</p>
-                            <h3 class="step__title">Escrow to keys</h3>
+                        <li class="step" aria-labelledby="step5-title">
+                            <p class="step__number" aria-hidden="true">FIVE</p>
+                            <h3 class="step__title" id="step5-title">Escrow to
+                                keys</h3>
                             <p class="step__text">
                                 I coordinate the deadlines, paperwork, and
                                 moving parts so nothing
@@ -367,8 +374,8 @@
                             role="listitem"
                             target="_blank"
                             href="assets/pdfs/01_The_Buying_Process.pdf"
-                            rel="noopener"
-                            aria-label="Download The Buying Process PDF guide">
+                            rel="noopener noreferrer"
+                            aria-label="Download The Buying Process PDF guide (opens in new tab)">
                             <p class="resource-card__eyebrow">PDF Guide</p>
                             <h3 class="resource-card__title">The Buying
                                 Process</h3>
@@ -384,8 +391,8 @@
                             role="listitem"
                             target="_blank"
                             href="assets/pdfs/08_Home_Tour_Comparison_Worksheet.pdf"
-                            rel="noopener"
-                            aria-label="Download Home Tour Checklist PDF">
+                            rel="noopener noreferrer"
+                            aria-label="Download Home Tour Checklist PDF (opens in new tab)">
                             <p class="resource-card__eyebrow">Checklist</p>
                             <h3 class="resource-card__title">Home Tour
                                 Checklist</h3>
@@ -413,12 +420,13 @@
                                 <a class="resource-card__link"
                                     href="assets/pdfs/11_Monthly_Home_Budget_Worksheet.pdf"
                                     target="_blank"
-                                    aria-label="Download Monthly Budget Worksheet PDF">
+                                    rel="noopener noreferrer"
+                                    aria-label="Download Monthly Budget Worksheet PDF (opens in new tab)">
                                     Download PDF
                                 </a>
                                 <a class="resource-card__link"
                                     href="budget-calculator.html"
-                                    aria-label="Open Monthly Budget Worksheet online">
+                                    aria-label="Open interactive Monthly Budget Calculator">
                                     Try Online
                                 </a>
                             </div>
@@ -429,7 +437,8 @@
                             role="listitem"
                             target="_blank"
                             href="assets/pdfs/10_Home_Inspection_Day_Checklist.pdf"
-                            aria-label="Download Inspection Day Checklist">
+                            rel="noopener noreferrer"
+                            aria-label="Download Inspection Day Checklist PDF (opens in new tab)">
                             <p class="resource-card__eyebrow">Checklist</p>
                             <h3 class="resource-card__title">Inspection Day
                                 Checklist</h3>
@@ -449,9 +458,9 @@
                     <h2 class="section__title" id="faq-title">Common La Jolla
                         buyer questions</h2>
 
-                    <div class="faq"
+                    <div class="faq" role="list"
                         aria-label="Buyer frequently asked questions">
-                        <details class="faq__item">
+                        <details class="faq__item" role="listitem">
                             <summary class="faq__q">Why work with a buyer's
                                 agent in La Jolla?</summary>
                             <div class="faq__a">
@@ -469,7 +478,7 @@
                             </div>
                         </details>
 
-                        <details class="faq__item">
+                        <details class="faq__item" role="listitem">
                             <summary class="faq__q">Do I need to be pre-approved
                                 before I start looking?</summary>
                             <div class="faq__a">
@@ -484,7 +493,7 @@
                             </div>
                         </details>
 
-                        <details class="faq__item">
+                        <details class="faq__item" role="listitem">
                             <summary class="faq__q">How much should I offer on a
                                 La Jolla home?</summary>
                             <div class="faq__a">
@@ -497,7 +506,7 @@
                             </div>
                         </details>
 
-                        <details class="faq__item">
+                        <details class="faq__item" role="listitem">
                             <summary class="faq__q">What happens after my offer
                                 is accepted?</summary>
                             <div class="faq__a">
@@ -510,7 +519,7 @@
                             </div>
                         </details>
 
-                        <details class="faq__item">
+                        <details class="faq__item" role="listitem">
                             <summary class="faq__q">Can you help me compare La
                                 Jolla neighborhoods?</summary>
                             <div class="faq__a">
@@ -534,11 +543,12 @@
             </section>
 
             <!-- ABOUT -->
-            <section class="approach">
+            <section class="approach" aria-labelledby="about-title">
                 <div class="container">
                     <div class="approach__grid">
                         <div class="approach__content">
-                            <h2>Your La Jolla Real Estate Agent</h2>
+                            <h2 id="about-title">Your La Jolla Real Estate
+                                Agent</h2>
                             <p>
                                 Buying a home in La Jolla, Bird Rock, La Jolla
                                 Shores, or anywhere
@@ -551,11 +561,13 @@
                                 straight talk, no pressure, and a plan that
                                 actually fits their life.
                             </p>
-                            <a href="contact.html">Schedule a conversation →</a>
+                            <a href="contact.html"
+                                aria-label="Schedule a conversation with Lana Swanson">Schedule
+                                a conversation →</a>
                         </div>
                         <div class="approach__image">
                             <img src="assets/images/lana2.png"
-                                alt="Lana Swanson, La Jolla REALTOR® with Coldwell Banker Realty" />
+                                alt="Lana Swanson, La Jolla REALTOR® with Coldwell Banker Realty, smiling in a professional setting" />
                         </div>
                     </div>
                 </div>
@@ -576,17 +588,19 @@
                     </p>
                     <div class="cta-band__actions"
                         aria-label="Buyer page calls to action">
-                        <a class="btn btn--primary" href="contact.html">Schedule
+                        <a class="btn btn--primary" href="contact.html"
+                            aria-label="Schedule a conversation with Lana Swanson">Schedule
                             a conversation</a>
                         <a class="btn btn--secondary"
-                            href="resources.html">Browse resources</a>
+                            href="resources.html"
+                            aria-label="Browse buyer and seller resources">Browse
+                            resources</a>
                     </div>
                 </div>
             </section>
 
         </main>
 
-        <!-- SEO: Location context for search engines -->
         <div
             style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"
             aria-hidden="true">
@@ -601,9 +615,11 @@
             <div class="site-footer__inner">
                 <p class="site-footer__fineprint">
                     © <span id="year"></span> Lana Swanson | REALTOR® •
-                    <a href="tel:+18582419903">858-241-9903</a> •
-                    <a
-                        href="mailto:lanaswanson@cbrealty.com">lanaswanson@cbrealty.com</a>
+                    <a href="tel:+18582419903"
+                        aria-label="Call Lana Swanson at 858-241-9903">858-241-9903</a>
+                    •
+                    <a href="mailto:lanaswanson@cbrealty.com"
+                        aria-label="Email Lana Swanson">lanaswanson@cbrealty.com</a>
                     • DRE #02382714 • Coldwell Banker Realty La Jolla
                 </p>
             </div>

@@ -285,46 +285,62 @@
                                 netlify-honeypot="bot-field"
                                 action="thank-you.html"
                                 class="contact-form"
-                                aria-label="Contact form">
+                                aria-label="Contact form"
+                                novalidate>
 
                                 <input type="hidden" name="form-name"
                                     value="contact" />
 
-                                <p class="hidden">
+                                <p class="hidden" aria-hidden="true">
                                     <label>
                                         Don't fill this out if you're human:
-                                        <input name="bot-field" />
+                                        <input name="bot-field" tabindex="-1"
+                                            autocomplete="off" />
                                     </label>
                                 </p>
 
                                 <div class="contact-form__field">
-                                    <label for="first-name">First Name</label>
+                                    <label for="first-name">First Name <span
+                                            aria-hidden="true">*</span><span
+                                            class="visually-hidden">(required)</span></label>
                                     <input
                                         type="text"
                                         id="first-name"
                                         name="first_name"
                                         autocomplete="given-name"
+                                        aria-required="true"
                                         required />
                                 </div>
 
                                 <div class="contact-form__field">
-                                    <label for="last-name">Last Name</label>
+                                    <label for="last-name">Last Name <span
+                                            aria-hidden="true">*</span><span
+                                            class="visually-hidden">(required)</span></label>
                                     <input
                                         type="text"
                                         id="last-name"
                                         name="last_name"
                                         autocomplete="family-name"
+                                        aria-required="true"
                                         required />
                                 </div>
 
                                 <div class="contact-form__field">
-                                    <label for="email">Email</label>
+                                    <label for="email">Email <span
+                                            aria-hidden="true">*</span><span
+                                            class="visually-hidden">(required)</span></label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         autocomplete="email"
+                                        aria-required="true"
+                                        aria-describedby="email-hint"
                                         required />
+                                    <span id="email-hint"
+                                        class="visually-hidden">Enter a valid
+                                        email address, for example
+                                        name@example.com</span>
                                 </div>
 
                                 <div class="contact-form__field">
@@ -373,7 +389,12 @@
                                         type="text"
                                         id="location"
                                         name="location"
-                                        placeholder="La Jolla, Bird Rock, La Jolla Shores, Del Mar, etc." />
+                                        placeholder="La Jolla, Bird Rock, La Jolla Shores, Del Mar, etc."
+                                        aria-describedby="location-hint" />
+                                    <span id="location-hint"
+                                        class="visually-hidden">Examples: La
+                                        Jolla, Bird Rock, La Jolla Shores, Del
+                                        Mar</span>
                                 </div>
 
                                 <div class="contact-form__field">
@@ -382,7 +403,12 @@
                                         type="text"
                                         id="budget"
                                         name="budget"
-                                        placeholder="$1M–$2M" />
+                                        placeholder="$1M–$2M"
+                                        aria-describedby="budget-hint" />
+                                    <span id="budget-hint"
+                                        class="visually-hidden">Enter your
+                                        approximate price range, for example
+                                        $1M–$2M</span>
                                 </div>
 
                                 <div
@@ -397,8 +423,14 @@
 
                                 <div class="contact-form__actions">
                                     <button class="btn btn--primary"
-                                        type="submit">Send message</button>
+                                        type="submit"
+                                        aria-label="Send your message to Lana Swanson">Send
+                                        message</button>
                                 </div>
+
+                                <div role="alert" aria-live="polite"
+                                    id="form-status"
+                                    class="visually-hidden"></div>
                             </form>
                         </div>
                     </div>
@@ -407,13 +439,15 @@
 
             <!-- SOFT CTA / SECONDARY -->
             <section class="section section--contact-support"
-                aria-labelledby="support-title">
+                aria-labelledby="support-section-title">
                 <div class="section__inner">
+                    <h2 id="support-section-title" class="visually-hidden">Ways
+                        Lana can help</h2>
                     <div class="value-grid" role="list"
-                        aria-label="Contact page support cards">
+                        aria-label="Ways Lana can help">
                         <article class="value-card" role="listitem">
-                            <h3 class="value-card__title"
-                                id="support-title">Buying in La Jolla</h3>
+                            <h3 class="value-card__title">Buying in La
+                                Jolla</h3>
                             <p class="value-card__text">
                                 Looking for the right La Jolla neighborhood —
                                 Bird Rock,
@@ -469,9 +503,11 @@
             <div class="site-footer__inner">
                 <p class="site-footer__fineprint">
                     © <span id="year"></span> Lana Swanson | REALTOR® •
-                    <a href="tel:+18582419903">858-241-9903</a> •
-                    <a
-                        href="mailto:lanaswanson@cbrealty.com">lanaswanson@cbrealty.com</a>
+                    <a href="tel:+18582419903"
+                        aria-label="Call Lana Swanson at 858-241-9903">858-241-9903</a>
+                    •
+                    <a href="mailto:lanaswanson@cbrealty.com"
+                        aria-label="Email Lana Swanson">lanaswanson@cbrealty.com</a>
                     • DRE #02382714 • Coldwell Banker Realty La Jolla
                 </p>
             </div>
