@@ -860,7 +860,7 @@ body.page--home {
 
     p {
       color: rgba(0, 0, 0, 0.70);
-      opacity: .5;
+      opacity: .85;
 
     }
 
@@ -1198,6 +1198,12 @@ body.page--listings {
     .btn--secondary:hover {
       background: #03236c !important;
       color: white !important;
+    }
+  }
+
+  .listing-text-intro {
+    .listing-text p {
+      margin: 40px;
     }
   }
 

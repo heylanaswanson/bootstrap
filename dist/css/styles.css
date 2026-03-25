@@ -11580,7 +11580,7 @@ body.page--home .page-hero__content h1, body.page--home .page-hero__content .h1 
 }
 body.page--home .page-hero__content p {
   color: rgba(0, 0, 0, 0.7);
-  opacity: 0.5;
+  opacity: 0.85;
 }
 body.page--home .page-hero__content .approach {
   padding: 120px 24px;
@@ -11846,6 +11846,9 @@ body.page--listings .listing-hero__actions {
 body.page--listings .listing-hero__actions .btn--secondary:hover {
   background: #03236c !important;
   color: white !important;
+}
+body.page--listings .listing-text-intro .listing-text p {
+  margin: 40px;
 }
 body.page--listings .listing-grid {
   display: grid;
