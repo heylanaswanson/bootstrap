@@ -247,7 +247,8 @@
                                         now</p>
                                     <p class="contact-method__value">
                                         <a
-                                            href="https://calendly.com/theagentlana/consultation">Schedule
+                                            href="https://calendly.com/theagentlana/consultation"
+                                            onclick="gtag('event', 'schedule_click');">Schedule
                                             a consultation →</a>
                                     </p>
                                 </div>
@@ -295,6 +296,7 @@
                                 netlify-honeypot="bot-field"
                                 action="thank-you"
                                 class="contact-form"
+                                onsubmit="gtag('event', 'contact_submit');"
                                 aria-label="Contact form"
                                 novalidate>
 
