@@ -1872,3 +1872,104 @@ body.page--thank-you {
     padding-right: 18px;
   }
 }
+
+/* =============================================
+   LISTINGS PAGE — SEARCH CTA (replaces grid)
+   ============================================= */
+
+.section--search-cta {
+  padding: 4rem 0 5rem;
+  background-color: #F2EDE4;
+  /* ivory */
+}
+
+.section__inner--narrow {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.section--search-cta .section__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #1B3A5C;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.section--search-cta .section__lede {
+  color: #4A7BA7;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.search-cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.btn--large {
+  padding: 0.85rem 2.25rem;
+  font-size: 1rem;
+}
+
+.search-cta-note {
+  color: #A68B8B;
+  /* mauve */
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* =============================================
+   LISTINGS PAGE — SEARCH CTA (replaces grid)
+   ============================================= */
+
+.section--search-cta {
+  padding: 4rem 0 5rem;
+  background-color: #F2EDE4;
+  /* ivory */
+}
+
+.section__inner--narrow {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.section--search-cta .section__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #1B3A5C;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.section--search-cta .section__lede {
+  color: #4A7BA7;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.search-cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+
+
+.search-cta-note {
+  color: #A68B8B;
+  /* mauve */
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+}
