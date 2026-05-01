@@ -12489,3 +12489,35 @@ body.page--thank-you .thank-you-card__actions {
   font-style: italic;
   margin: 0;
 }
+
+/* =============================================
+   CONTACT FORM — FORMSPREE STATES
+   ============================================= */
+.form-success {
+  background-color: #F2EDE4;
+  border-left: 4px solid #7AACAB;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+}
+
+.form-success p {
+  color: #1B3A5C;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.form-error-global {
+  color: #C97B68;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  min-height: 0;
+}
+
+.form-field-error {
+  display: block;
+  color: #C97B68;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
