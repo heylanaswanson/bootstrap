@@ -38,3 +38,5 @@ branding/background.png
 instagram/*
 scripts/render-pug.js
 bluecirclecreative/*
+mailers/lana_farm_mailing_list.xlsx
+dist/home.html

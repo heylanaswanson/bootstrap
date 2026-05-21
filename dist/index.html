@@ -1,499 +1,1225 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Google tag (gtag.js) -->
-        <script async
-            src="https://www.googletagmanager.com/gtag/js?id=G-YZY8183GLY"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            gtag('config', 'G-YZY8183GLY');
-        </script>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+        <!-- ═══════════════════════════════════════════════════
+     PRIMARY SEO META
+     Update title/description any time your focus keyword
+     or value prop changes. Keep title under 60 chars,
+     description under 155 chars.
+════════════════════════════════════════════════════ -->
         <title>Lana Swanson | La Jolla Real Estate Agent | Coldwell Banker
             Realty</title>
+        <meta name="description"
+            content="Lana Swanson is a La Jolla REALTOR® with Coldwell Banker Realty. Hyperlocal expertise across all 7 La Jolla neighborhoods, Bird Rock, Muirlands, Del Mar & the coastal corridor. DRE #02382714.">
+        <meta name="keywords"
+            content="La Jolla real estate agent, La Jolla REALTOR, buy home La Jolla, sell home La Jolla, Coldwell Banker La Jolla, Bird Rock homes, Muirlands homes for sale, Mount Soledad real estate, Del Mar realtor, coastal San Diego homes">
+        <meta name="author" content="Lana Swanson">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://lanaswanson.com/">
 
-        <meta
-            name="description"
-            content="Lana Swanson is a La Jolla REALTOR® with Coldwell Banker Realty helping buyers and sellers in La Jolla, Bird Rock, La Jolla Shores, and greater San Diego. Local expertise you can trust." />
-        <meta
-            name="keywords"
-            content="La Jolla real estate agent, La Jolla REALTOR, San Diego real estate, La Jolla homes for sale, buy a home in La Jolla, sell a home in La Jolla, Bird Rock real estate, La Jolla Shores homes, Lana Swanson Realtor, Coldwell Banker Realty La Jolla" />
-        <meta name="author" content="Lana Swanson" />
-        <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#ffffff" />
+        <!-- ═══════════════════════════════════════════════════
+     OPEN GRAPH — controls how the page looks when shared
+     on Facebook, LinkedIn, iMessage, etc.
+     og:image should be 1200×630px — swap in your best
+     La Jolla golden-hour photo.
+════════════════════════════════════════════════════ -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://lanaswanson.com/">
+        <meta property="og:title"
+            content="Lana Swanson | La Jolla Real Estate Agent">
+        <meta property="og:description"
+            content="Hyperlocal La Jolla real estate expertise. Coldwell Banker Realty, DRE #02382714.">
+        <meta property="og:image"
+            content="https://lanaswanson.com/images/og-hero.jpg">
+        <!-- SWAP ↑ Replace with your own golden-hour La Jolla photo, 1200×630px -->
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Lana Swanson Real Estate">
 
-        <link rel="canonical" href="https://lanaswanson.com/" />
+        <!-- ═══════════════════════════════════════════════════
+     TWITTER / X CARD
+════════════════════════════════════════════════════ -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title"
+            content="Lana Swanson | La Jolla Real Estate Agent">
+        <meta name="twitter:description"
+            content="Hyperlocal La Jolla real estate expertise. Coldwell Banker Realty, DRE #02382714.">
+        <meta name="twitter:image"
+            content="https://lanaswanson.com/images/og-hero.jpg">
+        <!-- SWAP ↑ Same image as og:image above -->
 
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:title"
-            content="Lana Swanson | La Jolla Real Estate Agent | Coldwell Banker Realty" />
-        <meta
-            property="og:description"
-            content="Lana Swanson is a La Jolla REALTOR® with Coldwell Banker Realty helping buyers and sellers in La Jolla, Bird Rock, La Jolla Shores, and greater San Diego." />
-        <meta property="og:url" content="https://lanaswanson.com/" />
-        <meta
-            property="og:image"
-            content="https://lanaswanson.com/assets/images/banners/home.png" />
-        <meta property="og:site_name" content="Lana Swanson Real Estate" />
-        <meta property="og:locale" content="en_US" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="Lana Swanson | La Jolla Real Estate Agent | Coldwell Banker Realty" />
-        <meta
-            name="twitter:description"
-            content="La Jolla REALTOR® Lana Swanson — thoughtful guidance for buying and selling in La Jolla and greater San Diego." />
-        <meta
-            name="twitter:image"
-            content="https://lanaswanson.com/assets/images/banners/outdoor.png" />
-
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <link href="css/styles.css" rel="stylesheet" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-            rel="stylesheet" />
-
+        <!-- ═══════════════════════════════════════════════════
+     SCHEMA.ORG — JSON-LD STRUCTURED DATA
+     This is what makes Google show rich results:
+     your name, phone, address, and service area right
+     in the search listing. Update phone + social URLs.
+════════════════════════════════════════════════════ -->
         <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "RealEstateAgent",
-              "name": "Lana Swanson",
-              "url": "https://lanaswanson.com/",
-              "image": "https://lanaswanson.com/assets/images/banners/outdoor.png",
-              "telephone": "+1-858-241-9903",
-              "email": "lanaswanson@cbrealty.com",
-              "description": "Lana Swanson is a REALTOR® with Coldwell Banker Realty serving buyers and sellers throughout San Diego County, specializing in La Jolla, Bird Rock, La Jolla Shores, The Village, and Windansea.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "888 Prospect St, Suite 140",
-                "addressLocality": "La Jolla",
-                "addressRegion": "CA",
-                "postalCode": "92037",
-                "addressCountry": "US"
-              },
-              "areaServed": [
-                {"@type": "City", "name": "La Jolla"},
-                {"@type": "Neighborhood", "name": "Bird Rock"},
-                {"@type": "Neighborhood", "name": "La Jolla Shores"},
-                {"@type": "Neighborhood", "name": "The Village"},
-                {"@type": "Neighborhood", "name": "Windansea"},
-                {"@type": "City", "name": "San Diego"},
-                {"@type": "City", "name": "Del Mar"}
-              ],
-              "memberOf": {
-                "@type": "Organization",
-                "name": "Coldwell Banker Realty"
-              }
-            }
-        </script>
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Lana Swanson",
+  "url": "https://lanaswanson.com",
+  "logo": "https://lanaswanson.com/images/logo.svg",
+  "image": "https://lanaswanson.com/images/lana-swanson-headshot.jpg",
+  "description": "La Jolla REALTOR® with Coldwell Banker Realty. Hyperlocal expertise across all 7 La Jolla neighborhoods and the coastal San Diego corridor.",
+  "telephone": "+1-858-241-9903",
+  "email": "lana@lanaswanson.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "888 Prospect St Suite 140",
+    "addressLocality": "La Jolla",
+    "addressRegion": "CA",
+    "postalCode": "92037",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "La Jolla" },
+    { "@type": "City", "name": "Del Mar" },
+    { "@type": "City", "name": "Solana Beach" },
+    { "@type": "City", "name": "Pacific Beach" },
+    { "@type": "City", "name": "Encinitas" },
+    { "@type": "City", "name": "Carlsbad" }
+  ],
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Coldwell Banker Realty"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/lanaswanson",
+    "https://www.instagram.com/lanaswansonrealestate"
+  ]
+}
+</script>
+
+        <!-- ═══════════════════════════════════════════════════
+     BREADCRUMB SCHEMA — helps Google show the site
+     hierarchy in search results
+════════════════════════════════════════════════════ -->
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lanaswanson.com/"
+    }
+  ]
+}
+</script>
+
+        <!-- ═══════════════════════════════════════════════════
+     FONTS
+════════════════════════════════════════════════════ -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet">
+
+        <style>
+  /* ── DESIGN TOKENS ── */
+  :root {
+    --navy:      #1B3A5C;
+    --ivory:     #F2EDE4;
+    --salmon:    #C97B68;
+    --teal:      #7AACAB;
+    --teal-logo: #93b3b8;
+    --navy-dark: #0f2238;
+    --text-dark: #1a1a1a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ivory);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── ACCESSIBILITY: SKIP NAV ── */
+  .skip-nav {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    background: var(--navy);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    z-index: 9999;
+    transition: top 0.2s;
+  }
+  .skip-nav:focus { top: 1rem; }
+
+  /* ── ACCESSIBILITY: FOCUS STYLES ── */
+  :focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 3px;
+  }
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ── SCREEN READER ONLY utility ── */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ── REDUCED MOTION ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3rem;
+    background: transparent;
+    transition: background 0.4s, backdrop-filter 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(27,58,92,0.96);
+    backdrop-filter: blur(8px);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+  }
+  .nav-logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+  }
+  .nav-logo-text span {
+    display: block;
+    font-size: 0.62rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-top: 1px;
+  }
+  .logo-mark { flex-shrink: 0; }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-links a[aria-current="page"] {
+    color: var(--teal);
+    border-bottom: 1px solid var(--teal);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 640px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    /*
+    ┌─────────────────────────────────────────────────────┐
+    │  HERO BACKGROUND IMAGE                              │
+    │  Swap the URL below with your own La Jolla photo.  │
+    │  Ideal: golden-hour coastal shot, landscape orient.│
+    │  Recommended size: 1920×1080px minimum, JPG/WebP.  │
+    │  Keep the gradient overlay — it ensures text reads │
+    │  against any photo.                                 │
+    └─────────────────────────────────────────────────────┘
+    */
+    background:
+      linear-gradient(to top, rgba(27,58,92,0.92) 0%, rgba(27,58,92,0.4) 45%, rgba(27,58,92,0.15) 100%),
+      url('assets/images/banners/sellers.png') center/cover no-repeat;
+    transform: scale(1.04);
+    animation: heroZoom 12s ease-out forwards;
+  }
+  @keyframes heroZoom {
+    from { transform: scale(1.04); }
+    to   { transform: scale(1.00); }
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 8rem 3rem 5rem; /* top padding pushes content well below fixed nav */
+    max-width: 780px;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeUp 1s 0.4s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 1.2rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    font-weight: 600;
+    line-height: 1.08;
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    /* Warm golden-peach — glows against sunset photos.
+       Swap to var(--teal) for cooler/blue-toned hero images. */
+    color: #E8B89A;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.78);
+    max-width: 520px;
+    margin-bottom: 2.4rem;
+    font-weight: 300;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--salmon);
+    color: white;
+    padding: 0.9rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #b56a57; transform: translateY(-1px); }
+  .btn-ghost {
+    border: 1px solid rgba(255,255,255,0.45);
+    color: white;
+    padding: 0.9rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-block;
+  }
+  .btn-ghost:hover {
+    border-color: var(--teal);
+    background: rgba(122,172,171,0.12);
+  }
+
+  /* ── SCROLL INDICATOR ── */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeUp 1s 1.2s ease forwards;
+  }
+  .scroll-line {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .scroll-line::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--teal);
+    animation: lineSlide 2s 1.5s ease infinite;
+  }
+  @keyframes lineSlide {
+    0%   { left: -100%; }
+    50%  { left: 0; }
+    100% { left: 100%; }
+  }
+
+  /* ── INTRO STRIP ── */
+  .intro-strip {
+    background: var(--navy);
+    color: white;
+    padding: 3.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  .intro-strip p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 640px;
+    color: rgba(255,255,255,0.9);
+  }
+  .intro-strip p span { color: var(--teal); font-style: normal; }
+  .stat-row {
+    display: flex;
+    gap: 3rem;
+    flex-shrink: 0;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--salmon);
+    display: block;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 0.4rem;
+    display: block;
+  }
+
+  /* ── SECTION UTILITY ── */
+  section { padding: 6rem 3rem; }
+  .section-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--salmon);
+    margin-bottom: 1rem;
+  }
+  .section-h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--navy);
+    margin-bottom: 1.2rem;
+  }
+
+  /* ── TWO-PATH ── */
+  .two-path {
+    background: var(--ivory);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+  }
+  .path-card {
+    padding: 5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 420px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .path-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: transform 0.6s ease;
+  }
+  .path-card:hover::before { transform: scale(1.04); }
+
+  .path-card.buying::before {
+    /*
+    ┌─────────────────────────────────────────────────────┐
+    │  BUYERS CARD BACKGROUND IMAGE                       │
+    │  Swap URL with a warm interior / lifestyle shot.   │
+    │  Recommended: bright living room or front door.    │
+    │  Size: 900×600px minimum, JPG/WebP.                │
+    └─────────────────────────────────────────────────────┘
+    */
+    background:
+      linear-gradient(to top, rgba(27,58,92,0.92) 0%, rgba(27,58,92,0.3) 60%, transparent 100%),
+      url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=80') center/cover;
+  }
+
+  .path-card.selling::before {
+    /*
+    ┌─────────────────────────────────────────────────────┐
+    │  SELLERS CARD BACKGROUND IMAGE                      │
+    │  Swap URL with a polished exterior / curb-appeal   │
+    │  shot. A La Jolla listing photo works perfectly.   │
+    │  Size: 900×600px minimum, JPG/WebP.                │
+    └─────────────────────────────────────────────────────┘
+    */
+    background:
+      linear-gradient(to top, rgba(201,123,104,0.9) 0%, rgba(201,123,104,0.3) 60%, transparent 100%),
+      url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80') center/cover;
+  }
+
+  .path-content {
+    position: relative;
+    z-index: 2;
+  }
+  .path-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.8rem;
+  }
+  .path-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    font-weight: 600;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .path-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    transition: gap 0.2s;
+  }
+  .path-card:hover .path-arrow { gap: 0.85rem; }
+
+  /* ── NEIGHBORHOODS ── */
+  .neighborhoods { background: white; }
+  .neighborhoods-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+  }
+  .neighborhoods-header .section-h2 { margin-bottom: 0; }
+  .link-subtle {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--teal);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  .link-subtle:hover { color: var(--salmon); }
+  .hood-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    list-style: none;
+  }
+  .hood-grid > li {
+    display: contents; /* lets the child .hood-card participate directly in the grid */
+  }
+  .hood-card {
+    background: var(--ivory);
+    padding: 2rem;
+    border-left: 3px solid transparent;
+    transition: border-color 0.25s, transform 0.25s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+  .hood-card:hover {
+    border-left-color: var(--teal);
+    transform: translateX(4px);
+  }
+  .hood-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+  .hood-tag {
+    font-size: 0.72rem;
+    color: var(--salmon);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .hood-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  .hood-card.featured {
+    background: var(--navy);
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+    border-left: none;
+    transform: none;
+  }
+  .hood-card.featured:hover { transform: none; }
+
+  .hood-featured-img {
+    /*
+    ┌─────────────────────────────────────────────────────┐
+    │  FEATURED NEIGHBORHOOD IMAGE — THE VILLAGE          │
+    │  Swap URL with your own La Jolla Village photo.    │
+    │  The Cove, Prospect St, or Ellen Browning Scripps  │
+    │  Park all work beautifully here.                   │
+    │  Size: 600×400px minimum, JPG/WebP.                │
+    └─────────────────────────────────────────────────────┘
+    */
+    background: url('https://images.unsplash.com/photo-1533745848184-3db07256e163?w=600&q=80') center/cover;
+    min-height: 240px;
+  }
+
+  .hood-featured-text {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hood-featured-text .hood-name { color: white; }
+  .hood-featured-text .hood-tag  { color: var(--teal); }
+  .hood-featured-text .hood-desc { color: rgba(255,255,255,0.7); }
+
+  /* ── ABOUT SPLIT ── */
+  .about-split {
+    background: var(--ivory);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+  .about-img-wrap { position: relative; }
+
+  .about-img {
+    /*
+    ┌─────────────────────────────────────────────────────┐
+    │  ABOUT / HEADSHOT IMAGE                             │
+    │  Swap URL with your professional headshot.         │
+    │  Portrait orientation works best (4:5 ratio).      │
+    │  Ideally taken outdoors in La Jolla — the teal     │
+    │  accent border will complement coastal tones.      │
+    │  Size: 600×750px minimum, JPG/WebP.                │
+    │  Alt text is set on the <img> tag in the HTML.     │
+    └─────────────────────────────────────────────────────┘
+    */
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-accent {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    width: 60%;
+    height: 60%;
+    border: 2px solid var(--teal);
+    z-index: -1;
+  }
+  .about-text .section-h2 { margin-bottom: 1.5rem; }
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.2rem;
+  }
+  .about-text p strong { color: var(--navy); font-weight: 500; }
+  .about-text .btn-primary { margin-top: 0.8rem; }
+
+  /* ── MARQUEE ── */
+  .marquee-wrap {
+    background: var(--navy);
+    padding: 1.2rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-inner {
+    display: inline-block;
+    animation: marquee 28s linear infinite;
+  }
+  .marquee-item {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-right: 3rem;
+  }
+  .marquee-item span { color: var(--teal); margin-right: 3rem; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ── CONTACT BAR ── */
+  .contact-bar {
+    background: var(--salmon);
+    padding: 5rem 3rem;
+    text-align: center;
+  }
+  .contact-bar .section-label { color: rgba(255,255,255,0.7); }
+  .contact-bar h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+    margin-bottom: 0.8rem;
+    line-height: 1.15;
+  }
+  .contact-bar p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+  .btn-white {
+    background: white;
+    color: var(--salmon);
+    padding: 1rem 2.5rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy-dark);
+    color: rgba(255,255,255,0.45);
+    padding: 2.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+  }
+  footer a { color: rgba(255,255,255,0.45); text-decoration: none; }
+  footer a:hover { color: var(--teal); }
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .footer-address { color: rgba(255,255,255,0.4); font-size: 0.72rem; }
+  .footer-dre     { color: rgba(255,255,255,0.3); font-size: 0.68rem; letter-spacing: 0.1em; }
+  .footer-cb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .cb-logo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.5rem 1.2rem;
+    gap: 0.1rem;
+    /*
+    ┌─────────────────────────────────────────────────────┐
+    │  COLDWELL BANKER LOGO PLACEHOLDER                   │
+    │  Remove this entire .cb-logo-placeholder div and   │
+    │  replace with:                                      │
+    │  <img src="/images/cb-logo-white.png"               │
+    │       alt="Coldwell Banker Realty"                  │
+    │       width="120" height="40">                      │
+    │  Get the official white-on-transparent logo from   │
+    │  your CB brand portal or broker.                   │
+    └─────────────────────────────────────────────────────┘
+    */
+  }
+  .cb-wordmark {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .cb-sub {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+  }
+  .footer-equal-housing {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+  }
+  .footer-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: right;
+  }
+  .footer-right-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+  }
+</style>
     </head>
+    <body>
 
-    <body class="page page--home">
-        <a class="visually-hidden-focusable" href="#main-content">Skip to main
-            content</a>
+        <!-- ══ SKIP NAVIGATION — accessibility for keyboard/screen reader users ══ -->
+        <a class="skip-nav" href="#main-content">Skip to main content</a>
 
-        <header class="site-header sticky-top" role="banner">
-            <nav class="navbar navbar-expand-lg"
-                aria-label="Primary navigation">
-                <div class="container-fluid">
-                    <a href="/" class="site-logo"
-                        aria-label="Lana Swanson home page">
-                        <img src="assets/images/desktop-logo.png"
-                            alt="Lana Swanson REALTOR® Coldwell Banker Realty La Jolla"
-                            class="logo logo--desktop" />
-                        <img src="assets/images/mobile-logo.png"
-                            alt="Lana Swanson REALTOR® Coldwell Banker Realty La Jolla"
-                            class="logo logo--mobile" />
-                    </a>
-                    <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"
-                            aria-hidden="true"></span>
-                    </button>
-                    <div class="collapse navbar-collapse"
-                        id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="/buyers">Buyers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="/sellers">Sellers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="/listings">Listings</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="/neighborhood-explorer">Neighborhoods</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle"
-                                    id="navbarDropdown" href="#" role="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false">Resources</a>
-                                <ul class="dropdown-menu dropdown-menu-end"
-                                    aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item"
-                                            href="/resources">All
-                                            Resources</a></li>
-                                    <li><hr class="dropdown-divider"
-                                            aria-hidden="true" /></li>
-                                    <li><a class="dropdown-item"
-                                            href="/resources#buyer-resources">Buyer
-                                            Resources</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="/resources#seller-resources">Seller
-                                            Resources</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="/budget-calculator">Monthly
-                                            Home Budget Calculator</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="/contact">Contact</a>
-                            </li>
-                        </ul>
+        <!-- ══ SITE HEADER / NAV ══ -->
+        <header role="banner">
+            <nav id="nav" aria-label="Main navigation">
+                <a href="/" class="nav-logo"
+                    aria-label="Lana Swanson Real Estate — home">
+                    <!-- Blue Circle Creative brand mark — concentric circles in navy, ivory, teal -->
+                    <svg class="logo-mark" width="36" height="36"
+                        viewBox="0 0 48 48" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                        focusable="false">
+                        <circle cx="24" cy="24" r="21" stroke="#93b3b8"
+                            stroke-width="3" />
+                        <circle cx="24" cy="24" r="14" stroke="#F2EDE4"
+                            stroke-width="3" />
+                        <circle cx="24" cy="24" r="7" stroke="#1B3A5C"
+                            stroke-width="3" />
+                    </svg>
+                    <div class="nav-logo-text">
+                        Lana Swanson
+                        <span>La Jolla Real Estate</span>
                     </div>
-                </div>
+                </a>
+                <ul class="nav-links" role="list">
+                    <li><a href="/neighborhood-explorer">Neighborhoods</a></li>
+                    <li><a href="#buying">Buying</a></li>
+                    <li><a href="#selling">Selling</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
         </header>
 
-        <main id="main-content" class="page-main" role="main"
-            aria-label="La Jolla and San Diego real estate guidance">
+        <!-- ══ MAIN CONTENT ══ -->
+        <main id="main-content">
 
-            <!-- HERO -->
-            <section
-                class="page-hero"
-                aria-labelledby="page-hero-title"
-                aria-describedby="page-hero-subtitle">
-                <div
-                    class="page-hero__media"
-                    role="img"
-                    aria-label="Outdoor coastal seating area overlooking the ocean in La Jolla, San Diego"
-                    style="background-image:url('assets/images/banners/home.png')"></div>
-
-                <div class="page-hero__overlay" aria-hidden="true"></div>
-
-                <div class="page-hero__content">
-                    <h1 class="page-hero__title" id="page-hero-title">
-                        La Jolla &amp; San Diego Real Estate Agent
+            <!-- ── HERO ── -->
+            <section class="hero" aria-labelledby="hero-heading">
+                <div class="hero-bg" role="img"
+                    aria-label="Aerial view of the La Jolla coastline at golden hour"></div>
+                <!-- SWAP ↑ Update aria-label to describe YOUR actual photo when you replace it -->
+                <div class="hero-content">
+                    <h1 id="hero-heading">
+                        Your home has a story.<br>
+                        <em>So does your next chapter.</em>
                     </h1>
-                    <br />
-                    <h2>Your Next Chapter Starts Here</h2>
-
-                    <p class="page-hero__sub" id="page-hero-subtitle">
-                        Buying or selling a home in La Jolla or greater San
-                        Diego
-                        is one of the biggest decisions you'll make — and it
-                        shouldn't feel overwhelming. As a La Jolla REALTOR® with
-                        Coldwell Banker Realty, I walk my clients through every
-                        step with straight talk, no pressure, and a plan that
-                        actually fits their life.
+                    <p class="hero-sub">
+                        Hyperlocal knowledge, a tech-sharpened eye, and someone
+                        who actually answers her phone.
+                        La Jolla real estate, done differently.
                     </p>
-                    <div class="cta-band__actions"
-                        aria-label="Homepage calls to action">
-                        <a class="btn btn--primary" href="/contact"
-                            aria-label="Schedule a conversation with Lana Swanson">Schedule
-                            a conversation</a>
-                        <a class="btn btn--secondary" href="/resources"
-                            aria-label="Browse buyer and seller resources">Browse
-                            resources</a>
+                    <div class="hero-ctas">
+                        <a href="#neighborhoods" class="btn-primary">Explore
+                            Neighborhoods</a>
+                        <a href="#contact" class="btn-ghost">Let's Talk</a>
                     </div>
+                </div>
+                <div class="scroll-hint" aria-hidden="true">
+                    <div class="scroll-line"></div>
+                    Scroll
                 </div>
             </section>
 
-            <!-- BUYERS / SELLERS PATHWAYS -->
-            <section class="section section--values"
-                aria-labelledby="pathways-title">
-                <div class="section__inner">
-                    <h2 class="section__title" id="pathways-title">How can I
-                        help?</h2>
-
-                    <div class="value-grid" role="list"
-                        aria-label="Buyer and seller pathways">
-                        <article class="value-card" role="listitem"
-                            aria-labelledby="buyers-path-title">
-                            <h3 class="value-card__title"
-                                id="buyers-path-title">
-                                For La Jolla &amp; San Diego Buyers
-                            </h3>
-                            <p class="value-card__text">
-                                Buying a home in La Jolla or San Diego has a lot
-                                of moving parts. From Bird Rock to La Jolla
-                                Shores, I help you stay informed and confident
-                                at every step — so nothing catches you off
-                                guard.
-                            </p>
-                            <p class="mt-3 mb-0">
-                                <a class="btn btn--secondary" href="/buyers"
-                                    aria-label="Explore the buyers page for La Jolla and San Diego home buyers">Explore
-                                    the buyers page</a>
-                            </p>
-                        </article>
-
-                        <article class="value-card" role="listitem"
-                            aria-labelledby="sellers-path-title">
-                            <h3 class="value-card__title"
-                                id="sellers-path-title">
-                                For La Jolla &amp; San Diego Sellers
-                            </h3>
-                            <p class="value-card__text">
-                                Selling your La Jolla or San Diego home is part
-                                preparation, part timing, part presentation. I
-                                help you get all three right so your home stands
-                                out in the market and sells well.
-                            </p>
-                            <p class="mt-3 mb-0">
-                                <a class="btn btn--secondary"
-                                    href="/sellers"
-                                    aria-label="Explore the sellers page for La Jolla and San Diego home sellers">Explore
-                                    the sellers page</a>
-                            </p>
-                        </article>
+            <!-- ── INTRO STRIP ── -->
+            <aside class="intro-strip" aria-label="About La Jolla">
+                <p>
+                    "La Jolla isn't one neighborhood — it's
+                    <span>seven distinct communities</span>,
+                    each with its own personality, price point, and pace of
+                    life. I know them all."
+                </p>
+                <dl class="stat-row">
+                    <div class="stat">
+                        <dt class="sr-only">La Jolla sub-neighborhoods
+                            covered</dt>
+                        <dd class="stat-num">7</dd>
+                        <span class="stat-label"
+                            aria-hidden="true">Sub-neighborhoods</span>
                     </div>
-                </div>
+                    <div class="stat">
+                        <dt class="sr-only">San Diego communities mapped</dt>
+                        <dd class="stat-num">16</dd>
+                        <span class="stat-label" aria-hidden="true">Communities
+                            mapped</span>
+                    </div>
+                    <div class="stat">
+                        <dt class="sr-only">Years of tech background</dt>
+                        <dd class="stat-num">25<span style="font-size:1.2rem"
+                                aria-hidden="true">yr</span></dd>
+                        <span class="stat-label" aria-hidden="true">Tech
+                            background</span>
+                    </div>
+                </dl>
+            </aside>
+
+            <!-- ── TWO PATH ── -->
+            <section class="two-path" aria-labelledby="paths-heading">
+                <h2 id="paths-heading" class="sr-only">Buying or selling in La
+                    Jolla</h2>
+                <a href="/buying" class="path-card buying" id="buying"
+                    aria-label="For buyers — find your place in La Jolla">
+                    <div class="path-content">
+                        <p class="path-tag" aria-hidden="true">For buyers</p>
+                        <h3>Find your place<br>in La Jolla</h3>
+                        <span class="path-arrow" aria-hidden="true">Start here
+                            →</span>
+                    </div>
+                </a>
+                <a href="/selling" class="path-card selling" id="selling"
+                    aria-label="For sellers — find out what your home is worth">
+                    <div class="path-content">
+                        <p class="path-tag" aria-hidden="true">For sellers</p>
+                        <h3>Your home deserves<br>the right story</h3>
+                        <span class="path-arrow" aria-hidden="true">Let's talk
+                            value →</span>
+                    </div>
+                </a>
             </section>
 
-            <!-- A LA JOLLA LOCAL -->
-            <section class="approach" aria-labelledby="local-title">
-                <div class="container">
-                    <div class="approach__grid">
-                        <div class="approach__content">
-                            <h2 id="local-title">A La Jolla Local</h2>
-                            <p>
-                                I live in La Jolla and I know this neighborhood
-                                — and the surrounding San Diego communities of
-                                Bird Rock, La Jolla Shores, The Village, and
-                                Windansea — the way only a neighbor can. Before
-                                real estate, I spent 25 years in software
-                                engineering, so I bring a detail-oriented,
-                                analytical mind to every transaction. Whether
-                                you're buying a home in La Jolla or selling in
-                                San Diego County, my clients say I listen.
-                                Really listen. That's not an accident — it's how
-                                I work.
-                            </p>
-                            <a href="/contact"
-                                aria-label="Schedule a conversation with Lana Swanson">Schedule
-                                a conversation →</a>
-                        </div>
-                        <div class="approach__image">
-                            <img src="assets/images/lana2.png"
-                                alt="Lana Swanson, La Jolla REALTOR® with Coldwell Banker Realty, smiling in a professional setting" />
-                        </div>
+            <!-- ── NEIGHBORHOODS ── -->
+            <section class="neighborhoods" id="neighborhoods"
+                aria-labelledby="neighborhoods-heading">
+                <div class="neighborhoods-header">
+                    <div>
+                        <p class="section-label" aria-hidden="true">Know your
+                            neighborhood</p>
+                        <h2 class="section-h2" id="neighborhoods-heading">La
+                            Jolla, up close</h2>
                     </div>
+                    <a href="/neighborhood-explorer" class="link-subtle"
+                        aria-label="Explore all 16 San Diego communities">Explore
+                        all 16 communities →</a>
                 </div>
-            </section>
+                <ul class="hood-grid" role="list"
+                    aria-label="La Jolla neighborhood highlights">
 
-            <!-- APPROACH -->
-            <section class="section section--process"
-                aria-labelledby="approach-title">
-                <div class="section__inner">
-                    <h2 class="section__title" id="approach-title">What guides
-                        my approach</h2>
-
-                    <div class="value-grid" role="list"
-                        aria-label="Core values">
-                        <article class="value-card" role="listitem"
-                            aria-labelledby="clarity-title">
-                            <h3 class="value-card__title" id="clarity-title">No
-                                guesswork</h3>
-                            <p class="value-card__text">
-                                I won't push you toward a decision before you're
-                                ready. We start by getting clear on what you
-                                actually want — and what you don't.
-                            </p>
-                        </article>
-
-                        <article class="value-card" role="listitem"
-                            aria-labelledby="strategy-title">
-                            <h3 class="value-card__title"
-                                id="strategy-title">The full picture</h3>
-                            <p class="value-card__text">
-                                Whether you're buying or selling in La Jolla or
-                                anywhere in San Diego, I look at the full
-                                picture — market timing, your situation, and
-                                what's realistic — before making a move.
-                            </p>
-                        </article>
-
-                        <article class="value-card value-card--featured"
-                            role="listitem" aria-labelledby="support-title">
-                            <h3 class="value-card__title" id="support-title">You
-                                won't be left hanging</h3>
-                            <p class="value-card__text">
-                                Real estate gets emotional. I'm here to keep
-                                things organized and grounded so you're never
-                                left wondering what happens next.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- RESOURCES -->
-            <section class="section section--resources"
-                aria-labelledby="resources-title">
-                <div class="section__inner">
-                    <h2 class="section__title" id="resources-title">Featured
-                        resources</h2>
-                    <p class="section__lede">
-                        Buying or selling a home in La Jolla or San Diego has a
-                        lot of moving parts. These guides break it down so you
-                        know what to expect and when.
-                    </p>
-
-                    <div class="resource-grid" role="list"
-                        aria-label="Featured resource downloads">
-                        <a class="resource-card"
-                            role="listitem"
-                            href="/resources#buyer-resources"
-                            aria-label="Browse buyer resources for La Jolla and San Diego home buyers">
-                            <p class="resource-card__eyebrow">Buyer guide</p>
-                            <h3 class="resource-card__title">The Buying
-                                Process</h3>
-                            <p class="resource-card__text">
-                                From your first showing to getting your keys —
-                                here's what buying a home in La Jolla actually
-                                looks like.
-                            </p>
-                        </a>
-
-                        <a class="resource-card"
-                            role="listitem"
-                            href="assets/pdfs/02_Prep_to_Sell_Checklist.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Download Prep to Sell Checklist PDF for La Jolla and San Diego sellers (opens in new tab)">
-                            <p class="resource-card__eyebrow">Seller guide</p>
-                            <h3 class="resource-card__title">Prep to Sell
-                                Checklist</h3>
-                            <p class="resource-card__text">
-                                Everything you should do before your La Jolla or
-                                San Diego home hits the market — in one simple
-                                list.
-                            </p>
-                        </a>
-
-                        <a class="resource-card"
-                            role="listitem"
-                            href="assets/pdfs/03_Offer_Terms_Explained.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Download Offer Terms Explained PDF guide (opens in new tab)">
-                            <p class="resource-card__eyebrow">Guide</p>
-                            <h3 class="resource-card__title">Offer Terms
-                                Explained</h3>
-                            <p class="resource-card__text">
-                                Contingencies, credits, timelines — know what
-                                you're agreeing to before you sign.
-                            </p>
-                        </a>
-
-                        <article class="resource-card" role="listitem"
-                            aria-labelledby="budget-worksheet-title">
-                            <p class="resource-card__eyebrow">Worksheet</p>
-                            <h3 class="resource-card__title"
-                                id="budget-worksheet-title">Monthly Budget
-                                Worksheet</h3>
-                            <p class="resource-card__text">
-                                Estimate your true monthly costs beyond the
-                                mortgage payment — taxes, insurance, and more.
-                            </p>
-                            <div class="resource-card__actions">
-                                <a class="resource-card__link"
-                                    href="assets/pdfs/11_Monthly_Home_Budget_Worksheet.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="Download Monthly Budget Worksheet PDF (opens in new tab)">
-                                    Download PDF
-                                </a>
-                                <a class="resource-card__link"
-                                    href="/budget-calculator"
-                                    aria-label="Open interactive Monthly Budget Calculator">
-                                    Try Online
-                                </a>
+                    <li>
+                        <a href="/neighborhoods/the-village"
+                            class="hood-card featured"
+                            aria-label="The Village — most searched La Jolla neighborhood">
+                            <div class="hood-featured-img"
+                                role="img"
+                                aria-label="La Jolla Cove and Village waterfront at sunset">
+                                <!-- SWAP ↑ Update aria-label to describe your actual Village photo -->
                             </div>
-                        </article>
-                    </div>
+                            <div class="hood-featured-text">
+                                <p class="hood-tag">Most searched</p>
+                                <p class="hood-name">The Village</p>
+                                <p class="hood-desc">The heart of La Jolla —
+                                    walkable, vibrant, steps from the cove.
+                                    Historic character meets contemporary
+                                    coastal living.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/neighborhoods/bird-rock" class="hood-card"
+                            aria-label="Bird Rock neighborhood guide">
+                            <p class="hood-name">Bird Rock</p>
+                            <p class="hood-tag">Laid-back coastal</p>
+                            <p class="hood-desc">Surf culture, local boutiques,
+                                and bungalows that hold their value quietly.</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/neighborhoods/muirlands" class="hood-card"
+                            aria-label="Muirlands neighborhood guide">
+                            <p class="hood-name">Muirlands</p>
+                            <p class="hood-tag">Classic estates</p>
+                            <p class="hood-desc">Hillside homes with canyon
+                                views. Where old La Jolla money meets new buyers
+                                who appreciate bones.</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/neighborhoods/mount-soledad" class="hood-card"
+                            aria-label="Mount Soledad neighborhood guide">
+                            <p class="hood-name">Mount Soledad</p>
+                            <p class="hood-tag">Views &amp; space</p>
+                            <p class="hood-desc">Panoramic Pacific views,
+                                generous lots, and a quieter pace — ten minutes
+                                from everything.</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- ── MARQUEE — decorative, hidden from screen readers ── -->
+            <div class="marquee-wrap" aria-hidden="true" role="presentation">
+                <div class="marquee-inner">
+                    <span class="marquee-item">Bird Rock <span>·</span></span>
+                    <span class="marquee-item">The Village <span>·</span></span>
+                    <span class="marquee-item">Muirlands <span>·</span></span>
+                    <span class="marquee-item">Mount Soledad
+                        <span>·</span></span>
+                    <span class="marquee-item">La Jolla Shores
+                        <span>·</span></span>
+                    <span class="marquee-item">Country Club
+                        <span>·</span></span>
+                    <span class="marquee-item">Del Mar <span>·</span></span>
+                    <span class="marquee-item">Solana Beach
+                        <span>·</span></span>
+                    <span class="marquee-item">Pacific Beach
+                        <span>·</span></span>
+                    <span class="marquee-item">Encinitas <span>·</span></span>
+                    <span class="marquee-item">Carlsbad <span>·</span></span>
+                    <span class="marquee-item">Bird Rock <span>·</span></span>
+                    <span class="marquee-item">The Village <span>·</span></span>
+                    <span class="marquee-item">Muirlands <span>·</span></span>
+                    <span class="marquee-item">Mount Soledad
+                        <span>·</span></span>
+                    <span class="marquee-item">La Jolla Shores
+                        <span>·</span></span>
+                    <span class="marquee-item">Country Club
+                        <span>·</span></span>
+                    <span class="marquee-item">Del Mar <span>·</span></span>
+                    <span class="marquee-item">Solana Beach
+                        <span>·</span></span>
+                    <span class="marquee-item">Pacific Beach
+                        <span>·</span></span>
+                    <span class="marquee-item">Encinitas <span>·</span></span>
+                    <span class="marquee-item">Carlsbad <span>·</span></span>
+                </div>
+            </div>
+
+            <!-- ── ABOUT ── -->
+            <section class="about-split" id="about"
+                aria-labelledby="about-heading">
+                <div class="about-img-wrap">
+                    <!--
+      ┌─────────────────────────────────────────────────────┐
+      │  HEADSHOT — swap src with your actual photo path.  │
+      │  Alt text describes you + context for screen       │
+      │  readers and Google Image Search.                  │
+      │  Update alt text when you swap the image.          │
+      └─────────────────────────────────────────────────────┘
+      -->
+                    <img
+                        class="about-img"
+                        src="assets/images/lana2.png"
+                        alt="Lana Swanson, La Jolla REALTOR® with Coldwell Banker Realty, photographed in the La Jolla Village"
+                        width="600"
+                        height="750"
+                        loading="lazy">
+                    <div class="about-accent" aria-hidden="true"></div>
+                </div>
+                <div class="about-text">
+                    <p class="section-label" aria-hidden="true">About Lana</p>
+                    <h2 class="section-h2" id="about-heading">A different kind
+                        of agent</h2>
+                    <p>Twenty-five years in enterprise technology taught me how
+                        to read a market, structure a complex deal, and cut
+                        through noise to what actually matters. I brought all of
+                        that to real estate.</p>
+                    <p>I live and work in La Jolla. I know which streets flood
+                        in January, which neighborhoods are quietly
+                        appreciating, and which listings are priced to move
+                        versus priced to hope. <strong>That's the difference
+                            between someone who looks up information and someone
+                            who just knows it.</strong></p>
+                    <p>I'm with Coldwell Banker Realty, DRE #02382714 — and yes,
+                        I answer my phone.</p>
+                    <a href="#contact" class="btn-primary">Let's have a
+                        conversation</a>
                 </div>
             </section>
 
-            <!-- CTA BAND -->
-            <section class="cta-band" aria-labelledby="cta-title">
-                <div class="cta-band__inner">
-                    <h2 class="cta-band__title" id="cta-title">Ready to buy or
-                        sell in La Jolla?</h2>
-                    <p class="cta-band__text">
-                        Whether you're searching for a home in La Jolla, Bird
-                        Rock, La Jolla Shores, or anywhere in San Diego County
-                        — let's talk. That's exactly what the first conversation
-                        is for.
-                    </p>
-                    <div class="cta-band__actions"
-                        aria-label="Final call to action">
-                        <a class="btn btn--primary" href="/contact"
-                            aria-label="Schedule a conversation with Lana Swanson">Schedule
-                            a conversation</a>
-                    </div>
-                </div>
+            <!-- ── CONTACT BAR ── -->
+            <section class="contact-bar" id="contact"
+                aria-labelledby="contact-heading">
+                <p class="section-label" aria-hidden="true">Ready when you
+                    are</p>
+                <h2 id="contact-heading">
+                    Your home has a story.<br>
+                    Let's find out what it's worth.
+                </h2>
+                <p>No pressure, no pitch. Just a conversation about what you're
+                    thinking.</p>
+                <a href="mailto:lana@lanaswanson.com" class="btn-white"
+                    aria-label="Send an email to Lana Swanson">Get in touch</a>
+                <p
+                    style="margin-top:1.5rem; color:rgba(255,255,255,0.7); font-size:0.9rem;">
+                    Or call directly: <a href="tel:+18582419903"
+                        style="color:white; font-weight:500; text-decoration:none;">(858)
+                        241-9903</a>
+                </p>
             </section>
 
         </main>
 
-        <div
-            style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"
-            aria-hidden="true">
-            Lana Swanson is a REALTOR® and licensed real estate agent with
-            Coldwell Banker Realty La Jolla, serving buyers and sellers in La
-            Jolla, Bird Rock, La Jolla Shores, The Village, Windansea, Del Mar,
-            and greater San Diego County, California. DRE #02382714.
-        </div>
-
-        <footer class="site-footer" aria-label="Site footer">
-            <div class="site-footer__inner">
-                <p class="site-footer__fineprint">
-                    © <span id="year"></span> Lana Swanson | REALTOR® •
+        <!-- ══ SITE FOOTER ══ -->
+        <footer role="contentinfo">
+            <div class="footer-left">
+                <span class="footer-logo">Lana Swanson</span>
+                <address class="footer-address" style="font-style:normal;">
+                    888 Prospect St Suite 140 · La Jolla, CA 92037<br>
                     <a href="tel:+18582419903"
-                        aria-label="Call Lana Swanson at 858-241-9903">858-241-9903</a>
-                    •
-                    <a href="mailto:lanaswanson@cbrealty.com"
-                        aria-label="Email Lana Swanson">lanaswanson@cbrealty.com</a>
-                    • DRE #02382714 • Coldwell Banker Realty La Jolla
-                </p>
+                        style="color:rgba(255,255,255,0.4); text-decoration:none;">(858)
+                        241-9903</a>
+                </address>
+                <span class="footer-dre">
+                    <abbr
+                        title="California Department of Real Estate license number">DRE</abbr>
+                    #02382714
+                </span>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-right-text">
+                    <a href="/privacy">Privacy Policy</a>
+                    <span>© <span id="footer-year">2026</span> Lana
+                        Swanson</span>
+                    <span class="footer-equal-housing"><span
+                            aria-hidden="true">⌂</span> Equal Housing
+                        Opportunity</span>
+                </div>
+                <img src="assets/images/Logo_Realty_VER_STK_W_MO.png"
+                    alt="Coldwell Banker Realty" width="56" height="70"
+                    loading="lazy" style="opacity:0.95;">
             </div>
         </footer>
 
         <script>
-            document.getElementById("year").textContent = new Date().getFullYear();
-        </script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
+  // ── Nav: add .scrolled class for background on scroll ──
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ── Footer year (auto-updates) ──
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // ── Highlight active nav link based on scroll position ──
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const activateLink = (id) => {
+    navLinks.forEach(link => {
+      link.removeAttribute('aria-current');
+      if (link.getAttribute('href') === '#' + id) {
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  };
+
+  const onScroll = () => {
+    const scrollY = window.scrollY + window.innerHeight * 0.35;
+    let current = null;
+    sections.forEach(section => {
+      if (section.offsetTop <= scrollY) {
+        current = section.id;
+      }
+    });
+    if (current) activateLink(current);
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run once on load
+</script>
     </body>
 </html>
