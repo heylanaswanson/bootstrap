@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YZY8183GLY"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YZY8183GLY');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Lana Swanson | La Jolla REALTOR® | Coldwell Banker
+      Realty</title>
+    <meta name="description"
+      content="Lana Swanson is a La Jolla REALTOR® with Coldwell Banker Realty. 25 years in enterprise technology, hyperlocal knowledge of all 7 La Jolla neighborhoods. DRE #02382714.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lanaswanson.com/about">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet">
+
+    <style>
+  :root {
+    --slate:     #5B7F7E;
+    --ivory:     #F2EDE4;
+    --ivory-dark:#EDE5D4;
+    --ivory-mid: #E2D9CC;
+    --salmon:    #C97B68;
+    --teal:      #7AACAB;
+    --footer-bg: #4a6b6a;
+    --text-dark: #1a1a1a;
+    --text-mid:  #444;
+    --text-muted:#78786E;
+    --border:    rgba(91,127,126,.10);
+    --border-mid:rgba(91,127,126,.20);
+    --radius:    12px;
+    --radius-sm: 7px;
+  }
+  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'DM Sans',sans-serif; background:var(--ivory); color:var(--text-dark); overflow-x:hidden; line-height:1.6; }
+
+  .skip-nav { position:absolute; top:-100%; left:1rem; background:var(--slate); color:white; padding:0.75rem 1.5rem; font-size:0.85rem; font-weight:500; text-decoration:none; z-index:9999; transition:top 0.2s; }
+  .skip-nav:focus { top:1rem; }
+  :focus-visible { outline:3px solid var(--teal); outline-offset:3px; border-radius:2px; }
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+  /* ── NAV ── */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:0.85rem 3rem;
+    background:rgba(242,237,228,1.0);
+    backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    box-shadow:0 1px 0 rgba(91,127,126,0.10);
+  }
+  a.nav-logo,a.nav-logo:link,a.nav-logo:visited,a.nav-logo:hover,a.nav-logo:active {
+    display:flex; align-items:center; gap:0; text-decoration:none; color:var(--slate);
+  }
+  .logo-palm { flex-shrink:0; display:flex; align-items:center; }
+  .logo-divider { width:1px; height:38px; background:var(--salmon); opacity:0.6; margin:0 0.9rem; flex-shrink:0; }
+  .nav-logo-text { font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:600; color:#1B3A5C; letter-spacing:0.08em; line-height:1.1; white-space:nowrap; }
+  .nav-logo-text span { display:block; font-size:0.58rem; font-family:'DM Sans',sans-serif; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:var(--teal); margin-top:3px; }
+  .nav-links { display:flex; gap:2.5rem; list-style:none; }
+  .nav-links a { color:var(--slate); text-decoration:none; font-size:0.78rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; transition:color 0.2s; opacity:0.7; }
+  .nav-links a:hover { color:var(--salmon); opacity:1; }
+  .nav-links a.active { color:var(--salmon); opacity:1; border-bottom:1px solid var(--salmon); padding-bottom:2px; }
+
+  /* ── MAIN ABOUT SPLIT ── */
+  .about-wrap {
+    display:grid; grid-template-columns:1fr 1fr;
+    min-height:100vh; padding-top:65px;
+  }
+
+  /* photo side */
+  .about-photo-side {
+    position:sticky; top:65px; height:calc(100vh - 65px);
+    overflow:visible;
+  }
+  .about-photo-side img {
+    width:100%; height:100%; object-fit:cover; object-position:center top; display:block;
+  }
+  .about-photo-accent {
+    display:none;
+  }
+
+  /* text side */
+  .about-text-side {
+    padding:5rem 4rem 6rem 4rem;
+    background:var(--ivory);
+    display:flex; flex-direction:column; justify-content:center;
+  }
+  .section-label { font-size:0.68rem; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:var(--salmon); margin-bottom:0.75rem; }
+  .about-name { font-family:'Playfair Display',serif; font-size:clamp(2rem,3.5vw,3rem); font-weight:600; color:var(--slate); line-height:1.1; margin-bottom:0.4rem; }
+  .about-title { font-family:'Playfair Display',serif; font-size:1rem; font-style:italic; color:var(--teal); margin-bottom:2.5rem; }
+
+  .about-bio p { font-size:0.95rem; line-height:1.85; color:var(--text-mid); margin-bottom:1.2rem; }
+  .about-bio p strong { color:var(--slate); font-weight:500; }
+  .about-bio p:last-child { margin-bottom:0; }
+
+  /* credentials */
+  .credentials { margin:2.5rem 0; display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  .cred { background:white; border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem 1.25rem; border-left:3px solid var(--teal); }
+  .cred__label { font-size:0.62rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.3rem; }
+  .cred__value { font-family:'Playfair Display',serif; font-size:0.95rem; color:var(--slate); font-weight:600; }
+
+  /* cta */
+  .about-ctas { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
+  .btn-primary { background:var(--salmon); color:white; padding:0.9rem 2rem; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:background 0.2s,transform 0.2s; display:inline-block; }
+  .btn-primary:hover { background:#b56a57; transform:translateY(-1px); }
+  .btn-ghost { border:1.5px solid rgba(91,127,126,0.4); color:var(--slate); padding:0.9rem 2rem; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:border-color 0.2s,background 0.2s; display:inline-block; }
+  .btn-ghost:hover { background:rgba(91,127,126,0.06); border-color:var(--teal); }
+
+  /* ── FOOTER ── */
+  footer { background:var(--footer-bg); color:rgba(242,237,228,0.55); padding:2.5rem 3rem; display:flex; justify-content:space-between; align-items:center; gap:2rem; font-size:0.75rem; letter-spacing:0.06em; }
+  footer a { color:rgba(242,237,228,0.55); text-decoration:none; }
+  footer a:hover { color:var(--salmon); }
+  .footer-left { display:flex; flex-direction:column; gap:0.3rem; }
+  .footer-logo { font-family:'Playfair Display',serif; font-size:1.05rem; color:rgba(242,237,228,0.9); font-weight:600; }
+  .footer-address { color:rgba(242,237,228,0.55); font-size:0.72rem; }
+  .footer-dre { color:rgba(242,237,228,0.35); font-size:0.68rem; letter-spacing:0.1em; }
+  .footer-right { display:flex; flex-direction:row; align-items:center; gap:1.5rem; }
+  .footer-right-text { display:flex; flex-direction:column; align-items:flex-end; gap:0.3rem; }
+  .footer-equal-housing { font-size:0.62rem; letter-spacing:0.08em; color:rgba(255,255,255,0.25); text-transform:uppercase; }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:1024px){
+    nav { padding:0.85rem 2rem; }
+    .about-text-side { padding:4rem 3rem 5rem; }
+  }
+  @media(max-width:768px){
+    .nav-links { display:none; }
+    nav { padding:0.85rem 1.5rem; }
+    .about-wrap { grid-template-columns:1fr; padding-top:65px; }
+    .about-photo-side { position:relative; top:auto; height:60vw; max-height:420px; }
+    .about-photo-accent { display:none; }
+    .about-text-side { padding:3rem 1.5rem 4rem; }
+    .credentials { grid-template-columns:1fr; }
+    .about-ctas { flex-direction:column; }
+    .btn-primary,.btn-ghost { width:100%; text-align:center; }
+    footer { flex-direction:column; align-items:flex-start; gap:1.5rem; padding:2rem 1.5rem; }
+    .footer-right { width:100%; justify-content:space-between; }
+    .nav-logo-text { font-size:0.9rem; }
+    .logo-divider { height:30px; }
+  }
+  @media(max-width:480px){
+    .nav-logo-text span { display:none; }
+    footer { font-size:0.7rem; }
+    .footer-right { flex-direction:column; align-items:flex-start; gap:0.75rem; }
+    .footer-right-text { align-items:flex-start; }
+  }
+  .nav-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+  .nav-toggle span { display:block; width:22px; height:2px; background:var(--slate); border-radius:2px; transition:transform 0.2s,opacity 0.2s; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity:0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  @media(max-width:768px){
+    .nav-toggle { display:flex; }
+    .nav-links { display:none; position:fixed; top:65px; left:0; right:0; background:rgba(91,127,126,0.98); backdrop-filter:blur(12px); flex-direction:column; gap:0; padding:1rem 0; z-index:99; }
+    .nav-links.open { display:flex; }
+    .nav-links li { border-bottom:1px solid rgba(255,255,255,0.07); }
+    .nav-links a { display:block; padding:1rem 2rem; font-size:0.85rem; letter-spacing:0.12em; color:rgba(242,237,228,0.9); opacity:1; }
+    .nav-links a:hover { color:white; }
+  }
+  </style>
+  </head>
+  <body>
+
+    <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+    <header role="banner">
+      <nav id="nav" aria-label="Main navigation">
+        <a href="/" class="nav-logo"
+          aria-label="Lana Swanson Real Estate — home">
+          <div class="logo-palm">
+            <svg class="logo-mark" width="52" height="52" viewBox="0 0 52 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              focusable="false">
+              <path d="M20 54 Q21 44 23 34 Q25 24 24 14" stroke="#4a6b6a"
+                stroke-width="2.8" stroke-linecap="round" fill="none" />
+              <path d="M24 14 Q10 6 2 9" stroke="#5B7F7E" stroke-width="2.5"
+                stroke-linecap="round" fill="none" />
+              <path d="M24 14 Q18 2 22 0" stroke="#5B7F7E" stroke-width="2.5"
+                stroke-linecap="round" fill="none" />
+              <path d="M24 14 Q28 2 32 0" stroke="#4a6b6a" stroke-width="2.5"
+                stroke-linecap="round" fill="none" />
+              <path d="M24 14 Q36 6 44 10" stroke="#5B7F7E" stroke-width="2.5"
+                stroke-linecap="round" fill="none" />
+              <path d="M24 14 Q38 18 42 24" stroke="#4a6b6a" stroke-width="2"
+                stroke-linecap="round" fill="none" />
+              <path d="M24 14 Q10 20 6 28" stroke="#7AACAB" stroke-width="2"
+                stroke-linecap="round" fill="none" />
+              <path d="M24 14 Q12 12 6 16" stroke="#7AACAB" stroke-width="1.8"
+                stroke-linecap="round" fill="none" />
+              <circle cx="24" cy="14" r="2.5" fill="#C97B68" />
+              <path d="M2 48 Q10 44 18 48 Q26 52 34 48 Q42 44 50 48"
+                stroke="#7AACAB" stroke-width="2.2" stroke-linecap="round"
+                fill="none" />
+              <path d="M4 52 Q12 48 20 52 Q28 56 36 52 Q43 49 50 52"
+                stroke="#7cd5e6" stroke-width="1.4" stroke-linecap="round"
+                fill="none" opacity="0.65" />
+            </svg>
+          </div>
+          <div class="logo-divider" aria-hidden="true"></div>
+          <div class="nav-logo-text">Lana Swanson<span>La Jolla Real
+              Estate</span></div>
+        </a>
+        <button class="nav-toggle" id="nav-toggle"
+          aria-label="Toggle navigation" aria-expanded="false"
+          aria-controls="nav-links">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span
+            aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="/neighborhood-explorer">Neighborhoods</a></li>
+          <li><a href="/buyers">Buying</a></li>
+          <li><a href="/sellers">Selling</a></li>
+          <li><a href="/about" class="active" aria-current="page">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <div class="about-wrap">
+
+        <!-- PHOTO SIDE -->
+        <div class="about-photo-side" aria-hidden="true">
+          <img src="assets/images/lana2.png"
+            alt="Lana Swanson, La Jolla REALTOR® with Coldwell Banker Realty"
+            width="800" height="1000">
+          <div class="about-photo-accent"></div>
+        </div>
+
+        <!-- TEXT SIDE -->
+        <div class="about-text-side">
+          <p class="section-label">La Jolla REALTOR®</p>
+          <h1 class="about-name">Lana Swanson</h1>
+          <p class="about-title">Coldwell Banker Realty · DRE #02382714</p>
+
+          <div class="about-bio">
+            <p>Twenty-five years in enterprise technology taught me how to read
+              a market, structure a complex deal, and cut through noise to what
+              actually matters. I brought all of that to real estate.</p>
+            <p>I live and work in La Jolla. I know which streets flood in
+              January, which neighborhoods are quietly appreciating, and which
+              listings are priced to move versus priced to hope. <strong>That's
+                the difference between someone who looks up information and
+                someone who just knows it.</strong></p>
+            <p>I work with buyers and sellers across all seven La Jolla
+              neighborhoods — Bird Rock, The Village, La Jolla Shores,
+              Muirlands, Mount Soledad, Windansea, and Country Club — as well as
+              Del Mar, Solana Beach, and greater San Diego County.</p>
+            <p>I'm with Coldwell Banker Realty at 888 Prospect St in La Jolla —
+              and yes, I answer my phone.</p>
+          </div>
+
+          <div class="credentials" aria-label="Credentials and background">
+            <div class="cred">
+              <div class="cred__label">License</div>
+              <div class="cred__value">DRE #02382714</div>
+            </div>
+            <div class="cred">
+              <div class="cred__label">Brokerage</div>
+              <div class="cred__value">Coldwell Banker Realty</div>
+            </div>
+            <div class="cred">
+              <div class="cred__label">Tech background</div>
+              <div class="cred__value">25 years · ATG, SFCC</div>
+            </div>
+            <div class="cred">
+              <div class="cred__label">Market focus</div>
+              <div class="cred__value">La Jolla · 7 neighborhoods</div>
+            </div>
+            <div class="cred">
+              <div class="cred__label">Office</div>
+              <div class="cred__value">888 Prospect St, Suite 140</div>
+            </div>
+            <div class="cred">
+              <div class="cred__label">Phone</div>
+              <div class="cred__value"><a href="tel:+18582419903"
+                  style="color:var(--slate);text-decoration:none;border-bottom:1px solid var(--teal);">858-241-9903</a></div>
+            </div>
+          </div>
+
+          <div class="about-ctas">
+            <a href="/contact" class="btn-primary">Get in touch</a>
+            <a href="/neighborhood-explorer" class="btn-ghost">Explore
+              neighborhoods</a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="footer-left">
+        <span class="footer-logo">Lana Swanson</span>
+        <address class="footer-address" style="font-style:normal;">
+          888 Prospect St Suite 140 · La Jolla, CA 92037<br>
+          <a href="tel:+18582419903"
+            style="color:rgba(255,255,255,0.4);text-decoration:none;">(858)
+            241-9903</a>
+        </address>
+        <span class="footer-dre"><abbr
+            title="California Department of Real Estate license number">DRE</abbr>
+          #02382714</span>
+      </div>
+      <div class="footer-right">
+        <div class="footer-right-text">
+          <a href="/privacy">Privacy Policy</a>
+          <span>© <span id="footer-year">2026</span> Lana Swanson</span>
+          <span class="footer-equal-housing">⌂ Equal Housing Opportunity</span>
+        </div>
+        <img src="assets/images/Logo_Realty_VER_STK_W_MO.png"
+          alt="Coldwell Banker Realty" width="56" height="70" loading="lazy"
+          style="opacity:0.95;">
+      </div>
+    </footer>
+
+    <script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+    <script>
+  const toggle=document.getElementById("nav-toggle"),links=document.getElementById("nav-links");
+  if(toggle&&links){
+    toggle.addEventListener("click",()=>{const open=links.classList.toggle("open");toggle.setAttribute("aria-expanded",open);});
+    links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");toggle.setAttribute("aria-expanded","false");}));
+  }
+</script>
+  </body>
+</html>
